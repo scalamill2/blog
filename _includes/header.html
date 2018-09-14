@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link href="/css/example.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+</head>
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="nav-bar" (window:scroll)="onScroll()">
+    <nav id="nav" class="white valign-wrapper">
+      <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:7%"><img src="{{site.url}}/assets/scala-mill.svg" alt="not-found"></a>
+      <a href="#!" class="brand-logo hide-on-large-only"><img src="{{site.url}}/assets/scala-mill.svg" alt="not-found"></a>
+      <a href="#" data-activates="mobile-bar" class="button-collapse">
+              <i class="medium material-icons red-text" style="font-size:40px">menu</i>
+            </a>
+      <!-- <img class="brand-logo" src="/assets/img/scala-logo.png" alt="scala logo not found"> -->
+      <ul id="ulmain" class="animated right-align hide-on-med-and-down" style="position:absolute;right:0 !important">
+        <li>
+          <a href = "https://www.scalamill.com/home" (click) = "removeDepth()">
+                  <span>Company</span>
+                </a>
+        </li>
+        <li>
+          <a href="https://www.scalamill.com/services/consulting" (click) = "addDepth()">
+                  <span>Consulting & Development</span>
+                </a>
+        </li>
+        <li>
+          <a href = "https://www.scalamill.com/training" (click) = "addDepth()">
+                  <span>Training</span>
+                </a>
+        </li>
+        <li>
+          <a href="{{site.url}}" (click) = "addDepth()">
+                  <span>Blog</span>
+                </a>
+        </li>
+        <li>
+          <a href = "https://www.scalamill.com/contact" (click) = "addDepth()">
+                  <span>Contact</span>
+                </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <ul id="nav2" class="z-depth-5 side-nav" id="mobile-bar">
+    <li class="">
+      <div class="right-align">
+        <a routerLink="https://www.scalamill.com//home" (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Company</span>
+    </a>
+        <span>
+      <a><i class="medium right pink-text material-icons">close</i> </a>
+    </span>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a routerLink="https://www.scalamill.com/services/consulting" (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Consulting & Development</span>
+      </a>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a routerLink="https://www.scalamill.com/training"  (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Training</span>
+      </a>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a routerLink="{{site.url}}/blog"(click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Blog</span>
+      </a>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a routerLink="https://www.scalamill.com/contact" (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Contact</span>
+      </a>
+      </div>
+    </li>
+  </ul>

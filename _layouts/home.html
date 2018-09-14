@@ -1,0 +1,34 @@
+---
+layout: default
+---
+{% for post in site.posts %}
+<div class="section"></div>
+<div class="row">
+<div class="col s12 l12">
+  <div class=" card">
+
+    <div style="padding:1%">
+      <h5 class="left-align" style="color:hsl(226, 41%, 49%)">
+                <em>{{post.title}}</em>
+              </h5>
+      <cite class="orange-text">Last updated on <span class="post-meta">
+              <span class="post-date">
+                {{ post.date | date: "%-d %b %Y" | upcase }}
+              </span>
+            </span> by <span class="post-meta">
+                <span class="post-author">
+                  {{ post.author }}
+                </span></cite>
+      </div>
+
+      <div style="padding:1%">
+        <p>{{post.excerpt}}</p>
+        <div class="card-action">
+          <a href="{{ post.url | prepend: site.baseurl }}">
+              Read More
+            </a>
+        </div>
+      </div>
+</div>
+</div>
+{% endfor %}
