@@ -315,6 +315,13 @@ figure {
   border-left-color: hsla(219, 79%, 44%, 0.753) !important;
 }
 
+figure > pre > code {
+   font-size: 14px;
+   font-weight: 100 !important;
+   font-family: 'Courier New', Courier, monospace
+}
+
+
 div > pre > code {
   padding-left:200px
 }

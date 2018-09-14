@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Functional programming in scala"
-author : "Piyush Mishra"
+author : "ScalaMill LLP"
 tags: "scala, akka, java, lagom, spark"
 date:   2018-09-12 19:43:29 +0530
-categories: jekyll update
+categories: functional programming scala
 ---
 Hello Programmers, We are living in the era of functional programming. Gone are the days when we used to model object and functions together and building the program using object-oriented technique but still we are left with the necessities of design pattern and management of code in modules when it comes to object-oriented programming. There are many functional programming languages which are coming every day but Scala is very old of them. Since Scala has come in the mainstream, many languages like Java, kotlin, Javascript are influenced by it and taken the same face as Scala has. They have functions, lambdas, closures etc. But Scala comes with a strong type system and with a lot of functional patterns inbuilt. So we will see what is functional programming and how we do it in Scala.
 
@@ -34,14 +34,11 @@ Now we will create a base trait portfolio which will be extended by different sp
 
 trait Portfolio
 
-case class CricketPlayerPortfolio(totalRuns: Int, totalMatches: Int, centuries: Int,
-                                  halfCenturies: Int) extends Portfolio
+case class CricketPlayerPortfolio(totalRuns: Int, totalMatches: Int, centuries: Int, halfCenturies: Int) extends Portfolio
 
-case class TennisPlayerPortfolio(totalMatches: Int, wins: Int, lost: Int)
-  extends Portfolio
+case class TennisPlayerPortfolio(totalMatches: Int, wins: Int, lost: Int) extends Portfolio
 
-case class FootBallPlayerPortFolio(totalMatches: Int, totalGoals: Int)
-  extends Portfolio
+case class FootBallPlayerPortFolio(totalMatches: Int, totalGoals: Int) extends Portfolio
 
 {% endhighlight %}
 
@@ -56,19 +53,15 @@ trait Player {
   val portfolio: Portfolio
 }
 
-case class CrickePlayer(override val playerId: Int, override val playerName: String,
-                        override val portfolio: CricketPlayerPortfolio) extends Player
+case class CrickePlayer(override val playerId: Int, override val playerName: String, override val portfolio: CricketPlayerPortfolio) extends Player
 
-case class TennisPlayer(override val playerId: Int, override val playerName: String,
-                        override val portfolio: TennisPlayerPortfolio) extends Player
+case class TennisPlayer(override val playerId: Int, override val playerName: String, override val portfolio: TennisPlayerPortfolio) extends Player
 
-case class FootballPlayer(override val playerId: Int, override val playerName: String,
-                          override val portfolio: FootBallPlayerPortFolio) extends Player
-
+case class FootballPlayer(override val playerId: Int, override val playerName: String, override val portfolio: FootBallPlayerPortFolio) extends Player
 
 object PortfolioStore {
 
-  val cricketPlayers = Seq(CrickePlayer(1, "Peterson", CricketPlayerPortfolio(10000, 300, 25, 50)),
+  val cricketPlayers = Seq(CrickePlayer(1, "Peterson", CricketPlayerPortfolio(10000, 300, 25, 50)), 
     CrickePlayer(2, "Morris", CricketPlayerPortfolio(5000, 200, 20, 30)),
     CrickePlayer(3, "Mathew", CricketPlayerPortfolio(8000, 150, 25, 45)))
 
@@ -92,13 +85,17 @@ object PortfolioBuilder {
   def buildPortfolio(player: Player) = {
     player.portfolio match {
       case CricketPlayerPortfolio(totalRuns, totalMatches, centuries, halfCenturies) =>
-        s"""Number of Runs : $totalRuns\nNumber of Matches Played: $totalMatches\nNumber of 100's" +
-          s": $centuries\nNumber of 50's : $halfCenturies"""
+      s"""Number of Runs : $totalRuns 
+                      Number of Matches Played: $totalMatches
+                      Number of 100s $centuries
+                      Number of 50's : $halfCenturies"""
       case TennisPlayerPortfolio(totalMatches, wins, lost) =>
-        s"Number of Matches Played: $totalMatches\nWin" +
-          s": $wins\nlost                     :$lost"
+        s"""Number of Matches Played: $totalMatches
+                      Win: $wins 
+                      lost: $lost"""
       case FootBallPlayerPortFolio(totalMatches, totalGoals) =>
-        s"Number of Matches Played: $totalMatches\nNumber of Goals : $totalGoals"
+        s"""Number of Matches Played: $totalMatches
+                     Number of Goals : $totalGoals"""
     }
   }
 }
