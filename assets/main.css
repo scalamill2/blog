@@ -134,7 +134,7 @@ div {
     /* border-style: groove; */
 }
 
-* {
+body {
   font-family: 'Quicksand','Lato', sans-serif;
 
 }
@@ -316,9 +316,17 @@ figure {
 }
 
 figure > pre > code {
-   font-size: 14px;
-   font-weight: 100 !important;
-   font-family: 'Courier New', Courier, monospace !important
+  font: normal 11px Consolas, Monaco, monospace;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 11px;
+  line-height: normal;
+  font-family: Consolas, Monaco, monospace;
 }
 
 
