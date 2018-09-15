@@ -1,16 +1,14 @@
 ---
 layout: post
-title:  "Understand Semigroup via Cats in Scala"
+title:  "Understanding Semigroup via Cats in Scala"
 author : "ScalaMill LLP"
 tags: "scala, akka, java, lagom, spark"
-date:   2018-09-16 18:30:51 +530
+date:   2018-09-15 18:30:51 +530
 categories: functional programming scala
 ---
 
 
-Hi All,
-
-Scala now is a most widely used language for enterprises and if you are Scala Programmer then you are also using it in your daily life. Ever wondered how Scala library collections share the same algebra. We can use map, flatMap, reduceLeft, foldLeft functions for any kind of the collection if we know how a particular algebraic datatype in that collection behaves. We will understand these things via Cats.
+Hi All, Scala now is a most widely used language for enterprises and if you are Scala Programmer then you are also using it in your daily life. Ever wondered how Scala library collections share the same algebra. We can use map, flatMap, reduceLeft, foldLeft functions for any kind of the collection if we know how a particular algebraic datatype in that collection behaves. We will understand these things via Cats.
 
 **What is Cats.**
 
@@ -118,7 +116,7 @@ object reportSevice {
     val Transaction(_, totalDebit) = transactions.reduceLeft(CombineAllDebit.combine)
     val Transaction(_, finalbalance) = transactions.reduceLeft(Finalbalance.combine)
     s"Total Credit is $totalCredit and total debit is $totalDebit and final Balance is $finalbalance"
-  } 
+  }
 }
 {% endhighlight %}
 

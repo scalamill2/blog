@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "Understanding monoids using Cats in Scala"
-date: 2018-09-16 18:30:51 +530
+date: 2018-09-15 18:30:51 +530
 tags: "scala, akka, java, lagom, spark"
 categories: functional programming scala
 ---
-
 In the previous post we learned about Semigroup, In this post, we will see what are Monoids and how to use them.
 
 **What is Monoid**
@@ -56,12 +55,12 @@ val listMonoid = Monoid[List[Int]]
 assert(intMonoid.combine(1,3) == 4)
 assert(strMonoid.combine("Hello ", "World") == "Hello World")
 assert(listMonoid.combine(List(1, 2, 3), List(4, 5, 6)) == List(1, 2, 3, 4, 5, 6))
- 
+
 assert(intMonoid.combine(1, intMonoid.empty) == 1)
 assert(strMonoid.combine("Hello World", strMonoid.empty) == "Hello World")
 assert(listMonoid.combine(List(1, 2, 3), listMonoid.empty) == List(1, 2, 3))
 {% endhighlight %}
- 
+
 In the previous post on Semigroup, we demonstrate a banking transaction App to combine the credit, debit and final balance using reduceLeft. But what will happen if we find that there are no transactions in personal account then what we will return a result? Here monoid can solve our problem as it has an identity element.
 
 {% highlight scala %}
@@ -88,7 +87,7 @@ object CombineAllCredit extends Monoid[Transaction] {
   override def empty = Transaction(TransactionType.INVALID_OR_NO_TRANSACTION, 0)  
 
    override def combine(a: Transaction, b: Transaction): Transaction = {
-    if(b.transactionType == TransactionType.CREDIT) 
+    if(b.transactionType == TransactionType.CREDIT)
     {
       a.copy(transactionType = TransactionType.CREDIT, amount = a.amount + b.amount)
     } else {
@@ -102,7 +101,7 @@ object CombineAllDebit extends Monoid[Transaction] {
   override def empty = Transaction(TransactionType.INVALID_OR_NO_TRANSACTION, 0)  
 
   override def combine(a: Transaction, b: Transaction): Transaction = {
-    if(b.transactionType == TransactionType.DEBIT) 
+    if(b.transactionType == TransactionType.DEBIT)
     {
       a.copy(transactionType = TransactionType.DEBIT, amount = a.amount + b.amount)
     } else {
