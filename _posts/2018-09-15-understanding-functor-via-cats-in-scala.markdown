@@ -7,7 +7,7 @@ author: ScalaMill LLP
 tags: scala, cats, functor
 ---
 
-In previous posts we learned something about Semigroup and Monoid in Cats. Now we will look into a Fucntor.
+In previous posts we learned something about Semigroup and Monoid in Cats. Now we will look into a Functor.
 
 <strong>What is a Functor.</strong>
 
@@ -32,8 +32,7 @@ import cats.instances.list._
 import cats.instances.option._
 {% endhighlight %}
 
-Cats have functors available for some datatype list, option and their are ways to compose functor together as you see in below examples. As per the Functor
-definition it is unwrapping the element from the context(option, list, listOption) 
+Cats have functors available for some datatype like list, option and their are ways to compose functor together as you see in below examples. As per the Functor definition it is unwrapping the element from the context(option, list, listOption) and transform the element to element of same type or other type.
 
 {% highlight scala %}
 val option = Some(1)
