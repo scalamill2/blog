@@ -1,40 +1,44 @@
 {% include header.html %}
 
-
 <div class="row">
-  <div class="col s12 m12 xl9 l9" style="padding:0.5%">
-    <div class="col s11 m11 xl11 l11 offset-s1 offset-l1 offset-m1 offset-xl1 z-depth-3">
-      <div style="padding:1%">
-        <h5 class="left-align" style="color:hsl(226, 41%, 49%)">
-          <em>{{page.title}}</em>
-        </h5>
-        <cite class="orange-text">Last updated on <span class="post-meta">
-            <span class="post-date">
-              {{ page.date | date: "%-d %b %Y" | upcase }}
-            </span>
-          </span> by <span class="post-meta">
-            <span class="post-author">
-              {{ page.author}}
-            </span></cite>
+  <div class="col l12">
+
+    <div class="col s12 m12 xl12 l12" class="cyan">
+      <div class="z-depth-1" style="z-index:99">
+        <div class="section cyan" style="padding: 5%">
+          <h5 class="white-text" style="font-size:35px">
+            <em>{{page.title}}</em>
+          </h5>
+          <cite class="white-text">Last updated on <span class="post-meta">
+              <span class="post-date">
+                {{ page.date | date: "%-d %b %Y" | upcase }}
+              </span>
+            </span> by <span class="post-meta">
+              <span class="post-author">
+                {{ page.author}}
+              </span></cite>
+          <div class = "section">
+            {% include share.html %}
+          </div>
+        </div>
       </div>
+    </div>
 
-      <div style="padding-left:1%">
-        {% include share.html %}
-
+    <div class="col s12 m12 xl9 l9">
+      <div class="col s11 m11 xl11 l11  z-depth-1 " style="padding:5%">
         <p>{{content}}</p>
+
+        {% include discuss.html %}
       </div>
     </div>
-    <!-- <cite class="orange-text">Last updated on {{post?.date}} by {{post?._embedded?.author[0].name}}</cite> -->
   </div>
+
+</div>
+
 </div>
 
 
-<div class="row">
-  <div class="col s12 m12 xl9 l9" style="padding:0.5%">
-    <div class="col s11 m11 xl11 l11 offset-s1 offset-l1 offset-m1 offset-xl1 z-depth-3">
-      {% include discuss.html %}
-    </div>
-  </div>
-</div>
+
+
 
 {% include footer.html %}
