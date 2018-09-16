@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Functional programming made easy in scala"
+title:  "functional programming made easy in scala"
 author : "ScalaMill LLP"
 tags: "scala, akka, java, lagom, spark"
 date:   2018-09-12 19:43:29 +0530
