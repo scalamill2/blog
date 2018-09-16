@@ -61,7 +61,7 @@ case class FootballPlayer(override val playerId: Int, override val playerName: S
 
 object PortfolioStore {
 
-  val cricketPlayers = Seq(CrickePlayer(1, "Peterson", CricketPlayerPortfolio(10000, 300, 25, 50)), 
+  val cricketPlayers = Seq(CrickePlayer(1, "Peterson", CricketPlayerPortfolio(10000, 300, 25, 50)),
                            CrickePlayer(2, "Morris", CricketPlayerPortfolio(5000, 200, 20, 30)),
                            CrickePlayer(3, "Mathew", CricketPlayerPortfolio(8000, 150, 25, 45)))
 
@@ -85,13 +85,13 @@ object PortfolioBuilder {
   def buildPortfolio(player: Player) = {
     player.portfolio match {
       case CricketPlayerPortfolio(totalRuns, totalMatches, centuries, halfCenturies) =>
-                  s"""Number of Runs : $totalRuns 
+                  s"""Number of Runs : $totalRuns
                       Number of Matches Played: $totalMatches
                       Number of 100s $centuries
                       Number of 50's : $halfCenturies"""
       case TennisPlayerPortfolio(totalMatches, wins, lost) =>
                  s"""Number of Matches Played: $totalMatches
-                      Win: $wins 
+                      Win: $wins
                       lost: $lost"""
       case FootBallPlayerPortFolio(totalMatches, totalGoals) =>
                  s"""Number of Matches Played: $totalMatches

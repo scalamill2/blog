@@ -229,7 +229,7 @@
 
 <span class="k">object</span> <span class="nc">PortfolioStore</span> <span class="o">{</span>
 
-  <span class="k">val</span> <span class="n">cricketPlayers</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="nc">CrickePlayer</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">"Peterson"</span><span class="o">,</span> <span class="nc">CricketPlayerPortfolio</span><span class="o">(</span><span class="mi">10000</span><span class="o">,</span> <span class="mi">300</span><span class="o">,</span> <span class="mi">25</span><span class="o">,</span> <span class="mi">50</span><span class="o">)),</span> 
+  <span class="k">val</span> <span class="n">cricketPlayers</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="nc">CrickePlayer</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">"Peterson"</span><span class="o">,</span> <span class="nc">CricketPlayerPortfolio</span><span class="o">(</span><span class="mi">10000</span><span class="o">,</span> <span class="mi">300</span><span class="o">,</span> <span class="mi">25</span><span class="o">,</span> <span class="mi">50</span><span class="o">)),</span>
                            <span class="nc">CrickePlayer</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="s">"Morris"</span><span class="o">,</span> <span class="nc">CricketPlayerPortfolio</span><span class="o">(</span><span class="mi">5000</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30</span><span class="o">)),</span>
                            <span class="nc">CrickePlayer</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">"Mathew"</span><span class="o">,</span> <span class="nc">CricketPlayerPortfolio</span><span class="o">(</span><span class="mi">8000</span><span class="o">,</span> <span class="mi">150</span><span class="o">,</span> <span class="mi">25</span><span class="o">,</span> <span class="mi">45</span><span class="o">)))</span>
 
@@ -250,13 +250,13 @@
   <span class="k">def</span> <span class="n">buildPortfolio</span><span class="o">(</span><span class="n">player</span><span class="k">:</span> <span class="kt">Player</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
     <span class="n">player</span><span class="o">.</span><span class="n">portfolio</span> <span class="k">match</span> <span class="o">{</span>
       <span class="k">case</span> <span class="nc">CricketPlayerPortfolio</span><span class="o">(</span><span class="n">totalRuns</span><span class="o">,</span> <span class="n">totalMatches</span><span class="o">,</span> <span class="n">centuries</span><span class="o">,</span> <span class="n">halfCenturies</span><span class="o">)</span> <span class="k">=&gt;</span>
-                  <span class="n">s</span><span class="s">"""Number of Runs : $totalRuns 
+                  <span class="n">s</span><span class="s">"""Number of Runs : $totalRuns
                       Number of Matches Played: $totalMatches
                       Number of 100s $centuries
                       Number of 50's : $halfCenturies"""</span>
       <span class="k">case</span> <span class="nc">TennisPlayerPortfolio</span><span class="o">(</span><span class="n">totalMatches</span><span class="o">,</span> <span class="n">wins</span><span class="o">,</span> <span class="n">lost</span><span class="o">)</span> <span class="k">=&gt;</span>
                  <span class="n">s</span><span class="s">"""Number of Matches Played: $totalMatches
-                      Win: $wins 
+                      Win: $wins
                       lost: $lost"""</span>
       <span class="k">case</span> <span class="nc">FootBallPlayerPortFolio</span><span class="o">(</span><span class="n">totalMatches</span><span class="o">,</span> <span class="n">totalGoals</span><span class="o">)</span> <span class="k">=&gt;</span>
                  <span class="n">s</span><span class="s">"""Number of Matches Played: $totalMatches
