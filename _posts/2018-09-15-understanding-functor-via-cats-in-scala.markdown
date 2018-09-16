@@ -95,7 +95,7 @@ println(for {
 4. Convert to savings account if balance is between **5000**  and **20000** and make the balance reduce by **1000** :-(
 {% highlight scala %}
 println(for {
-    bankAccount <- list2
+    bankAccount <- list
     if (bankAccount.balance <= 20000 && bankAccount.balance >= 5000)
   } BankAccountFunctor.map(bankAccount)(x => new SavingsAccount).copy(balance = bankAccount.balance - 1000))
 {% endhighlight %}
@@ -103,7 +103,7 @@ println(for {
 5. Convert to current account if balance is above **50000** and award some **5000** money beacuse person maintain huge money in account :-)
 {% highlight scala %}
 println(for {
-    bankAccount <- list2
+    bankAccount <- list
     if (bankAccount.balance > 50000)
   } yield BankAccountFunctor.map(bankAccount)(x => new CurrentAccount).copy(balance = bankAccount.balance + 5000))
 {% endhighlight %}
