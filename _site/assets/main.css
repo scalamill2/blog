@@ -135,7 +135,7 @@ div {
 }
 
 body {
-  font-family: 'Quicksand','Lato', sans-serif;
+  font-family: Lato
 
 }
 
@@ -288,14 +288,18 @@ figure {
   margin-left: -2px;
   padding: 2%;
   margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(137, 188, 192, 0.541);
+  box-shadow: 0 0 12px rgba(137, 188, 192, 0.541);
   transition: 0.3s;
   border-radius: 2px;
   border-width: 1px;
-  border-left: 6px solid hsl(0, 72%, 56%)!important;
-  border-left-width: 6px !important;
-  border-left-style: solid !important;
-  border-left-color: hsla(219, 79%, 44%, 0.753) !important;
+  
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+  border-top-color: hsla(219, 79%, 44%, 0.753) !important;
+  
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: hsla(219, 79%, 44%, 0.753) !important;
 }
 
 .code {
@@ -322,10 +326,10 @@ figure > pre > code {
   font-variant-caps: normal;
   font-variant-numeric: normal;
   font-variant-east-asian: normal;
-  font-weight: bold;
+  font-weight: lighter;
   font-stretch: normal;
   font-size: 12px;
-  line-height: normal;
+  line-height: 1.5em;
   font-family: Consolas, Monaco, monospace;
 }
 

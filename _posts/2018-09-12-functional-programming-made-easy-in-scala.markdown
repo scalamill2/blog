@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Functional programming in scala"
+title:  "Functional programming made easy in scala"
 author : "ScalaMill LLP"
 tags: "scala, akka, java, lagom, spark"
 date:   2018-09-12 19:43:29 +0530
@@ -62,15 +62,15 @@ case class FootballPlayer(override val playerId: Int, override val playerName: S
 object PortfolioStore {
 
   val cricketPlayers = Seq(CrickePlayer(1, "Peterson", CricketPlayerPortfolio(10000, 300, 25, 50)), 
-    CrickePlayer(2, "Morris", CricketPlayerPortfolio(5000, 200, 20, 30)),
-    CrickePlayer(3, "Mathew", CricketPlayerPortfolio(8000, 150, 25, 45)))
+                           CrickePlayer(2, "Morris", CricketPlayerPortfolio(5000, 200, 20, 30)),
+                           CrickePlayer(3, "Mathew", CricketPlayerPortfolio(8000, 150, 25, 45)))
 
   val fooballPlayers = Seq(FootballPlayer(1, "Bravo", FootBallPlayerPortFolio(300, 600)),
-    FootballPlayer(2, "Dany", FootBallPlayerPortFolio(200, 300)))
+                           FootballPlayer(2, "Dany", FootBallPlayerPortFolio(200, 300)))
 
   val tennisPlayers = Seq(TennisPlayer(1, "Peter", TennisPlayerPortfolio(30, 10, 20)),
-    TennisPlayer(2, "Bob", TennisPlayerPortfolio(25, 20, 5)),
-    TennisPlayer(3, "John", TennisPlayerPortfolio(120, 0, 10)))
+                          TennisPlayer(2, "Bob", TennisPlayerPortfolio(25, 20, 5)),
+                          TennisPlayer(3, "John", TennisPlayerPortfolio(120, 0, 10)))
 
   val sportsdPlayers: Map[Sport, Seq[Player]] = Map(Cricket -> cricketPlayers, Football -> fooballPlayers,
     Tennis -> tennisPlayers)
@@ -85,16 +85,16 @@ object PortfolioBuilder {
   def buildPortfolio(player: Player) = {
     player.portfolio match {
       case CricketPlayerPortfolio(totalRuns, totalMatches, centuries, halfCenturies) =>
-      s"""Number of Runs : $totalRuns 
+                  s"""Number of Runs : $totalRuns 
                       Number of Matches Played: $totalMatches
                       Number of 100s $centuries
                       Number of 50's : $halfCenturies"""
       case TennisPlayerPortfolio(totalMatches, wins, lost) =>
-        s"""Number of Matches Played: $totalMatches
+                 s"""Number of Matches Played: $totalMatches
                       Win: $wins 
                       lost: $lost"""
       case FootBallPlayerPortFolio(totalMatches, totalGoals) =>
-        s"""Number of Matches Played: $totalMatches
+                 s"""Number of Matches Played: $totalMatches
                      Number of Goals : $totalGoals"""
     }
   }
@@ -113,13 +113,10 @@ object PortfolioApp extends App {
 
   def getPlayer(name : String, sport: Sport): Option[Player] = of(name)(from(sport))
 
-  println("############################FootBall Player Bravo##############################################")
   println(PortfolioBuilder buildPortfolio getPlayer("Bravo", Football).get)
 
-  println("############################CricketPlayer Peterson#############################################")
   println(PortfolioBuilder buildPortfolio getPlayer("Peterson", Cricket).get)
 
-  println("############################Tennis Player Peter#############################################")
   println(PortfolioBuilder buildPortfolio getPlayer("Peter", Tennis).get)
 
   //Number of Players in All domain
