@@ -188,7 +188,7 @@
     <div class="col s12 m12 xl9 l9">
 
       <div class="col s11 m12 xl12 l12 z-depth-1 " style="padding:5%">
-        <p><p>In previous posts we learned something about Semigroup and Monoid in Cats. Now we will look into a Fucntor.</p>
+        <p><p>In previous posts we learned something about Semigroup and Monoid in Cats. Now we will look into a Functor.</p>
 
 <p><strong>What is a Functor.</strong></p>
 
@@ -208,8 +208,7 @@
 <span class="k">import</span> <span class="nn">cats.instances.list._</span>
 <span class="k">import</span> <span class="nn">cats.instances.option._</span></code></pre></figure>
 
-<p>Cats have functors available for some datatype list, option and their are ways to compose functor together as you see in below examples. As per the Functor
-definition it is unwrapping the element from the context(option, list, listOption)</p>
+<p>Cats have functors available for some datatype like list, option and their are ways to compose functor together as you see in below examples. As per the Functor definition it is unwrapping the element from the context(option, list, listOption) and transform the element to element of same type or other type.</p>
 
 <figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">val</span> <span class="n">option</span> <span class="k">=</span> <span class="nc">Some</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
 <span class="k">val</span> <span class="n">list</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">)</span>
@@ -268,7 +267,7 @@ definition it is unwrapping the element from the context(option, list, listOptio
 </ol>
 
 <figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="n">println</span><span class="o">(</span><span class="k">for</span> <span class="o">{</span>
-    <span class="n">bankAccount</span> <span class="k">&lt;-</span> <span class="n">list2</span>
+    <span class="n">bankAccount</span> <span class="k">&lt;-</span> <span class="n">list</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">bankAccount</span><span class="o">.</span><span class="n">balance</span> <span class="o">&lt;=</span> <span class="mi">20000</span> <span class="o">&amp;&amp;</span> <span class="n">bankAccount</span><span class="o">.</span><span class="n">balance</span> <span class="o">&gt;=</span> <span class="mi">5000</span><span class="o">)</span>
   <span class="o">}</span> <span class="nc">BankAccountFunctor</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">bankAccount</span><span class="o">)(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">SavingsAccount</span><span class="o">).</span><span class="n">copy</span><span class="o">(</span><span class="n">balance</span> <span class="k">=</span> <span class="n">bankAccount</span><span class="o">.</span><span class="n">balance</span> <span class="o">-</span> <span class="mi">1000</span><span class="o">))</span></code></pre></figure>
 
@@ -277,11 +276,11 @@ definition it is unwrapping the element from the context(option, list, listOptio
 </ol>
 
 <figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="n">println</span><span class="o">(</span><span class="k">for</span> <span class="o">{</span>
-    <span class="n">bankAccount</span> <span class="k">&lt;-</span> <span class="n">list2</span>
+    <span class="n">bankAccount</span> <span class="k">&lt;-</span> <span class="n">list</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">bankAccount</span><span class="o">.</span><span class="n">balance</span> <span class="o">&gt;</span> <span class="mi">50000</span><span class="o">)</span>
   <span class="o">}</span> <span class="k">yield</span> <span class="nc">BankAccountFunctor</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">bankAccount</span><span class="o">)(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">CurrentAccount</span><span class="o">).</span><span class="n">copy</span><span class="o">(</span><span class="n">balance</span> <span class="k">=</span> <span class="n">bankAccount</span><span class="o">.</span><span class="n">balance</span> <span class="o">+</span> <span class="mi">5000</span><span class="o">))</span></code></pre></figure>
 
-<p>Thus we have seen that Functor is a abstraction over kind types to map them between each other, the kind type could be anything, it could be a elementary type or it could be a colection or it could be a container like Option and BankAccount. Hope you will find all this helpful if you are learning scala or any other functional programming language. You can find the code <a href="https://github.com/scalamill/cats-in-practice/blob/master/src/main/scala/com/scalamill/meow/Functor.scala">here</a>. Let us know your opinion in comment box.</p>
+<p>Thus we have seen that Functor is a abstraction over kind types to map the contained types between each other, the kind type could be anything, it could be a elementary type or it could be a colection or it could be a container like Option and BankAccount. Hope you will find all this helpful if you are learning scala or any other functional programming language. You can find the code <a href="https://github.com/scalamill/cats-in-practice/blob/master/src/main/scala/com/scalamill/meow/Functor.scala">here</a>. Let us know your opinion in comment box.</p>
 </p>
         <div id="disqus_thread"></div>
 <script>
