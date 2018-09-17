@@ -44,7 +44,7 @@ println(Functor[List].map(list)(x => x+1))
 println(Functor[List].compose[Option].map(listOption)(_ + 1))
 {% endhighlight %}
 
-Again we will unsdertand functor in context of banking domain. Bank usually have certain constraints over bank balance, based on that they can take actions on person's account. Like if balance is below a certain amount then they can convert to some other account type or if balance is above a certain amount they can change account type and also can award some more money on top of current balance. First we will create various account type object as below and bank accont case class.
+Again we will unsdertand functor in context of banking domain. Bank usually have certain constraints over bank balance, based on that they can take actions on person's account. Like if balance is below a certain amount then they can convert to some other account type or if balance is above a certain amount they can change account type and also can award some more money on top of current balance. First we will create various account type object and bank account case class as below.
 
 {% highlight scala %}
 case class BankAccount[T <: AccountType](accountType: T, balance: Int, status: String)
