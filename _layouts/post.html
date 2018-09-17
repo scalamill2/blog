@@ -9,7 +9,12 @@
           <h5 class="white-text" style="font-size:35px">
             <em>{{page.title}}</em>
           </h5>
-          <cite class="white-text">Last updated on <span class="post-meta">
+        
+          <cite class="white-text">
+              <div class="white-text">
+                  {{ page.tags }} 
+                </div>
+            Last updated on <span class="post-meta">
               <span class="post-date">
                 {{ page.date | date: "%-d %b %Y" | upcase }}
               </span>
@@ -17,6 +22,7 @@
               <span class="post-author">
                 {{ page.author}}
               </span></cite>
+              
           <div class="section">
             {% include share.html %}
           </div>
