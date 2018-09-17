@@ -17,27 +17,36 @@
               <span class="post-author">
                 {{ page.author}}
               </span></cite>
-          <div class = "section">
+          <div class="section">
             {% include share.html %}
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col s12 m12 xl9 l10">
-      <div class="col s11 m11 xl11 l11  z-depth-1 " style="padding:5%">
-        <p>{{content}}</p>
+    <div class="col s12 m12 xl9 l9">
 
+      <div class="col s11 m12 xl12 l12 z-depth-1 " style="padding:5%">
+        <p>{{content}}</p>
         {% include discuss.html %}
+      </div>
+    </div>
+
+    <div class="section col s12 m12 xl3 l3" style="margin-top:2%">
+      <div class = "col">
+        {% include followus.html %}
       </div>
     </div>
   </div>
 
-</div>
 
 </div>
 
+</div>
 
+<div class = "col offset-l1">
+    {% include followus.html %}
+  </div>
 
 
 

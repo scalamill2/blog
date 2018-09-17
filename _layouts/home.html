@@ -22,7 +22,8 @@ layout: default
       </div>
 
       <div style="padding:1%">
-              <p>{{post.excerpt}}</p>
+              <p>{{ post.excerpt  | truncate: 3000 }}  
+              </p>
               <div class="card-action">
                 <a href="{{ post.url | prepend: site.baseurl }}">
                     Read More
