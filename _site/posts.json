@@ -7,8 +7,7 @@
   "favicon": "/assets/icons/favicon-96x96.png",
   "icon": "/assets/icons/apple-touch-icon.png",
   "author": {
-      "name": null,
-      "url": "/",
+      "name": null
   },
   "expired": "false",
   "items": [
