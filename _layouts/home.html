@@ -7,7 +7,7 @@ layout: default
 <div class="row">
 <div class="col s12 l12">
   <div>
-    <div style="padding:1%">
+    <div style="padding:0 1 0 1%">
       <h5 class="left-align" style="color:hsl(226, 41%, 49%)">
                 <em>{{post.title}}</em>
               </h5>
@@ -15,13 +15,13 @@ layout: default
               <span class="post-date">
                 {{ post.date | date: "%-d %b %Y" | upcase }}
               </span>
-            </span> by <span class="post-meta">
+          </span> by <span class="post-meta">
                 <span class="post-author">
                   {{ post.author }}
                 </span></cite>
       </div>
 
-      <div style="padding:1%">
+      <div style="padding:0 1 0 1%" >
               <p>{{ post.excerpt  | truncate: 900 }}  
               </p>
               <div class="card-action">
