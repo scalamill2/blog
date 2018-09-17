@@ -29,11 +29,13 @@ tags: Lagom, scala, akka, play, microservices
 </ol>
 </div>
 #### Below are some rules for building Microservices in Lagom
+<div id = "lists">
 <ol>
  	<li> Each services owns it's data</li>
  	<li> Lagom uses persistence and event sourcing for managing data</li>
  	<li> Lagom separate the service implementation from its description.</li>
 </ol>
+</div>
 In this post, we will build a minimal Microservices for signing in and signing up a user. First of all, we will create service description interface as shown in below code.
 
 {% highlight scala%}

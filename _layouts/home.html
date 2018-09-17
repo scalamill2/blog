@@ -1,36 +1,45 @@
----
-layout: default
+--- 
+layout: default 
 ---
 <div class="section">
 </div>
 {% for post in site.posts %}
 <div class="row">
-<div class="col s12 l12">
-  <div>
-    <div style="padding:0 1 0 1%">
-      <h5 class="left-align" style="color:hsl(226, 41%, 49%)">
-                <em>{{post.title}}</em>
-              </h5>
-      <cite class="orange-text">Last updated on <span class="post-meta">
-              <span class="post-date">
-                {{ post.date | date: "%-d %b %Y" | upcase }}
-              </span>
-          </span> by <span class="post-meta">
-                <span class="post-author">
-                  {{ post.author }}
-                </span></cite>
+  <div class="col s12 l12">
+    <div>
+      <div style="padding:0 1 0 1%">
+        <h5 class="left-align" style="color:hsl(226, 41%, 49%)">
+          <em>{{post.title}}</em>
+          <p class="orange-text tags">
+            {{ post.tags }}
+          </p>
+        </h5>
+
+        <cite class="orange-text tags">
+
+          Last updated on
+          <span class="post-meta">
+            <span class="post-date">
+              {{ post.date | date: "%-d %b %Y" | upcase }}
+            </span>
+          </span> by
+          <span class="post-meta">
+            <span class="post-author">
+              {{ post.author }}
+            </span>
+        </cite>
       </div>
 
-      <div style="padding:0 1 0 1%" >
-              <p>{{ post.excerpt  | truncate: 900 }}  
-              </p>
-              <div class="card-action">
-                <a href="{{ post.url | prepend: site.baseurl }}">
-                    Read More
-                  </a>
-              </div>
-            </div>
+      <div style="padding:0 1 0 1%">
+        <p>{{ post.excerpt | truncate: 900 }}
+        </p>
+        <div class="card-action">
+          <a href="{{ post.url | prepend: site.baseurl }}">
+            Read More
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 </div>
 {% endfor %}

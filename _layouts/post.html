@@ -8,21 +8,25 @@
         <div class="section cyan" style="padding: 5%;color:aquamarine">
           <h5 class="white-text" style="font-size:35px">
             <em>{{page.title}}</em>
+            <p class="white-text tags">
+              {{ page.tags }}
+            </p>
           </h5>
-        
+
           <cite class="white-text">
-              <div class="white-text">
-                  {{ page.tags }} 
-                </div>
-            Last updated on <span class="post-meta">
+
+            Last updated on
+            <span class="post-meta">
               <span class="post-date">
                 {{ page.date | date: "%-d %b %Y" | upcase }}
               </span>
-            </span> by <span class="post-meta">
+            </span> by
+            <span class="post-meta">
               <span class="post-author">
                 {{ page.author}}
-              </span></cite>
-              
+              </span>
+          </cite>
+
           <div class="section">
             {% include share.html %}
           </div>
@@ -32,14 +36,14 @@
 
     <div class="col s12 m12 xl9 l9">
 
-      <div class="col s11 m12 xl12 l12 z-depth-1 " style="padding:6%">
+      <div class="col s11 m12 xl12 l12 z-depth-1 " style="padding:4%">
         <p>{{content}}</p>
         {% include discuss.html %}
       </div>
     </div>
 
     <div class="section col s12 m12 xl3 l3" style="margin-top:2%">
-      <div class = "col">
+      <div class="col">
         {% include followus.html %}
       </div>
     </div>
@@ -50,9 +54,9 @@
 
 </div>
 
-<div class = "col offset-l1">
-    {% include followus.html %}
-  </div>
+<div class="col offset-l1">
+  {% include followus.html %}
+</div>
 
 
 

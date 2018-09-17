@@ -461,6 +461,10 @@ body, html {
   line-height: 300px;
 }
 
+.tags {
+  margin: 0%
+}
+
 #lists > ol {
   list-style:none;
   font-size: 15px !important;
