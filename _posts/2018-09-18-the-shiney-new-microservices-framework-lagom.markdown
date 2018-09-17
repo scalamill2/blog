@@ -2,33 +2,33 @@
 layout: post
 author: ScalaMill LLP
 title: "The Shiney new microservices framework Lagom"
-date: 2018-09-17 15:57:27 +0530
+date: 2018-09-16 14:41:27 +0530
 categories: lagom scala
 tags: Lagom, scala, akka, play, microservices
 ---
 
-Lagom is a Microservices framework built on top of Akka and Play. Lagom provides Scala as well as Java API to build microservices. Like Akka where we focus on writing business logic in Actors rather than focusing on low-level multi-threading logic, Lagom enables us to write microservices without bothering about wiring them.
+<b>Lagom</b> is a Microservices framework built on top of Akka and Play. Lagom provides Scala as well as Java API to build microservices. Like Akka where we focus on writing business logic in Actors rather than focusing on low-level multi-threading logic, Lagom enables us to write microservices without bothering about wiring them.
 
-<span>Features of Lagom Framework</span>
+###### Features of Lagom Framework
 <ol>
- 	<li>    A Single command builds your supported components and microservices.</li>
- 	<li>    Solves business problems instead of wiring services.</li>
- 	<li>    Quickly build and hot reload project when source code changes.dbdfbdfsgs</li>
- 	<li>    As it is built on top of Akka we get all merits of reactive applications i.e Elasticity, Resiliency and Responsiveness.</li>
+ 	<li>    A Single command builds your supported components and microservices.</li>
+ 	<li>    Solves business problems instead of wiring services.</li>
+ 	<li>    Quickly build and hot reload project when source code changes.</li>
+ 	<li>    As it is built on top of Akka we get all merits of reactive applications i.e Elasticity, Resiliency and Responsiveness.</li>
 </ol>
-<span>Lagom development Environment comprises of and runs</span>
+###### Lagom development environment comprises of and runs on
 <ol>
- 	<li>   Cassandra</li>
- 	<li>   Kafka</li>
- 	<li>   A service locator</li>
- 	<li>   A service gateway</li>
- 	<li>   Your Lagom services</li>
+ 	<li>   Cassandra</li>
+ 	<li>   Kafka</li>
+ 	<li>   A service locator</li>
+ 	<li>   A service gateway</li>
+ 	<li>   Your Lagom services</li>
 </ol>
-There are some rules for building Microservices in Lagom.
+ <blockquote>  There are some rules for building Microservices in Lagom.</blockquote>
 <ol>
- 	<li>Each services owns it's data</li>
- 	<li> Lagom uses persistence and event sourcing for managing data</li>
- 	<li> Lagom separate the service implementation from its description.</li>
+ 	<li> Each services owns it's data</li>
+ 	<li> Lagom uses persistence and event sourcing for managing data</li>
+ 	<li> Lagom separate the service implementation from its description.</li>
 </ol>
 In this post, we will build a minimal Microservices for signing in and signing up a user. First of all, we will create service description interface as shown in below code.
 
@@ -75,9 +75,7 @@ sealed trait CustomCommand
 case class SignInCommand(user: User) extends CustomCommand with ReplyType[Boolean]
 
 object SignInCommand {
-
   implicit val format: Format[SignInCommand] = Json.format
-
 }
 
 case class SignUpCommand(user: User) extends CustomCommand with ReplyType[UserSignUpDone]
@@ -100,9 +98,7 @@ case class SignUpEvent(user: User, userEntityId: String) extends AggregateEvent[
   override def aggregateTag: AggregateEventTag[SignUpEvent] = SignUpEvent.Tag
 }
 
-
 case class UserState(user: Option[User], timeStamp: String)
-
 case class User(name: String, password: String)
 
 object User {
@@ -137,7 +133,6 @@ class UserPersistenceEntity extends PersistentEntity {
         _ => ctx.reply(UserSignUpDone(user.name))
       }
   }.onEvent { case (SignUpEvent(user, userEntityId), state) =>
-//    println(state)
     UserState(Some(user), LocalDateTime.now.toString)
   }.onReadOnlyCommand[SignInCommand, Boolean] {
     case (SignInCommand(user), ctx, state) => ctx.reply(state.user.getOrElse(User("", "")) == user)
