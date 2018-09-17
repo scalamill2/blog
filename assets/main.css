@@ -154,7 +154,11 @@ h1, h2, h3, h4, h5, h6 {
 h6 {
   font-family: Lato;
   font-size: 20px;
+  font-style: italic;
   color: rgb(209, 98, 131);
+  margin-top: 2%;
+  margin-bottom: 2%;
+
 }
 
 cite {
@@ -163,10 +167,14 @@ cite {
 
 b {
   color: rgb(231, 100, 139);
-  font-weight:200; 
-  font-size: 18px
+  font-size: 18px;
+  font-weight: 200;
+  font-style: italic
 }
 
+ul > li {
+  font-family:Lato;
+}
 
 li > a:hover {
   background: none !important;
@@ -348,7 +356,15 @@ figure {
 
 blockquote {
   font-size: 16px;
-  color: rgb(73, 73, 187)
+  color: rgb(126, 126, 185)
+}
+
+blockquote::before {
+  content:  "👉";
+  font-size: 20px ;
+  font-weight:600;
+  margin-right:2%;
+  margin-left:-1%;
 }
 
 figure > pre > code {
@@ -449,7 +465,7 @@ body, html {
 ol {
   list-style:none;
   font-size: 15px !important;
-  margin-left:12px;
+  margin-left:4%;
  }
 
  ol > li {

@@ -24,7 +24,7 @@ tags: Lagom, scala, akka, play, microservices
  	<li>   A service gateway</li>
  	<li>   Your Lagom services</li>
 </ol>
- <blockquote>  There are some rules for building Microservices in Lagom.</blockquote>
+ <blockquote>There are some rules for building Microservices in Lagom.</blockquote>
 <ol>
  	<li> Each services owns it's data</li>
  	<li> Lagom uses persistence and event sourcing for managing data</li>
