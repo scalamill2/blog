@@ -145,20 +145,27 @@ strong {
   font-size: 16px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4{
   font-family: Lato;
   font-weight:400; 
   color: rgb(73, 73, 187)
 }
 
-h6 {
+h4, h5, h6 {
   font-family: Lato;
   font-size: 20px;
   font-style: italic;
   color: rgb(209, 98, 131);
   margin-top: 2%;
   margin-bottom: 2%;
+}
 
+h4::before {
+  content:  "👉";
+  font-size: 20px ;
+  font-weight:600;
+  margin-right:2%;
+  margin-left:-1%;
 }
 
 cite {
@@ -315,8 +322,8 @@ p {
     color:#3d6372  !important;
     font-size: 16px !important;
     line-height: 1.5;
-    margin-top: 1%;
-    margin-bottom: 1%
+    margin-top:3%;
+    margin-bottom:3%;
 }
 
 figure {
@@ -357,14 +364,6 @@ figure {
 blockquote {
   font-size: 16px;
   color: rgb(126, 126, 185)
-}
-
-blockquote::before {
-  content:  "👉";
-  font-size: 20px ;
-  font-weight:600;
-  margin-right:2%;
-  margin-left:-1%;
 }
 
 figure > pre > code {
@@ -466,6 +465,7 @@ ol {
   list-style:none;
   font-size: 15px !important;
   margin-left:4%;
+  margin-bottom: 2%;
  }
 
  ol > li {
