@@ -8,7 +8,7 @@ author: ScalaMill LLP
 ---
 In the previous post we learned about Semigroup, In this post, we will see what are Monoids and how to use them.
 
-**What is Monoid**
+###### What is Monoid ?
 
 Wikipedia says In abstract algebra, a branch of mathematics, a monoid is an algebraic structure with a single associative binary operation and an identity element. We saw from the previous post on Semigroup that Semigroup also has a single associative operation. So monoids are similar to Semigroup but it has an identity element and a monoid definition in Scala look like as below. Here empty method refers to identity element.
 

@@ -10,7 +10,7 @@ categories: functional programming scala
 
 Hi All, Scala now is a most widely used language for enterprises and if you are Scala Programmer then you are also using it in your daily life. Ever wondered how Scala library collections share the same algebra. We can use map, flatMap, reduceLeft, foldLeft functions for any kind of the collection if we know how a particular algebraic datatype in that collection behaves. We will understand these things via Cats.
 
-**What is Cats.**
+###### What is Cats
 
 Cats is the library written in Scala to teach you the functional design patterns in a functional programming. Cats not only provides a solid understanding of Monad, Monoid, Functor, Applicative functor in category theory but also let's you create abstractions for your datatypes .
 
@@ -19,7 +19,7 @@ Add Cats to your sbt project
 libraryDependencies += "org.typelevel" %% "cats-core" % "1.2.0"
 There are various datatype is cats and we will explore one of them in this post.
 
-**SemiGroup**
+###### SemiGroup
 
 Semigroup is a discrete mathematics concept(Wikipedia In mathematics, a semigroup is an algebraic structure consisting of a set together with an associative binary operation. ). Coming to functional programming a Semigroup over a datatype is defined as a single associative operation which takes two values of same type and return you the same datatype.
 

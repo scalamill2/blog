@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link href="/css/autumn.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+</head>
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="/hljs/styles/atelier-plateu-light.css">
+<script src="/hljs/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+
+  <div id="nav-bar" (window:scroll)="onScroll()">
+    <nav id="nav" class="white valign-wrapper">
+      <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:7%"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
+      <a href="#!" class="brand-logo hide-on-large-only"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
+      <a href="#" data-activates="mobile-bar" class="button-collapse">
+              <i class="medium material-icons red-text" style="font-size:40px">menu</i>
+            </a>
+      <!-- <img class="brand-logo" src="/assets/img/scala-logo.png" alt="scala logo not found"> -->
+      <ul id="ulmain" class="animated right-align hide-on-med-and-down" style="position:absolute;right:0 !important">
+        <li>
+          <a href = "https://www.scalamill.com/home" (click) = "removeDepth()">
+                  <span>Company</span>
+                </a>
+        </li>
+        <li>
+          <a href="https://www.scalamill.com/services/consulting" (click) = "addDepth()">
+                  <span>Consulting & Development</span>
+                </a>
+        </li>
+        <li>
+          <a href = "https://www.scalamill.com/training" (click) = "addDepth()">
+                  <span>Training</span>
+                </a>
+        </li>
+        <li>
+          <a href="http://localhost:4000" (click) = "addDepth()">
+                  <span>Blog</span>
+                </a>
+        </li>
+        <li>
+          <a href = "https://www.scalamill.com/contact" (click) = "addDepth()">
+                  <span>Contact</span>
+                </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <ul id="nav2" class="z-depth-5 side-nav" id="mobile-bar">
+    <li class="">
+      <div class="right-align">
+        <a routerLink="https://www.scalamill.com//home" (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Company</span>
+    </a>
+        <span>
+      <a><i class="medium right pink-text material-icons">close</i> </a>
+    </span>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a routerLink="https://www.scalamill.com/services/consulting" (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Consulting & Development</span>
+      </a>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a routerLink="https://www.scalamill.com/training"  (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Training</span>
+      </a>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a href="http://localhost:4000/blog"(click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Blog</span>
+      </a>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a href="https://www.scalamill.com/contact" (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Contact</span>
+      </a>
+      </div>
+    </li>
+  </ul>
+
+<div class="section img">
+    <div class="container">
+      <div class = "centerThings2 hide-on-small-only">
+      <h2 class="orange-text" style="font-size:25px;font-family:monospace">ScalaMill Blog</h2>
+      <p class="white-text" style="font-size:20px">Visit us for boosting your productivity</p>
+    </div>
+    <div class = "centerThings hide-on-med-and-up">
+        <h2 class="orange-text" style="font-size:25px;font-family:monospace">ScalaMill Blog</h2>
+        <p class="white-text" style="font-size:20px">Visit us for boosting your productivity</p>
+      </div>
+  </div>
+  </div>
+<div class="container">
+     <style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<div class="container">
+  <h1>404</h1>
+
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+</div>
+
+</div>
+
+<footer class="page-footer blue-grey darken-3">
+    <div class="container col s10 offset-s1" style="font-family:'font-family: 'PT Serif',sans-serif">
+      <p class="white-text center">
+        <em>"ScalaMill, now is a startup community of individuals who works towards providing modern software solutions using cutting-edge
+          technologies.Since we have just started we work from home. We are a startup and help startup's as well as big organisation to build thier solutions .
+          We welcome clients of every type from small to big enterprises".
+        </em>
+      </p>
+    <br>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">ScalaMill</h5>
+          <p class="grey-text text-lighten-4">Developing Software At Pace</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/home">Company</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/services/consulting">Consulting and Development</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/training">Training</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/blog">blog</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        ScalaMill©2017 Copyright
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+</body></html>   
+

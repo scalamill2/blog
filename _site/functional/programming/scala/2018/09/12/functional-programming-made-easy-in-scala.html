@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link href="/css/autumn.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+</head>
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="/hljs/styles/atelier-plateu-light.css">
+<script src="/hljs/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+
+  <div id="nav-bar" (window:scroll)="onScroll()">
+    <nav id="nav" class="white valign-wrapper">
+      <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:7%"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
+      <a href="#!" class="brand-logo hide-on-large-only"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
+      <a href="#" data-activates="mobile-bar" class="button-collapse">
+              <i class="medium material-icons red-text" style="font-size:40px">menu</i>
+            </a>
+      <!-- <img class="brand-logo" src="/assets/img/scala-logo.png" alt="scala logo not found"> -->
+      <ul id="ulmain" class="animated right-align hide-on-med-and-down" style="position:absolute;right:0 !important">
+        <li>
+          <a href = "https://www.scalamill.com/home" (click) = "removeDepth()">
+                  <span>Company</span>
+                </a>
+        </li>
+        <li>
+          <a href="https://www.scalamill.com/services/consulting" (click) = "addDepth()">
+                  <span>Consulting & Development</span>
+                </a>
+        </li>
+        <li>
+          <a href = "https://www.scalamill.com/training" (click) = "addDepth()">
+                  <span>Training</span>
+                </a>
+        </li>
+        <li>
+          <a href="http://localhost:4000" (click) = "addDepth()">
+                  <span>Blog</span>
+                </a>
+        </li>
+        <li>
+          <a href = "https://www.scalamill.com/contact" (click) = "addDepth()">
+                  <span>Contact</span>
+                </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <ul id="nav2" class="z-depth-5 side-nav" id="mobile-bar">
+    <li class="">
+      <div class="right-align">
+        <a routerLink="https://www.scalamill.com//home" (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Company</span>
+    </a>
+        <span>
+      <a><i class="medium right pink-text material-icons">close</i> </a>
+    </span>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a routerLink="https://www.scalamill.com/services/consulting" (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Consulting & Development</span>
+      </a>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a routerLink="https://www.scalamill.com/training"  (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Training</span>
+      </a>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a href="http://localhost:4000/blog"(click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Blog</span>
+      </a>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a href="https://www.scalamill.com/contact" (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Contact</span>
+      </a>
+      </div>
+    </li>
+  </ul>
+
+
+<div class="row">
+  <div class="col l12">
+
+    <div class="col s12 m12 xl12 l12" class="cyan">
+      <div class="z-depth-1" style="z-index:99">
+        <div class="section cyan" style="padding: 5%">
+          <h5 class="white-text" style="font-size:35px">
+            <em>functional programming made easy in scala</em>
+          </h5>
+        
+          <cite class="white-text">
+              <div class="white-text">
+                  scala,akka,java,lagom,spark 
+                </div>
+            Last updated on <span class="post-meta">
+              <span class="post-date">
+                12 SEP 2018
+              </span>
+            </span> by <span class="post-meta">
+              <span class="post-author">
+                ScalaMill LLP
+              </span></cite>
+              
+          <div class="section">
+            <div id="share-bar">
+
+  <div class="share-buttons">
+      <a  href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/functional/programming/scala/2018/09/12/functional-programming-made-easy-in-scala.html"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Facebook" >
+          <i class="fa fa-facebook-official share-button white-text"> facebook</i>
+      </a>
+
+      <a  href="https://twitter.com/intent/tweet?text=functional programming made easy in scala&url=http://localhost:4000/functional/programming/scala/2018/09/12/functional-programming-made-easy-in-scala.html"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Twitter" >
+          <i class="fa fa-twitter share-button  white-text"> twitter</i>
+      </a>
+
+      <a  href="https://plus.google.com/share?url=http://localhost:4000/functional/programming/scala/2018/09/12/functional-programming-made-easy-in-scala.html"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Google+" >
+          <i class="fa fa-google-plus share-button  white-text"> google</i>
+      </a>
+
+      <a  href="http://pinterest.com/pin/create/button/?url=http://localhost:4000/functional/programming/scala/2018/09/12/functional-programming-made-easy-in-scala.html"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Pinterest" >
+          <i class="fa fa-pinterest-p share-button  white-text"> pinterest</i>
+      </a>
+
+      <a  href="http://www.tumblr.com/share/link?url=http://localhost:4000/functional/programming/scala/2018/09/12/functional-programming-made-easy-in-scala.html"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Tumblr" >
+          <i class="fa fa-tumblr share-button  white-text"> tumblr</i>
+      </a>
+
+      <a  href="http://www.reddit.com/submit?url=http://localhost:4000/functional/programming/scala/2018/09/12/functional-programming-made-easy-in-scala.html"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Reddit" >
+          <i class="fa fa-reddit-alien share-button  white-text"> reddit</i>
+      </a>
+
+      <a  href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/functional/programming/scala/2018/09/12/functional-programming-made-easy-in-scala.html&title=functional programming made easy in scala&summary=&source=scalamill"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on LinkedIn" >
+          <i class="fa fa-linkedin share-button  white-text"> linkedin</i>
+      </a>
+
+      <a  href="mailto:?subject=functional programming made easy in scala&amp;body=Check out this site http://localhost:4000/functional/programming/scala/2018/09/12/functional-programming-made-easy-in-scala.html"
+          title="Share via Email" >
+          <i class="fa fa-envelope share-button  white-text"> email</i>
+      </a>
+  </div>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m12 xl9 l9">
+
+      <div class="col s11 m12 xl12 l12 z-depth-1 " style="padding:5%">
+        <p><p>Hello Programmers, 
+We are living in the era of functional programming. Gone are the days when we used to model object and functions together and building the program using object-oriented technique but still we are left with the necessities of design pattern and management of code in modules when it comes to object-oriented programming. There are many functional programming languages which are coming every day but Scala is very old of them. Since Scala has come in the mainstream, many languages like Java, kotlin, Javascript are influenced by it and taken the same face as Scala has. They have functions, lambdas, closures etc. But Scala comes with a strong type system and with a lot of functional patterns inbuilt. So we will see what is functional programming and how we do it in Scala.</p>
+
+<p>Unlike object-oriented Functional programming decouples object behavior from its state and functions are usable across the domains without creating objects. So functional programming is influenced by below aspects.</p>
+
+<ol>
+  <li>Separate object’s state from its behavior</li>
+  <li>Use immutable objects and transform objects wherever you need.</li>
+  <li>Parameterize everything and talk about context.</li>
+  <li>Use Pure functions which produce no side effects and make reasoning easier about program execution.</li>
+  <li>Use higher-order polymorphism.</li>
+</ol>
+
+<p>In order to understand functional programming first, we need to think about some domain. Let’s talk about Sports domain. We have various sports like cricket, tennis, rugby, football etc and we want to build a portfolio service to display their scores. First, we will model these sports as below. We are creating a base trait Sport here to identify sports of various kinds. For example, we will deal with sports Cricket, Football tennis.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">trait</span> <span class="nc">Sport</span>
+
+<span class="k">object</span> <span class="nc">Football</span> <span class="k">extends</span> <span class="nc">Sport</span>
+
+<span class="k">object</span> <span class="nc">Tennis</span> <span class="k">extends</span> <span class="nc">Sport</span>
+
+<span class="k">object</span> <span class="nc">Cricket</span> <span class="k">extends</span> <span class="nc">Sport</span></code></pre></figure>
+
+<p>Now we will create a base trait portfolio which will be extended by different sports portfolio as given below.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">trait</span> <span class="nc">Portfolio</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">CricketPlayerPortfolio</span><span class="o">(</span><span class="n">totalRuns</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">totalMatches</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">centuries</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">halfCenturies</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Portfolio</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">TennisPlayerPortfolio</span><span class="o">(</span><span class="n">totalMatches</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">wins</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">lost</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Portfolio</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">FootBallPlayerPortFolio</span><span class="o">(</span><span class="n">totalMatches</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">totalGoals</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Portfolio</span></code></pre></figure>
+
+<p>Now we are done portfolios hence we will create another trait Player which will be extended by different kind of players and a portfolio store to store player’s data along with their portfolio.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">trait</span> <span class="nc">Player</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="n">playerId</span><span class="k">:</span> <span class="kt">Int</span>
+  <span class="k">val</span> <span class="n">playerName</span><span class="k">:</span> <span class="kt">String</span>
+  <span class="k">val</span> <span class="n">portfolio</span><span class="k">:</span> <span class="kt">Portfolio</span>
+<span class="o">}</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">CrickePlayer</span><span class="o">(</span><span class="k">override</span> <span class="k">val</span> <span class="n">playerId</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="k">override</span> <span class="k">val</span> <span class="n">playerName</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="k">override</span> <span class="k">val</span> <span class="n">portfolio</span><span class="k">:</span> <span class="kt">CricketPlayerPortfolio</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Player</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">TennisPlayer</span><span class="o">(</span><span class="k">override</span> <span class="k">val</span> <span class="n">playerId</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="k">override</span> <span class="k">val</span> <span class="n">playerName</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="k">override</span> <span class="k">val</span> <span class="n">portfolio</span><span class="k">:</span> <span class="kt">TennisPlayerPortfolio</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Player</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">FootballPlayer</span><span class="o">(</span><span class="k">override</span> <span class="k">val</span> <span class="n">playerId</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="k">override</span> <span class="k">val</span> <span class="n">playerName</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="k">override</span> <span class="k">val</span> <span class="n">portfolio</span><span class="k">:</span> <span class="kt">FootBallPlayerPortFolio</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Player</span>
+
+<span class="k">object</span> <span class="nc">PortfolioStore</span> <span class="o">{</span>
+
+  <span class="k">val</span> <span class="n">cricketPlayers</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="nc">CrickePlayer</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">"Peterson"</span><span class="o">,</span> <span class="nc">CricketPlayerPortfolio</span><span class="o">(</span><span class="mi">10000</span><span class="o">,</span> <span class="mi">300</span><span class="o">,</span> <span class="mi">25</span><span class="o">,</span> <span class="mi">50</span><span class="o">)),</span>
+                           <span class="nc">CrickePlayer</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="s">"Morris"</span><span class="o">,</span> <span class="nc">CricketPlayerPortfolio</span><span class="o">(</span><span class="mi">5000</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30</span><span class="o">)),</span>
+                           <span class="nc">CrickePlayer</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">"Mathew"</span><span class="o">,</span> <span class="nc">CricketPlayerPortfolio</span><span class="o">(</span><span class="mi">8000</span><span class="o">,</span> <span class="mi">150</span><span class="o">,</span> <span class="mi">25</span><span class="o">,</span> <span class="mi">45</span><span class="o">)))</span>
+
+  <span class="k">val</span> <span class="n">fooballPlayers</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="nc">FootballPlayer</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">"Bravo"</span><span class="o">,</span> <span class="nc">FootBallPlayerPortFolio</span><span class="o">(</span><span class="mi">300</span><span class="o">,</span> <span class="mi">600</span><span class="o">)),</span>
+                           <span class="nc">FootballPlayer</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="s">"Dany"</span><span class="o">,</span> <span class="nc">FootBallPlayerPortFolio</span><span class="o">(</span><span class="mi">200</span><span class="o">,</span> <span class="mi">300</span><span class="o">)))</span>
+
+  <span class="k">val</span> <span class="n">tennisPlayers</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="nc">TennisPlayer</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">"Peter"</span><span class="o">,</span> <span class="nc">TennisPlayerPortfolio</span><span class="o">(</span><span class="mi">30</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">)),</span>
+                          <span class="nc">TennisPlayer</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="s">"Bob"</span><span class="o">,</span> <span class="nc">TennisPlayerPortfolio</span><span class="o">(</span><span class="mi">25</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">5</span><span class="o">)),</span>
+                          <span class="nc">TennisPlayer</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">"John"</span><span class="o">,</span> <span class="nc">TennisPlayerPortfolio</span><span class="o">(</span><span class="mi">120</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">10</span><span class="o">)))</span>
+
+  <span class="k">val</span> <span class="n">sportsdPlayers</span><span class="k">:</span> <span class="kt">Map</span><span class="o">[</span><span class="kt">Sport</span>, <span class="kt">Seq</span><span class="o">[</span><span class="kt">Player</span><span class="o">]]</span> <span class="k">=</span> <span class="nc">Map</span><span class="o">(</span><span class="nc">Cricket</span> <span class="o">-&gt;</span> <span class="n">cricketPlayers</span><span class="o">,</span> <span class="nc">Football</span> <span class="o">-&gt;</span> <span class="n">fooballPlayers</span><span class="o">,</span>
+    <span class="nc">Tennis</span> <span class="o">-&gt;</span> <span class="n">tennisPlayers</span><span class="o">)</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Till now we have dealt with the only state of the various object. In functional programming we separate object’ state and functions apart. Let’s create a service to create the portfolio of player.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">object</span> <span class="nc">PortfolioBuilder</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">buildPortfolio</span><span class="o">(</span><span class="n">player</span><span class="k">:</span> <span class="kt">Player</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">portfolio</span> <span class="k">match</span> <span class="o">{</span>
+      <span class="k">case</span> <span class="nc">CricketPlayerPortfolio</span><span class="o">(</span><span class="n">totalRuns</span><span class="o">,</span> <span class="n">totalMatches</span><span class="o">,</span> <span class="n">centuries</span><span class="o">,</span> <span class="n">halfCenturies</span><span class="o">)</span> <span class="k">=&gt;</span>
+                  <span class="n">s</span><span class="s">"""Number of Runs : $totalRuns
+                      Number of Matches Played: $totalMatches
+                      Number of 100s $centuries
+                      Number of 50's : $halfCenturies"""</span>
+      <span class="k">case</span> <span class="nc">TennisPlayerPortfolio</span><span class="o">(</span><span class="n">totalMatches</span><span class="o">,</span> <span class="n">wins</span><span class="o">,</span> <span class="n">lost</span><span class="o">)</span> <span class="k">=&gt;</span>
+                 <span class="n">s</span><span class="s">"""Number of Matches Played: $totalMatches
+                      Win: $wins
+                      lost: $lost"""</span>
+      <span class="k">case</span> <span class="nc">FootBallPlayerPortFolio</span><span class="o">(</span><span class="n">totalMatches</span><span class="o">,</span> <span class="n">totalGoals</span><span class="o">)</span> <span class="k">=&gt;</span>
+                 <span class="n">s</span><span class="s">"""Number of Matches Played: $totalMatches
+                     Number of Goals : $totalGoals"""</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Now we will do some functional programming over this data as given below.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">object</span> <span class="nc">PortfolioApp</span> <span class="k">extends</span> <span class="nc">App</span> <span class="o">{</span>
+
+  <span class="k">def</span> <span class="n">from</span><span class="o">(</span><span class="n">sport</span><span class="k">:</span> <span class="kt">Sport</span><span class="o">)</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">Player</span><span class="o">]</span> <span class="k">=</span> <span class="n">sportsdPlayers</span><span class="o">(</span><span class="n">sport</span><span class="o">)</span>
+
+  <span class="k">def</span> <span class="n">of</span><span class="o">(</span><span class="n">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)(</span><span class="n">seqs</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">Player</span><span class="o">])</span> <span class="k">=</span> <span class="n">seqs</span><span class="o">.</span><span class="n">find</span><span class="o">(</span><span class="k">_</span><span class="o">.</span><span class="n">playerName</span> <span class="o">==</span> <span class="n">name</span><span class="o">)</span>
+
+  <span class="k">def</span> <span class="n">getPlayer</span><span class="o">(</span><span class="n">name</span> <span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">sport</span><span class="k">:</span> <span class="kt">Sport</span><span class="o">)</span><span class="k">:</span> <span class="kt">Option</span><span class="o">[</span><span class="kt">Player</span><span class="o">]</span> <span class="k">=</span> <span class="n">of</span><span class="o">(</span><span class="n">name</span><span class="o">)(</span><span class="n">from</span><span class="o">(</span><span class="n">sport</span><span class="o">))</span>
+
+  <span class="n">println</span><span class="o">(</span><span class="nc">PortfolioBuilder</span> <span class="n">buildPortfolio</span> <span class="n">getPlayer</span><span class="o">(</span><span class="s">"Bravo"</span><span class="o">,</span> <span class="nc">Football</span><span class="o">).</span><span class="n">get</span><span class="o">)</span>
+
+  <span class="n">println</span><span class="o">(</span><span class="nc">PortfolioBuilder</span> <span class="n">buildPortfolio</span> <span class="n">getPlayer</span><span class="o">(</span><span class="s">"Peterson"</span><span class="o">,</span> <span class="nc">Cricket</span><span class="o">).</span><span class="n">get</span><span class="o">)</span>
+
+  <span class="n">println</span><span class="o">(</span><span class="nc">PortfolioBuilder</span> <span class="n">buildPortfolio</span> <span class="n">getPlayer</span><span class="o">(</span><span class="s">"Peter"</span><span class="o">,</span> <span class="nc">Tennis</span><span class="o">).</span><span class="n">get</span><span class="o">)</span>
+
+  <span class="c1">//Number of Players in All domain
+</span>   <span class="k">val</span> <span class="n">totalPlayers</span> <span class="k">=</span> <span class="n">sportsdPlayers</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reduceLeft</span><span class="o">(</span><span class="k">_</span> <span class="o">++</span> <span class="k">_</span><span class="o">).</span><span class="n">length</span>
+   <span class="n">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Number of Players in All Sports $totalPlayers"</span><span class="o">)</span>
+
+  <span class="c1">//Number of total Runs scored in Cricket
+</span>  <span class="k">val</span> <span class="n">totalRuns</span> <span class="k">=</span> <span class="n">sportsdPlayers</span><span class="o">(</span><span class="nc">Cricket</span><span class="o">).</span><span class="n">foldLeft</span><span class="o">(</span><span class="mi">0</span><span class="o">)((</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">portfolio</span> <span class="k">match</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="nc">CricketPlayerPortfolio</span><span class="o">(</span><span class="n">totalRuny</span><span class="o">,</span> <span class="k">_</span><span class="o">,</span> <span class="k">_</span><span class="o">,</span> <span class="k">_</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="n">totalRuny</span>
+    <span class="k">case</span> <span class="k">_</span> <span class="k">=&gt;</span> <span class="mi">0</span>
+  <span class="o">})</span>
+
+  <span class="n">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Number of total Runs scored in Cricket $totalRuns"</span><span class="o">)</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Hope new learners will find it useful. In next post we will see how we can inject dependencies using scala implicits. For any query mail us at contact@scalamill.com</p>
+</p>
+        <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = 'https://www-scalamill-com.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+      </div>
+    </div>
+
+    <div class="section col s12 m12 xl3 l3" style="margin-top:2%">
+      <div class = "col">
+        <head>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<div class="card blue-grey lighten-2 white-text" style=" padding:10%">
+
+    <h6 class="white-text">Follow and connect with us on social and corporate Media</h6>
+
+    <div class="section"> </div>
+    <a href="https://www.linkedin.com/company/scalamill/">
+        <i class="fa fa-linkedin share-button white-text"> Linkedin</i></a>
+
+    <a href="https://www.linkedin.com/in/scalamill-software-48a16715b/">
+        <i class="fa fa-linkedin share-button white-text"> Linkedin page</i></a>
+    </br>
+    <a href="https://twitter.com/scalamill">
+        <i class="fa fa-twitter share-button white-text"> Twitter</i></a>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+</div>
+
+<div class = "col offset-l1">
+    <head>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<div class="card blue-grey lighten-2 white-text" style=" padding:10%">
+
+    <h6 class="white-text">Follow and connect with us on social and corporate Media</h6>
+
+    <div class="section"> </div>
+    <a href="https://www.linkedin.com/company/scalamill/">
+        <i class="fa fa-linkedin share-button white-text"> Linkedin</i></a>
+
+    <a href="https://www.linkedin.com/in/scalamill-software-48a16715b/">
+        <i class="fa fa-linkedin share-button white-text"> Linkedin page</i></a>
+    </br>
+    <a href="https://twitter.com/scalamill">
+        <i class="fa fa-twitter share-button white-text"> Twitter</i></a>
+</div>
+</div>
+  </div>
+
+
+
+<footer class="page-footer blue-grey darken-3">
+    <div class="container col s10 offset-s1" style="font-family:'font-family: 'PT Serif',sans-serif">
+      <p class="white-text center">
+        <em>"ScalaMill, now is a startup community of individuals who works towards providing modern software solutions using cutting-edge
+          technologies.Since we have just started we work from home. We are a startup and help startup's as well as big organisation to build thier solutions .
+          We welcome clients of every type from small to big enterprises".
+        </em>
+      </p>
+    <br>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">ScalaMill</h5>
+          <p class="grey-text text-lighten-4">Developing Software At Pace</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/home">Company</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/services/consulting">Consulting and Development</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/training">Training</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/blog">blog</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        ScalaMill©2017 Copyright
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+</body></html>   

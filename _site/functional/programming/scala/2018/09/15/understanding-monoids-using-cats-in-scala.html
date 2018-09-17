@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link href="/css/autumn.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+</head>
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="/hljs/styles/atelier-plateu-light.css">
+<script src="/hljs/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+
+  <div id="nav-bar" (window:scroll)="onScroll()">
+    <nav id="nav" class="white valign-wrapper">
+      <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:7%"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
+      <a href="#!" class="brand-logo hide-on-large-only"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
+      <a href="#" data-activates="mobile-bar" class="button-collapse">
+              <i class="medium material-icons red-text" style="font-size:40px">menu</i>
+            </a>
+      <!-- <img class="brand-logo" src="/assets/img/scala-logo.png" alt="scala logo not found"> -->
+      <ul id="ulmain" class="animated right-align hide-on-med-and-down" style="position:absolute;right:0 !important">
+        <li>
+          <a href = "https://www.scalamill.com/home" (click) = "removeDepth()">
+                  <span>Company</span>
+                </a>
+        </li>
+        <li>
+          <a href="https://www.scalamill.com/services/consulting" (click) = "addDepth()">
+                  <span>Consulting & Development</span>
+                </a>
+        </li>
+        <li>
+          <a href = "https://www.scalamill.com/training" (click) = "addDepth()">
+                  <span>Training</span>
+                </a>
+        </li>
+        <li>
+          <a href="http://localhost:4000" (click) = "addDepth()">
+                  <span>Blog</span>
+                </a>
+        </li>
+        <li>
+          <a href = "https://www.scalamill.com/contact" (click) = "addDepth()">
+                  <span>Contact</span>
+                </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <ul id="nav2" class="z-depth-5 side-nav" id="mobile-bar">
+    <li class="">
+      <div class="right-align">
+        <a routerLink="https://www.scalamill.com//home" (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Company</span>
+    </a>
+        <span>
+      <a><i class="medium right pink-text material-icons">close</i> </a>
+    </span>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a routerLink="https://www.scalamill.com/services/consulting" (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Consulting & Development</span>
+      </a>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a routerLink="https://www.scalamill.com/training"  (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Training</span>
+      </a>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a href="http://localhost:4000/blog"(click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Blog</span>
+      </a>
+      </div>
+    </li>
+    <li class="">
+      <div class="divider"></div>
+      <div class="center-align">
+        <a href="https://www.scalamill.com/contact" (click) = "addDepth()">
+        <span class="blue-grey-text text-darken-3">Contact</span>
+      </a>
+      </div>
+    </li>
+  </ul>
+
+
+<div class="row">
+  <div class="col l12">
+
+    <div class="col s12 m12 xl12 l12" class="cyan">
+      <div class="z-depth-1" style="z-index:99">
+        <div class="section cyan" style="padding: 5%">
+          <h5 class="white-text" style="font-size:35px">
+            <em>Understanding monoids using Cats in Scala</em>
+          </h5>
+        
+          <cite class="white-text">
+              <div class="white-text">
+                  scala,akka,java,lagom,spark 
+                </div>
+            Last updated on <span class="post-meta">
+              <span class="post-date">
+                15 SEP 2018
+              </span>
+            </span> by <span class="post-meta">
+              <span class="post-author">
+                ScalaMill LLP
+              </span></cite>
+              
+          <div class="section">
+            <div id="share-bar">
+
+  <div class="share-buttons">
+      <a  href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/functional/programming/scala/2018/09/15/understanding-monoids-using-cats-in-scala.html"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Facebook" >
+          <i class="fa fa-facebook-official share-button white-text"> facebook</i>
+      </a>
+
+      <a  href="https://twitter.com/intent/tweet?text=Understanding monoids using Cats in Scala&url=http://localhost:4000/functional/programming/scala/2018/09/15/understanding-monoids-using-cats-in-scala.html"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Twitter" >
+          <i class="fa fa-twitter share-button  white-text"> twitter</i>
+      </a>
+
+      <a  href="https://plus.google.com/share?url=http://localhost:4000/functional/programming/scala/2018/09/15/understanding-monoids-using-cats-in-scala.html"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Google+" >
+          <i class="fa fa-google-plus share-button  white-text"> google</i>
+      </a>
+
+      <a  href="http://pinterest.com/pin/create/button/?url=http://localhost:4000/functional/programming/scala/2018/09/15/understanding-monoids-using-cats-in-scala.html"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Pinterest" >
+          <i class="fa fa-pinterest-p share-button  white-text"> pinterest</i>
+      </a>
+
+      <a  href="http://www.tumblr.com/share/link?url=http://localhost:4000/functional/programming/scala/2018/09/15/understanding-monoids-using-cats-in-scala.html"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Tumblr" >
+          <i class="fa fa-tumblr share-button  white-text"> tumblr</i>
+      </a>
+
+      <a  href="http://www.reddit.com/submit?url=http://localhost:4000/functional/programming/scala/2018/09/15/understanding-monoids-using-cats-in-scala.html"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Reddit" >
+          <i class="fa fa-reddit-alien share-button  white-text"> reddit</i>
+      </a>
+
+      <a  href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/functional/programming/scala/2018/09/15/understanding-monoids-using-cats-in-scala.html&title=Understanding monoids using Cats in Scala&summary=&source=scalamill"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on LinkedIn" >
+          <i class="fa fa-linkedin share-button  white-text"> linkedin</i>
+      </a>
+
+      <a  href="mailto:?subject=Understanding monoids using Cats in Scala&amp;body=Check out this site http://localhost:4000/functional/programming/scala/2018/09/15/understanding-monoids-using-cats-in-scala.html"
+          title="Share via Email" >
+          <i class="fa fa-envelope share-button  white-text"> email</i>
+      </a>
+  </div>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m12 xl9 l9">
+
+      <div class="col s11 m12 xl12 l12 z-depth-1 " style="padding:5%">
+        <p><p>In the previous post we learned about Semigroup, In this post, we will see what are Monoids and how to use them.</p>
+
+<h6 id="what-is-monoid-">What is Monoid ?</h6>
+
+<p>Wikipedia says In abstract algebra, a branch of mathematics, a monoid is an algebraic structure with a single associative binary operation and an identity element. We saw from the previous post on Semigroup that Semigroup also has a single associative operation. So monoids are similar to Semigroup but it has an identity element and a monoid definition in Scala look like as below. Here empty method refers to identity element.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">trait</span> <span class="nc">Monoid</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span>
+<span class="o">{</span>
+  <span class="k">val</span> <span class="n">empty</span><span class="k">:</span> <span class="kt">A</span>
+  <span class="k">def</span> <span class="n">combine</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">A</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span><span class="kt">A</span><span class="o">)</span><span class="k">:</span> <span class="kt">A</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>A Monoid has the same operation as we have with Semigroup and if we have a Semigroup available for a particular datatype we can rewrite monoid definition as below.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">trait</span> <span class="nc">Semigroup</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">combine</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">A</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">A</span><span class="o">)</span><span class="k">:</span> <span class="kt">A</span>
+<span class="o">}</span>
+<span class="k">trait</span> <span class="nc">Monoid</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span> <span class="nc">extends</span> <span class="nc">Semigroup</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">empty</span><span class="k">:</span> <span class="kt">A</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>In cats, we already have monoid inbuilt for some datatypes. First, add cats to your SBT project.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"org.typelevel"</span> <span class="o">%%</span> <span class="s">"cats-core"</span> <span class="o">%</span> <span class="s">"1.2.0"</span></code></pre></figure>
+
+<p>As usual, we need to add below cats imports to work with a monoid</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">import</span> <span class="nn">cats.Monoid</span>
+<span class="k">import</span> <span class="nn">cats.implicits._</span></code></pre></figure>
+
+<p>Monoid instance for primitive types are already available in cats and can be used as below. Monoid has an identity element by definition and if you will combine another operand with it you will get the same as you can see in below code.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">val</span> <span class="n">intMonoid</span> <span class="k">=</span> <span class="nc">Monoid</span><span class="o">[</span><span class="kt">Int</span><span class="o">]</span>
+<span class="k">val</span> <span class="n">strMonoid</span> <span class="k">=</span> <span class="nc">Monoid</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span>
+<span class="k">val</span> <span class="n">listMonoid</span> <span class="k">=</span> <span class="nc">Monoid</span><span class="o">[</span><span class="kt">List</span><span class="o">[</span><span class="kt">Int</span><span class="o">]]</span>
+
+<span class="n">assert</span><span class="o">(</span><span class="n">intMonoid</span><span class="o">.</span><span class="n">combine</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">3</span><span class="o">)</span> <span class="o">==</span> <span class="mi">4</span><span class="o">)</span>
+<span class="n">assert</span><span class="o">(</span><span class="n">strMonoid</span><span class="o">.</span><span class="n">combine</span><span class="o">(</span><span class="s">"Hello "</span><span class="o">,</span> <span class="s">"World"</span><span class="o">)</span> <span class="o">==</span> <span class="s">"Hello World"</span><span class="o">)</span>
+<span class="n">assert</span><span class="o">(</span><span class="n">listMonoid</span><span class="o">.</span><span class="n">combine</span><span class="o">(</span><span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">List</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">))</span> <span class="o">==</span> <span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">))</span>
+
+<span class="n">assert</span><span class="o">(</span><span class="n">intMonoid</span><span class="o">.</span><span class="n">combine</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">intMonoid</span><span class="o">.</span><span class="n">empty</span><span class="o">)</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span>
+<span class="n">assert</span><span class="o">(</span><span class="n">strMonoid</span><span class="o">.</span><span class="n">combine</span><span class="o">(</span><span class="s">"Hello World"</span><span class="o">,</span> <span class="n">strMonoid</span><span class="o">.</span><span class="n">empty</span><span class="o">)</span> <span class="o">==</span> <span class="s">"Hello World"</span><span class="o">)</span>
+<span class="n">assert</span><span class="o">(</span><span class="n">listMonoid</span><span class="o">.</span><span class="n">combine</span><span class="o">(</span><span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="n">listMonoid</span><span class="o">.</span><span class="n">empty</span><span class="o">)</span> <span class="o">==</span> <span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">))</span></code></pre></figure>
+
+<p>In the previous post on Semigroup, we demonstrate a banking transaction App to combine the credit, debit and final balance using reduceLeft. But what will happen if we find that there are no transactions in personal account then what we will return a result? Here monoid can solve our problem as it has an identity element.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">object</span> <span class="nc">TransactionType</span> <span class="k">extends</span> <span class="nc">Enumeration</span> <span class="o">{</span>
+  <span class="k">type</span> <span class="kt">TRANSXN</span> <span class="o">=</span> <span class="nc">Value</span>
+  <span class="k">val</span> <span class="nc">CREDIT</span> <span class="k">=</span> <span class="nc">Value</span><span class="o">(</span><span class="s">"Credit"</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nc">DEBIT</span> <span class="k">=</span> <span class="nc">Value</span><span class="o">(</span><span class="s">"Debit"</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nc">INVALID_OR_NO_TRANSACTION</span> <span class="k">=</span> <span class="nc">Value</span><span class="o">(</span><span class="s">"InvalidOrNoTransaction"</span><span class="o">)</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Create a case class to represent the transaction class.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">case</span> <span class="k">class</span> <span class="nc">Transaction</span><span class="o">(</span><span class="n">transactionType</span><span class="k">:</span> <span class="kt">TransactionType.TRANSXN</span><span class="o">,</span> <span class="n">amount</span><span class="k">:</span> <span class="kt">Double</span><span class="o">)</span></code></pre></figure>
+
+<p>Now write monoids to combine all credit, debit and calculate final balance.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">object</span> <span class="nc">CombineAllCredit</span> <span class="k">extends</span> <span class="nc">Monoid</span><span class="o">[</span><span class="kt">Transaction</span><span class="o">]</span> <span class="o">{</span>
+
+  <span class="k">override</span> <span class="k">def</span> <span class="n">empty</span> <span class="k">=</span> <span class="nc">Transaction</span><span class="o">(</span><span class="nc">TransactionType</span><span class="o">.</span><span class="nc">INVALID_OR_NO_TRANSACTION</span><span class="o">,</span> <span class="mi">0</span><span class="o">)</span>  
+
+   <span class="k">override</span> <span class="k">def</span> <span class="n">combine</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Transaction</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Transaction</span><span class="o">)</span><span class="k">:</span> <span class="kt">Transaction</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">b</span><span class="o">.</span><span class="n">transactionType</span> <span class="o">==</span> <span class="nc">TransactionType</span><span class="o">.</span><span class="nc">CREDIT</span><span class="o">)</span>
+    <span class="o">{</span>
+      <span class="n">a</span><span class="o">.</span><span class="n">copy</span><span class="o">(</span><span class="n">transactionType</span> <span class="k">=</span> <span class="nc">TransactionType</span><span class="o">.</span><span class="nc">CREDIT</span><span class="o">,</span> <span class="n">amount</span> <span class="k">=</span> <span class="n">a</span><span class="o">.</span><span class="n">amount</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="n">amount</span><span class="o">)</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+      <span class="n">a</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">object</span> <span class="nc">CombineAllDebit</span> <span class="k">extends</span> <span class="nc">Monoid</span><span class="o">[</span><span class="kt">Transaction</span><span class="o">]</span> <span class="o">{</span>
+
+  <span class="k">override</span> <span class="k">def</span> <span class="n">empty</span> <span class="k">=</span> <span class="nc">Transaction</span><span class="o">(</span><span class="nc">TransactionType</span><span class="o">.</span><span class="nc">INVALID_OR_NO_TRANSACTION</span><span class="o">,</span> <span class="mi">0</span><span class="o">)</span>  
+
+  <span class="k">override</span> <span class="k">def</span> <span class="n">combine</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Transaction</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Transaction</span><span class="o">)</span><span class="k">:</span> <span class="kt">Transaction</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">b</span><span class="o">.</span><span class="n">transactionType</span> <span class="o">==</span> <span class="nc">TransactionType</span><span class="o">.</span><span class="nc">DEBIT</span><span class="o">)</span>
+    <span class="o">{</span>
+      <span class="n">a</span><span class="o">.</span><span class="n">copy</span><span class="o">(</span><span class="n">transactionType</span> <span class="k">=</span> <span class="nc">TransactionType</span><span class="o">.</span><span class="nc">DEBIT</span><span class="o">,</span> <span class="n">amount</span> <span class="k">=</span> <span class="n">a</span><span class="o">.</span><span class="n">amount</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="n">amount</span><span class="o">)</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+      <span class="n">a</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">object</span> <span class="nc">Finalbalance</span> <span class="k">extends</span> <span class="nc">Monoid</span><span class="o">[</span><span class="kt">Transaction</span><span class="o">]</span> <span class="o">{</span>
+
+  <span class="k">override</span> <span class="k">def</span> <span class="n">empty</span> <span class="k">=</span> <span class="nc">Transaction</span><span class="o">(</span><span class="nc">TransactionType</span><span class="o">.</span><span class="nc">INVALID_OR_NO_TRANSACTION</span><span class="o">,</span> <span class="mi">0</span><span class="o">)</span>  
+
+  <span class="k">override</span> <span class="k">def</span> <span class="n">combine</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Transaction</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Transaction</span><span class="o">)</span><span class="k">:</span> <span class="kt">Transaction</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">b</span><span class="o">.</span><span class="n">transactionType</span> <span class="o">==</span> <span class="nc">TransactionType</span><span class="o">.</span><span class="nc">DEBIT</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">a</span><span class="o">.</span><span class="n">copy</span><span class="o">(</span><span class="n">amount</span> <span class="k">=</span> <span class="n">a</span><span class="o">.</span><span class="n">amount</span> <span class="o">-</span> <span class="n">b</span><span class="o">.</span><span class="n">amount</span><span class="o">)</span>
+    <span class="o">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">b</span><span class="o">.</span><span class="n">transactionType</span> <span class="o">==</span> <span class="nc">TransactionType</span><span class="o">.</span><span class="nc">CREDIT</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">a</span><span class="o">.</span><span class="n">copy</span><span class="o">(</span><span class="n">amount</span> <span class="k">=</span> <span class="n">a</span><span class="o">.</span><span class="n">amount</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="n">amount</span><span class="o">)</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+      <span class="n">a</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Now we can create a function to generate the final report. In case of the no transaction if we use reduceLeft we will get a java.lang.UnsupportedOperationException: empty.reduceLeft but we will use foldleft and return an identity element as we have a monoid instance.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">object</span> <span class="nc">reportSevice</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">report</span><span class="o">(</span><span class="n">transactions</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">Transaction</span><span class="o">])</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nc">Transaction</span><span class="o">(</span><span class="nc">TransactionType</span><span class="o">.</span><span class="nc">CREDIT</span><span class="o">,</span> <span class="n">totalCredit</span><span class="o">)</span> <span class="k">=</span> <span class="n">transactions</span><span class="o">.</span><span class="n">foldLeft</span><span class="o">(</span><span class="nc">CombineAllCredit</span><span class="o">.</span><span class="n">empty</span><span class="o">)(</span><span class="nc">CombineAllCredit</span><span class="o">.</span><span class="n">combine</span><span class="o">)</span>
+    <span class="k">val</span> <span class="nc">Transaction</span><span class="o">(</span><span class="nc">TransactionType</span><span class="o">.</span><span class="nc">DEBIT</span><span class="o">,</span> <span class="n">totalDebit</span><span class="o">)</span>  <span class="k">=</span>  <span class="n">transactions</span><span class="o">.</span><span class="n">foldLeft</span><span class="o">(</span><span class="nc">CombineAllDebit</span><span class="o">.</span><span class="n">empty</span><span class="o">)(</span><span class="nc">CombineAllDebit</span><span class="o">.</span><span class="n">combine</span><span class="o">)</span>
+    <span class="k">val</span> <span class="nc">Transaction</span><span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="n">finalbalance</span><span class="o">)</span> <span class="k">=</span> <span class="n">transactions</span><span class="o">.</span><span class="n">foldLeft</span><span class="o">(</span><span class="nc">Finalbalance</span><span class="o">.</span><span class="n">empty</span><span class="o">)(</span><span class="nc">Finalbalance</span><span class="o">.</span><span class="n">combine</span><span class="o">)</span>
+    <span class="n">s</span><span class="s">"Total Credit is $totalCredit and total debit is $totalDebit and final Balance is $finalbalance"</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Now create some transactions and see the output.</p>
+
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">val</span> <span class="n">transactions</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span>
+  <span class="nc">Transaction</span><span class="o">(</span><span class="nc">TransactionType</span><span class="o">.</span><span class="nc">INVALID_OR_NO_TRANSACTION</span><span class="o">,</span> <span class="mf">40.0</span><span class="o">),</span>
+  <span class="nc">Transaction</span><span class="o">(</span><span class="nc">TransactionType</span><span class="o">.</span><span class="nc">CREDIT</span><span class="o">,</span> <span class="mf">200.0</span><span class="o">),</span>
+  <span class="nc">Transaction</span><span class="o">(</span><span class="nc">TransactionType</span><span class="o">.</span><span class="nc">INVALID_OR_NO_TRANSACTION</span><span class="o">,</span> <span class="mf">50.0</span><span class="o">),</span>
+  <span class="nc">Transaction</span><span class="o">(</span><span class="nc">TransactionType</span><span class="o">.</span><span class="nc">DEBIT</span><span class="o">,</span> <span class="mf">50.0</span><span class="o">),</span>
+  <span class="nc">Transaction</span><span class="o">(</span><span class="nc">TransactionType</span><span class="o">.</span><span class="nc">CREDIT</span><span class="o">,</span> <span class="mf">300.0</span><span class="o">),</span>
+  <span class="nc">Transaction</span><span class="o">(</span><span class="nc">TransactionType</span><span class="o">.</span><span class="nc">DEBIT</span><span class="o">,</span> <span class="mf">100.0</span><span class="o">),</span>
+  <span class="nc">Transaction</span><span class="o">(</span><span class="nc">TransactionType</span><span class="o">.</span><span class="nc">INVALID_OR_NO_TRANSACTION</span><span class="o">,</span> <span class="mf">25.0</span><span class="o">)</span>
+<span class="o">)</span>
+ <span class="n">println</span><span class="o">(</span><span class="n">reportSevice</span><span class="o">.</span><span class="n">report</span><span class="o">(</span><span class="n">transactions</span><span class="o">))</span>
+ </code></pre></figure>
+
+<p>Please find the code through <a href="https://github.com/scalamill/cats-in-practice/blob/master/src/main/scala/com/scalamill/meow/Monoid.scala">repo</a></p>
+</p>
+        <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = 'https://www-scalamill-com.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+      </div>
+    </div>
+
+    <div class="section col s12 m12 xl3 l3" style="margin-top:2%">
+      <div class = "col">
+        <head>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<div class="card blue-grey lighten-2 white-text" style=" padding:10%">
+
+    <h6 class="white-text">Follow and connect with us on social and corporate Media</h6>
+
+    <div class="section"> </div>
+    <a href="https://www.linkedin.com/company/scalamill/">
+        <i class="fa fa-linkedin share-button white-text"> Linkedin</i></a>
+
+    <a href="https://www.linkedin.com/in/scalamill-software-48a16715b/">
+        <i class="fa fa-linkedin share-button white-text"> Linkedin page</i></a>
+    </br>
+    <a href="https://twitter.com/scalamill">
+        <i class="fa fa-twitter share-button white-text"> Twitter</i></a>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+</div>
+
+<div class = "col offset-l1">
+    <head>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<div class="card blue-grey lighten-2 white-text" style=" padding:10%">
+
+    <h6 class="white-text">Follow and connect with us on social and corporate Media</h6>
+
+    <div class="section"> </div>
+    <a href="https://www.linkedin.com/company/scalamill/">
+        <i class="fa fa-linkedin share-button white-text"> Linkedin</i></a>
+
+    <a href="https://www.linkedin.com/in/scalamill-software-48a16715b/">
+        <i class="fa fa-linkedin share-button white-text"> Linkedin page</i></a>
+    </br>
+    <a href="https://twitter.com/scalamill">
+        <i class="fa fa-twitter share-button white-text"> Twitter</i></a>
+</div>
+</div>
+  </div>
+
+
+
+<footer class="page-footer blue-grey darken-3">
+    <div class="container col s10 offset-s1" style="font-family:'font-family: 'PT Serif',sans-serif">
+      <p class="white-text center">
+        <em>"ScalaMill, now is a startup community of individuals who works towards providing modern software solutions using cutting-edge
+          technologies.Since we have just started we work from home. We are a startup and help startup's as well as big organisation to build thier solutions .
+          We welcome clients of every type from small to big enterprises".
+        </em>
+      </p>
+    <br>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">ScalaMill</h5>
+          <p class="grey-text text-lighten-4">Developing Software At Pace</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/home">Company</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/services/consulting">Consulting and Development</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/training">Training</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/blog">blog</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        ScalaMill©2017 Copyright
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+</body></html>   

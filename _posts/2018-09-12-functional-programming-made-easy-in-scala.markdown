@@ -6,7 +6,8 @@ tags: "scala, akka, java, lagom, spark"
 date:   2018-09-12 19:43:29 +0530
 categories: functional programming scala
 ---
-Hello Programmers, We are living in the era of functional programming. Gone are the days when we used to model object and functions together and building the program using object-oriented technique but still we are left with the necessities of design pattern and management of code in modules when it comes to object-oriented programming. There are many functional programming languages which are coming every day but Scala is very old of them. Since Scala has come in the mainstream, many languages like Java, kotlin, Javascript are influenced by it and taken the same face as Scala has. They have functions, lambdas, closures etc. But Scala comes with a strong type system and with a lot of functional patterns inbuilt. So we will see what is functional programming and how we do it in Scala.
+Hello Programmers, 
+We are living in the era of functional programming. Gone are the days when we used to model object and functions together and building the program using object-oriented technique but still we are left with the necessities of design pattern and management of code in modules when it comes to object-oriented programming. There are many functional programming languages which are coming every day but Scala is very old of them. Since Scala has come in the mainstream, many languages like Java, kotlin, Javascript are influenced by it and taken the same face as Scala has. They have functions, lambdas, closures etc. But Scala comes with a strong type system and with a lot of functional patterns inbuilt. So we will see what is functional programming and how we do it in Scala.
 
 Unlike object-oriented Functional programming decouples object behavior from its state and functions are usable across the domains without creating objects. So functional programming is influenced by below aspects.
 

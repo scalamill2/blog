@@ -9,7 +9,7 @@ tags: scala, cats, functor
 
 In previous posts we learned something about Semigroup and Monoid in Cats. Now we will look into a Functor.
 
-<strong>What is a Functor.</strong>
+###### What is a Functor ?
 
 According to Wikipedia: In <a title="Mathematics" href="https://en.wikipedia.org/wiki/Mathematics">mathematics</a>, a <b>functor</b> is a map between <a title="Category (mathematics)" href="https://en.wikipedia.org/wiki/Category_(mathematics)">categories</a>. Functors were first considered in <a title="Algebraic topology" href="https://en.wikipedia.org/wiki/Algebraic_topology">algebraic topology</a>, where algebraic objects (such as the <a title="Fundamental group" href="https://en.wikipedia.org/wiki/Fundamental_group">fundamental group</a>) are associated to <a title="Topological space" href="https://en.wikipedia.org/wiki/Topological_space">topological spaces</a>, and maps between these algebraic objects are associated to <a title="Continuous function" href="https://en.wikipedia.org/wiki/Continuous_function">continuous</a> maps between spaces. Nowadays, functors are used throughout modern mathematics to relate various categories. Thus, functors are important in all areas within mathematics to which <a title="Category theory" href="https://en.wikipedia.org/wiki/Category_theory">category theory</a> is applied.
 
