@@ -4,6 +4,7 @@ title: "Understanding monoids using Cats in Scala"
 date: 2018-09-15 18:30:51 +530
 tags: "scala, akka, java, lagom, spark"
 categories: functional programming scala
+author: ScalaMill LLP
 ---
 In the previous post we learned about Semigroup, In this post, we will see what are Monoids and how to use them.
 
