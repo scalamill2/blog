@@ -148,13 +148,13 @@ strong {
 h1, h2, h3, h4, h5, h6 {
   font-family: Lato;
   font-weight:400; 
-  color: rgb(128, 53, 75);
+  color: rgb(73, 73, 187)
 }
 
 h6 {
   font-family: Lato;
   font-size: 20px;
-  color: rgb(128, 53, 75);
+  color: rgb(209, 98, 131);
 }
 
 cite {
@@ -164,6 +164,7 @@ cite {
 b {
   color: rgb(231, 100, 139);
   font-weight:200; 
+  font-size: 18px
 }
 
 
@@ -343,6 +344,11 @@ figure {
   border-left-width: 6px !important;
   border-left-style: solid !important;
   border-left-color: hsla(219, 79%, 44%, 0.753) !important;
+}
+
+blockquote {
+  font-size: 16px;
+  color: rgb(73, 73, 187)
 }
 
 figure > pre > code {

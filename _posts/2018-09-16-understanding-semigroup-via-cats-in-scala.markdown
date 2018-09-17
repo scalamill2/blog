@@ -16,7 +16,10 @@ Cats is the library written in Scala to teach you the functional design patterns
 
 Add Cats to your sbt project
 
+{% highlight scala %}
 libraryDependencies += "org.typelevel" %% "cats-core" % "1.2.0"
+{% endhighlight %}
+
 There are various datatype is cats and we will explore one of them in this post.
 
 ###### SemiGroup
