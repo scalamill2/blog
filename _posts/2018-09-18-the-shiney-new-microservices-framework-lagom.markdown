@@ -10,13 +10,16 @@ tags: Lagom, scala, akka, play, microservices
 <b>Lagom</b> is a Microservices framework built on top of Akka and Play. Lagom provides Scala as well as Java API to build microservices. Like Akka where we focus on writing business logic in Actors rather than focusing on low-level multi-threading logic, Lagom enables us to write microservices without bothering about wiring them.
 
 ###### Features of Lagom Framework
+<div id = "lists">
 <ol>
  	<li>    A Single command builds your supported components and microservices.</li>
  	<li>    Solves business problems instead of wiring services.</li>
  	<li>    Quickly build and hot reload project when source code changes.</li>
  	<li>    As it is built on top of Akka we get all merits of reactive applications i.e Elasticity, Resiliency and Responsiveness.</li>
 </ol>
+</div>
 ###### Lagom development environment comprises of and runs on
+<div id = "lists">
 <ol>
  	<li>   Cassandra</li>
  	<li>   Kafka</li>
@@ -24,6 +27,7 @@ tags: Lagom, scala, akka, play, microservices
  	<li>   A service gateway</li>
  	<li>   Your Lagom services</li>
 </ol>
+</div>
 #### Below are some rules for building Microservices in Lagom
 <ol>
  	<li> Each services owns it's data</li>

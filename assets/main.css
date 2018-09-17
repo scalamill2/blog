@@ -461,10 +461,16 @@ body, html {
   line-height: 300px;
 }
 
+#lists > ol {
+  list-style:none;
+  font-size: 15px !important;
+  margin-left: 4%;
+  margin-bottom: 2%;
+}
+
 ol {
   list-style:none;
   font-size: 15px !important;
-  margin-left:4%;
   margin-bottom: 2%;
  }
 
