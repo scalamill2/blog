@@ -56,7 +56,7 @@ class CurrentAccount extends AccountType
 class SomeOtherAccount extends AccountType
 {% endhighlight %}
 
-Now our task is to build some mechanism to convert accout of one type to some other type. As you can see from above defintion of the functor that a functor takes a collection of datatype **F[A]** which is **BankAccount** in our case. **A** and **B** are Account type and again **F[B]** is a **BankAccount**. Here F is collection type but we see **BankAccount** is not a collection, so what we have **Option** which is not a collection but it has a corresponding functors. Simlarly **Option** is a container for any datatype, we have **BankAccount** as a container for **AccountType**. 
+Now our task is to build some mechanism to convert account of one type to some other type. As you can see from above defintion of the functor that a functor takes a collection of datatype **F[A]** which is **BankAccount** in our case. **A** and **B** are Account type and again **F[B]** is a **BankAccount**. Here F is collection type but we see **BankAccount** is not a collection, so what we have **Option** which is not a collection but it has a corresponding functors. Simlarly **Option** is a container for any datatype, we have **BankAccount** as a container for **AccountType**. 
 
 {% highlight scala %}
 object BankAccountFunctor {
