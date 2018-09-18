@@ -440,6 +440,15 @@ body, html {
   border-left-color: rgb(24, 122, 202) !important;
 }
 
+.blog-post-background {
+  background:  linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+.followus{
+ background-color: #f977ce;
+background-image: linear-gradient(315deg, #f977ce 0%, #c373f2 74%);
+}
+
 .offers-background{
   background:linear-gradient(-20deg, hsl(186, 75%, 49%) 60%, hsla(194, 72%, 46%, 0.796) 25%)
 }
