@@ -21,7 +21,7 @@ There are various datatype is cats and we will explore one of them in this post.
 
 ###### SemiGroup
 
-Semigroup is a discrete mathematics concept(Wikipedia In mathematics, a semigroup is an algebraic structure consisting of a set together with an associative binary operation. ). Coming to functional programming a Semigroup over a datatype is defined as a single associative operation which takes two values of same type and return you the same datatype.
+Semigroup is a discrete mathematics concept( As per <strong>Wikipedia </strong>In mathematics, a semigroup is an <a title="Algebraic structure" href="https://en.wikipedia.org/wiki/Algebraic_structure">algebraic structure</a> consisting of a <a title="Set (mathematics)" href="https://en.wikipedia.org/wiki/Set_(mathematics)">set</a> together with an <a class="mw-redirect" title="Associative" href="https://en.wikipedia.org/wiki/Associative">associative</a> <a title="Binary operation" href="https://en.wikipedia.org/wiki/Binary_operation">binary operation</a>. ). Coming to functional programming a Semigroup over a datatype is defined as a single associative operation which takes two values of same type and return you the same datatype.
 
 To work with cats we need to import basic imports as below.
 
