@@ -320,10 +320,10 @@ li > a {
 
 p {
     color:#3d6372  !important;
-    font-size: 16px !important;
+    font-size: 17px !important;
     line-height: 1.5;
-    margin-top:3%;
-    margin-bottom:3%;
+    /* margin-top:3%;
+    margin-bottom:3%; */
 }
 
 figure {
@@ -441,12 +441,14 @@ body, html {
 }
 
 .blog-post-background {
-  background:  linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+ /* background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160)); */
+ background: linear-gradient(to right, rgb(238, 188, 197), rgb(250, 207, 182));
+
 }
 
 .followus{
  background-color: #f977ce;
-background-image: linear-gradient(315deg, #f977ce 0%, #c373f2 74%);
+ background-image: linear-gradient(141deg, #ec8dcc 0%, #ca8fec 74%);
 }
 
 .offers-background{
@@ -483,14 +485,14 @@ background-image: linear-gradient(315deg, #f977ce 0%, #c373f2 74%);
 
 ol {
   list-style:none;
-  font-size: 15px !important;
+  font-size: 17px !important;
   margin-bottom: 2%;
  }
 
  ol > li {
   padding-left:4px;
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 100;
   color:#5a6791  !important;
  }
 

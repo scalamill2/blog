@@ -11,10 +11,9 @@
             <p class="white-text tags">
               {{ page.tags }}
             </p>
+            
           </h5>
-
           <cite class="white-text">
-
             Last updated on
             <span class="post-meta">
               <span class="post-date">
@@ -27,6 +26,7 @@
               </span>
           </cite>
 
+          
           <div class="section">
             {% include share.html %}
           </div>
@@ -36,8 +36,8 @@
 
     <div class="col s12 m12 xl9 l9">
 
-      <div class="col s11 m12 xl12 l12 z-depth-1 " style="padding:4%">
-        <p>{{content}}</p>
+      <div class="col s11 m12 xl12 l12 z-depth-1 " style="padding:6%">
+        <post>{{content}}</p>
         {% include discuss.html %}
       </div>
     </div>
@@ -55,7 +55,7 @@
 </div>
 
 <div class="col offset-l1">
-  {% include followus.html %}
+  {% include followus-bottom.html %}
 </div>
 
 
