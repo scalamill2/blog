@@ -441,8 +441,8 @@ body, html {
 }
 
 .blog-post-background {
- /* background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160)); */
- background: linear-gradient(to right, rgb(238, 188, 197), rgb(250, 207, 182));
+ background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160));
+ /* background: linear-gradient(to right, rgb(238, 188, 197), rgb(250, 207, 182)); */
 
 }
 
