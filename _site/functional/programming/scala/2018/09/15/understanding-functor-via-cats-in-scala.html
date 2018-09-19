@@ -12,6 +12,7 @@
 </head>
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!-- <link rel="stylesheet" href="/hljs/styles/atelier-plateu-light.css">
 <script src="/hljs/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script> -->
@@ -19,7 +20,6 @@
 </head>
 
 <body>
-
   <div id="nav-bar" (window:scroll)="onScroll()">
     <nav id="nav" class="white valign-wrapper">
       <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:7%"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
@@ -104,8 +104,15 @@
 
 
 <div class="row">
-  <div class="col l12">
+<div class="col s12 m12 l12">
+<div id="particles-js">
 
+</div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col s12">
     <div class="col s12 m12 xl12 l12" class="cyan">
       <div class="z-depth-1" style="z-index:99">
         <div class="section blog-post-background" style="padding: 5%;color:aquamarine">
@@ -117,7 +124,6 @@
           </h5>
 
           <cite class="white-text">
-
             Last updated on
             <span class="post-meta">
               <span class="post-date">
@@ -192,7 +198,7 @@
 
     <div class="col s12 m12 xl9 l9">
 
-      <div class="col s11 m12 xl12 l12 z-depth-1 " style="padding:6%">
+      <div class="col s12 m12 xl12 l12 z-depth-1 " style="padding:6%">
         <p><p>In previous posts we learned something about Semigroup and Monoid in Cats. Now we will look into a Functor.</p>
 
 <h6 id="what-is-a-functor-">What is a Functor ?</h6>
@@ -219,10 +225,10 @@
 <span class="k">val</span> <span class="n">list</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">)</span>
 <span class="k">val</span> <span class="n">listOption</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="nc">Option</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="nc">Option</span><span class="o">(</span><span class="mi">2</span><span class="o">),</span> <span class="nc">Option</span><span class="o">(</span><span class="mi">3</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">Functor</span><span class="o">[</span><span class="kt">Option</span><span class="o">].</span><span class="n">map</span><span class="o">(</span><span class="n">option</span><span class="o">)(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="o">))</span>
-<span class="n">println</span><span class="o">(</span><span class="nc">Functor</span><span class="o">[</span><span class="kt">List</span><span class="o">].</span><span class="n">map</span><span class="o">(</span><span class="n">list</span><span class="o">)(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="o">))</span> 
+<span class="n">println</span><span class="o">(</span><span class="nc">Functor</span><span class="o">[</span><span class="kt">List</span><span class="o">].</span><span class="n">map</span><span class="o">(</span><span class="n">list</span><span class="o">)(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="o">))</span>
 <span class="n">println</span><span class="o">(</span><span class="nc">Functor</span><span class="o">[</span><span class="kt">List</span><span class="o">].</span><span class="n">compose</span><span class="o">[</span><span class="kt">Option</span><span class="o">].</span><span class="n">map</span><span class="o">(</span><span class="n">listOption</span><span class="o">)(</span><span class="k">_</span> <span class="o">+</span> <span class="mi">1</span><span class="o">))</span></code></pre></figure>
 
-<p>Again we will unsdertand functor in context of banking domain. Bank usually have certain constraints over bank balance, based on that they can take actions on person’s account. Like if balance is below a certain amount then they can convert to some other account type or if balance is above a certain amount they can change account type and also can award some more money on top of current balance. First we will create various account type object and bank account case class as below.</p>
+<p>Again we will understand functor in context of banking domain. Bank usually have certain constraints over bank balance, based on that they can take actions on person’s account. Like if balance is below a certain amount then they can convert to some other account type or if balance is above a certain amount they can change account type and also can award some more money on top of current balance. First we will create various account type object and bank account case class as below.</p>
 
 <figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">case</span> <span class="k">class</span> <span class="nc">BankAccount</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">AccountType</span><span class="o">](</span><span class="n">accountType</span><span class="k">:</span> <span class="kt">T</span><span class="o">,</span> <span class="n">balance</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">status</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span>
 
@@ -232,10 +238,10 @@
 <span class="k">class</span> <span class="nc">CurrentAccount</span> <span class="k">extends</span> <span class="nc">AccountType</span>
 <span class="k">class</span> <span class="nc">SomeOtherAccount</span> <span class="k">extends</span> <span class="nc">AccountType</span></code></pre></figure>
 
-<p>Now our task is to build some mechanism to convert account of one type to some other type. As you can see from above defintion of the functor that a functor takes a collection of datatype <strong>F[A]</strong> which is <strong>BankAccount</strong> in our case. <strong>A</strong> and <strong>B</strong> are Account type and again <strong>F[B]</strong> is a <strong>BankAccount</strong>. Here F is collection type but we see <strong>BankAccount</strong> is not a collection, so what we have <strong>Option</strong> which is not a collection but it has a corresponding functors. Simlarly <strong>Option</strong> is a container for any datatype, we have <strong>BankAccount</strong> as a container for <strong>AccountType</strong>.</p>
+<p>Now our task is to build some mechanism to convert account of one type to some other type. As you can see from above definition of the functor that a functor takes a collection of datatype <strong>F[A]</strong> which is <strong>BankAccount</strong> in our case. <strong>A</strong> and <strong>B</strong> are Account type and again <strong>F[B]</strong> is a <strong>BankAccount</strong>. Here F is collection type but we see <strong>BankAccount</strong> is not a collection, so what we have <strong>Option</strong> which is not a collection but it has a corresponding functors. Similarly <strong>Option</strong> is a container for any datatype, we have <strong>BankAccount</strong> as a container for <strong>AccountType</strong>.</p>
 
 <figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">object</span> <span class="nc">BankAccountFunctor</span> <span class="o">{</span>
-  <span class="k">def</span> <span class="n">map</span><span class="o">[</span><span class="kt">A</span> <span class="k">&lt;:</span> <span class="kt">AccountType</span>, <span class="kt">B</span> <span class="k">&lt;:</span> <span class="kt">AccountType</span><span class="o">](</span><span class="n">fa</span><span class="k">:</span> <span class="kt">BankAccount</span><span class="o">[</span><span class="kt">A</span><span class="o">])(</span><span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">B</span><span class="o">)</span><span class="k">:</span> <span class="kt">BankAccount</span><span class="o">[</span><span class="kt">B</span><span class="o">]</span> <span class="k">=</span> 
+  <span class="k">def</span> <span class="n">map</span><span class="o">[</span><span class="kt">A</span> <span class="k">&lt;:</span> <span class="kt">AccountType</span>, <span class="kt">B</span> <span class="k">&lt;:</span> <span class="kt">AccountType</span><span class="o">](</span><span class="n">fa</span><span class="k">:</span> <span class="kt">BankAccount</span><span class="o">[</span><span class="kt">A</span><span class="o">])(</span><span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">B</span><span class="o">)</span><span class="k">:</span> <span class="kt">BankAccount</span><span class="o">[</span><span class="kt">B</span><span class="o">]</span> <span class="k">=</span>
   <span class="n">fa</span><span class="o">.</span><span class="n">copy</span><span class="o">(</span><span class="n">accountType</span> <span class="k">=</span> <span class="n">f</span><span class="o">(</span><span class="n">fa</span><span class="o">.</span><span class="n">accountType</span><span class="o">))</span>
 <span class="o">}</span></code></pre></figure>
 
@@ -321,7 +327,7 @@
 
 </head>
 
-<div class="card blue-grey lighten-2 white-text followus" style=" padding:10%">
+<div class="card blue-grey lighten-2 white-text followus hide-on-med-and-down" style=" padding:10%">
 
     <h6 style = "font-size: 17px" class="white-text">Follow and connect with us on social and corporate Media</h6>
 
@@ -336,6 +342,7 @@
         <i class="fa fa-twitter share-button white-text"> Twitter</i></a>
 </div>
 </div>
+
       </div>
     </div>
   </div>
@@ -423,7 +430,7 @@
     particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 80,
+      "value": 120,
       "density": {
         "enable": true,
         "value_area": 800
@@ -436,7 +443,7 @@
       "type": "circle",
       "stroke": {
         "width": 0,
-        "color": "#000000"
+        "color": "blue"
       },
       "polygon": {
         "nb_sides": 5
@@ -475,7 +482,7 @@
       "width": 1
     },
     "move": {
-      "enable": true,
+      "enable": false,
       "speed": 6,
       "direction": "none",
       "random": false,
@@ -493,14 +500,14 @@
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
+        "enable": false,
         "mode": "grab"
       },
       "onclick": {
-        "enable": true,
+        "enable": false,
         "mode": "push"
       },
-      "resize": true
+      "resize": false
     },
     "modes": {
       "grab": {
@@ -533,3 +540,4 @@
 </script>
 
 </body></html>
+
