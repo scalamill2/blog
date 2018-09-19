@@ -419,8 +419,8 @@ div>pre>code {
 
 .img {
   /* background: url("./img/training.svg") no-repeat; */
-  background: linear-gradient(to left, #2962ff, rgb(255, 195, 160));
-  height: 70%;
+  background: linear-gradient(to left, #2979ff, rgb(255, 195, 160));
+  height: 60%;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
