@@ -129,10 +129,13 @@ div {
   /* border-style: groove; */
 }
 
+
 body {
+  /* font-family: "Source Sans Pro","Helvetica Neue",Arial,sans-serif; */
   font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
-  /* font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue","Fira Sans",Ubuntu,Oxygen,"Oxygen Sans",Cantarell,"Droid Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Emoji","Segoe UI Symbol","Lucida Grande",Helvetica,Arial,sans-serif;; */
-  font-weight: 300;
+  /* font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue","Fira Sans",Ubuntu,Oxygen,"Oxygen Sans",Cantarell,"Droid Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Emoji","Segoe UI Symbol","Lucida Grande",Helvetica,Arial,sans-serif; */
+  /* font-family: Lato; */
+  font-weight: 400;
 }
 
 strong {
@@ -165,14 +168,12 @@ h4::before {
 
 cite {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
-  ;
 }
 
 b {
   color: rgb(231, 100, 139);
-  font-size: 18px;
-  font-weight: 200;
-  font-style: italic
+  font-size: 17px;
+  font-weight: 400;
 }
 
 ul>li {
@@ -331,7 +332,7 @@ p {
   color: #3d6372 !important;
   font-size: 16px !important;
   font-family: inherit;
-  line-height: 1.5;
+  line-height: 1.8em;
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -500,11 +501,12 @@ body, html {
   margin: 0%
 }
 
-#lists>ol {
+#lists> ol {
   list-style: none;
   font-size: 15px !important;
   margin-left: 4%;
   margin-bottom: 2%;
+  line-height: 1.8em
 }
 
 ol {
@@ -525,6 +527,7 @@ ol > li::before {
   color: rgb(33, 207, 42) !important;
   display: inline-block;
   width: 1em;
+  font-size:22px;
   margin-left: -1em
 }
 
