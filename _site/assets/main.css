@@ -331,7 +331,6 @@ p {
   color: #3d6372 !important;
   font-size: 16px !important;
   font-family: inherit;
-  font-weight: 100 !important;
   line-height: 1.5;
   margin-top: 2%;
   margin-bottom: 2%;
@@ -419,7 +418,7 @@ div>pre>code {
 
 .img {
   /* background: url("./img/training.svg") no-repeat; */
-  background: linear-gradient(to left, #2979ff, rgb(255, 195, 160));
+  background: linear-gradient(to left, #6498f3, rgb(255, 195, 160));
   height: 60%;
   /* Center and scale the image nicely */
   background-position: center;
