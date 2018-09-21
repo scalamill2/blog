@@ -182,15 +182,19 @@ ul>li {
 
 li>a:hover {
   background: none !important;
-  color: rgb(129, 129, 158) !important
+  color: rgb(233, 89, 190) !important;
 }
 
 li>a:active {
-  color: orange !important;
+  color: rgb(183, 0, 255) !important;
 }
 
 li>a {
-  color: orange !important;
+  font-family:Helvetica Neue,Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  font-size:12px!important;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.842) !important;
 }
 
 .leftRs {
