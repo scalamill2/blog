@@ -422,11 +422,8 @@ div>pre>code {
   left: 50%;
 }
 
-.img {
-  /* background: url("./img/training.svg") no-repeat; */
-  background: linear-gradient(to left, #6498f3, rgb(255, 195, 160));
+.bimg {
   height: 60%;
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -451,8 +448,6 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160));
-  background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -471,7 +466,23 @@ body, html {
 }
 
 .blog-post-background {
-  background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160));
+  background: linear-gradient(to left, #6498f3, rgb(255, 195, 160));
+  /* background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160)); */
+  /* background: linear-gradient(to right, rgb (238, 188, 197), rgb(250, 207, 182)); */
+}
+
+.training-background {
+  background:  linear-gradient(to left, rgb(93, 220, 54), rgb(91, 134, 229));
+  /* background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160)); */
+  /* background: linear-gradient(to right, rgb (238, 188, 197), rgb(250, 207, 182)); */
+}
+
+.course-background {
+  /* background-image:  linear-gradient(to left, rgb(153, 104, 163), rgb(133, 50, 158)); */
+  background-image: url("./trianglify.png");
+  height:40%
+
+  /* background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160)); */
   /* background: linear-gradient(to right, rgb (238, 188, 197), rgb(250, 207, 182)); */
 }
 

@@ -1,0 +1,68 @@
+[
+  {
+  "course": "Scala",
+  "explanation": "In the course you will learn scala from scratch which covers classes, trait, function, higher order functions, pattern matching recursion, map, flatmap and much more.",
+  "url" : "https://www.scala-lang.com",
+  "curriculam": [{
+    "name": "Scala",
+    "topics": [{
+      "topic": "Primitive Types",
+      "details": ["Any, AnyRef","Null, Nil, Nothing, None"]
+    },
+    {
+      "topic": "Classes and Traits",
+      "details": ["Class, Constructor, Auxaliary Constructor", "Traits, Mixin composition"]
+    },
+    {
+      "topic": "Mutable vs Immutable collection",
+      "details": ["List, Array, ArrayBuffer, ListBuffer", "Set, Maps" ]
+    },
+    {
+      "topic": "Functions, Higher Order Functions",
+      "details": ["Function definitions", "Writing functions", "Writing own higher order functions",
+       "Understanding how Map, flatMap, filter works", "composing Functions"]
+    },
+    {
+      "topic": "Pattern matching",
+      "details": ["Case classes", "Pattern matching on case classes", "Partial Functions"]
+    },
+    {
+      "topic": "Recursion",
+      "details": ["Tail Recursion, implement map, flatmap, filter, foldleft using recusion and pattern matching"]
+    },
+    {
+      "topic": "For Comprehensions",
+      "details": ["for with yield, multiple generators, flatmap, filter, foldleft using recusion and pattern matching"]
+    }
+  ]
+  },
+  {
+    "name": "Akka",
+    "topics": [{
+      "topic": "Actor Intro",
+      "details": ["Actor Model"]
+    }]
+  }
+]
+},
+{
+  "course": "Akka",
+  "explanation": "This course covers Akka Actors, supervison, parent child creation, routing, data persistence, remoting, clustering, event sourcing, circuit breaker, Akka stream and Akka http",
+  "url": "https://akka.io"
+},
+{
+  "course": "Play",
+  "explanation": "In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.",
+  "url": "scala-lang"
+},
+{
+  "course": "Lagom",
+  "explanation": "In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.",
+  "url": "scala-lang"
+}, 
+{
+  "course": "Spark",
+  "explanation": "In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.",
+  "url": "scala-lang"
+}
+]

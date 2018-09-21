@@ -1,0 +1,41 @@
+[{
+    "name": "Scala",
+    "topics": [{
+      "topic": "Primitive Types",
+      "details": ["Any, AnyRef","Null, Nil, Nothing, None"]
+    },
+    {
+      "topic": "Classes and Traits",
+      "details": ["Class, Constructor, Auxaliary Constructor", "Traits, Mixin composition"]
+    },
+    {
+      "topic": "Mutable vs Immutable collection",
+      "details": ["List, Array, ArrayBuffer, ListBuffer", "Set, Maps" ]
+    },
+    {
+      "topic": "Functions, Higher Order Functions",
+      "details": ["Function definitions", "Writing functions", "Writing own higher order functions",
+       "Understanding how Map, flatMap, filter works", "composing Functions"]
+    },
+    {
+      "topic": "Pattern matching",
+      "details": ["Case classes", "Pattern matching on case classes", "Partial Functions"]
+    },
+    {
+      "topic": "Recursion",
+      "details": ["Tail Recursion, implement map, flatmap, filter, foldleft using recusion and pattern matching"]
+    },
+    {
+      "topic": "For Comprehensions",
+      "details": ["for with yield, multiple generators, flatmap, filter, foldleft using recusion and pattern matching"]
+    }
+  ]
+  },
+  {
+    "name": "Akka",
+    "topics": [{
+      "topic": "Actor Intro",
+      "details": ["Actor Model"]
+    }]
+  }
+]
