@@ -194,7 +194,8 @@ li>a {
   text-transform: uppercase;
   font-size:12px!important;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.842) !important;
+  color: rgba(0, 0, 0, 0.897) !important;
+  -webkit-font-smoothing: antialiased;
 }
 
 .leftRs {
