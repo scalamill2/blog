@@ -429,15 +429,6 @@ div>pre>code {
   background-size: cover;
 }
 
-.img-blog {
-  background: url("./img/lambdabox2.svg") no-repeat;
-  height: 50%;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 canvas {
   display: block;
   vertical-align: bottom;
@@ -465,7 +456,13 @@ body, html {
   border-left-color: rgb(24, 122, 202) !important;
 }
 
-.blog-post-background {
+.post {
+  /* background: linear-gradient(to left, #6498f3, rgb(255, 195, 160)); */
+  background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160));
+  /* background: linear-gradient(to right, rgb (238, 188, 197), rgb(250, 207, 182)); */
+}
+
+.blog {
   background: linear-gradient(to left, #6498f3, rgb(255, 195, 160));
   /* background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160)); */
   /* background: linear-gradient(to right, rgb (238, 188, 197), rgb(250, 207, 182)); */
