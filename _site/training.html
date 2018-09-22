@@ -53,7 +53,7 @@
                 </a>
         </li>
         <li>
-          <a href = "https://www.scalamill.com/contact" (click) = "addDepth()">
+          <a href = "http://localhost:4000/contactus.html" (click) = "addDepth()">
                   <span>Contact</span>
                 </a>
         </li>
@@ -110,29 +110,6 @@
 
 
 <div class="row">
-    <script>
-
-        function reverse(VALUE) {
-            console.log("hello");
-            if (document.getElementById("original" + VALUE).classList.contains("active")) {
-                document.getElementById(VALUE).style.display = 'none'
-                document.getElementById("original" + VALUE).classList.remove("active")
-                document.getElementById("id" + VALUE).style.height = '350px'
-                document.getElementById("original" + VALUE).style.display = 'block'
-                document.getElementById("panel" + VALUE).classList.add("col").
-                    remove("m12", "xl12").add("col").add("xl3").add("s12").add("l4")
-               
-            }
-        }
-
-        function displayEnable(VALUE) {
-            console.log("hello");
-            document.getElementById("original" + VALUE).classList.add("active")
-            document.getElementById(VALUE).style.display = 'block'
-            document.getElementById(VALUE).focus();
-            document.getElementById("id" + VALUE).style.width = 'auto'
-        }
-    </script>
 
   
 
@@ -146,26 +123,26 @@
           <div class="container" style="padding:2%">
               <h1>Scala</h1>
                
-              <p class="purple-text"> Primitive Types</p>
-              <p>Any, AnyRefNull, Nil, Nothing, None</p>
+              <cite class="purple-text"> Primitive Types</cite>
+              <p style="font-style: italic"> Any, AnyRefNull, Nil, Nothing, None</p>
                
-              <p class="purple-text"> Classes and Traits</p>
-              <p>Class, Constructor, Auxaliary ConstructorTraits, Mixin composition</p>
+              <cite class="purple-text"> Classes and Traits</cite>
+              <p style="font-style: italic"> Class, Constructor, Auxaliary ConstructorTraits, Mixin composition</p>
                
-              <p class="purple-text"> Mutable vs Immutable collection</p>
-              <p>List, Array, ArrayBuffer, ListBufferSet, Maps</p>
+              <cite class="purple-text"> Mutable vs Immutable collection</cite>
+              <p style="font-style: italic"> List, Array, ArrayBuffer, ListBufferSet, Maps</p>
                
-              <p class="purple-text"> Functions, Higher Order Functions</p>
-              <p>Function definitionsWriting functionsWriting own higher order functionsUnderstanding how Map, flatMap, filter workscomposing Functions</p>
+              <cite class="purple-text"> Functions, Higher Order Functions</cite>
+              <p style="font-style: italic"> Function definitionsWriting functionsWriting own higher order functionsUnderstanding how Map, flatMap, filter workscomposing Functions</p>
                
-              <p class="purple-text"> Pattern matching</p>
-              <p>Case classesPattern matching on case classesPartial Functions</p>
+              <cite class="purple-text"> Pattern matching</cite>
+              <p style="font-style: italic"> Case classesPattern matching on case classesPartial Functions</p>
                
-              <p class="purple-text"> Recursion</p>
-              <p>Tail Recursion, implement map, flatmap, filter, foldleft using recusion and pattern matching</p>
+              <cite class="purple-text"> Recursion</cite>
+              <p style="font-style: italic"> Tail Recursion, implement map, flatmap, filter, foldleft using recusion and pattern matching</p>
                
-              <p class="purple-text"> For Comprehensions</p>
-              <p>for with yield, multiple generators, flatmap, filter, foldleft using recusion and pattern matching</p>
+              <cite class="purple-text"> For Comprehensions</cite>
+              <p style="font-style: italic"> for with yield, multiple generators, flatmap, filter, foldleft using recusion and pattern matching</p>
               
           </div>
 

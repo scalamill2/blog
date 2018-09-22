@@ -476,6 +476,10 @@ body, html {
   background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160));
 }
 
+.contact {
+  background: linear-gradient(to left, rgb(136, 142, 151), rgb(150, 184, 182));
+}
+
 .training-background {
   background:  linear-gradient(to left, rgb(107, 184, 84), rgb(119, 150, 218));
   /* background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160)); */

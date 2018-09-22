@@ -20,29 +20,6 @@ layout: default
 
 
 <div class="row">
-    <script>
-
-        function reverse(VALUE) {
-            console.log("hello");
-            if (document.getElementById("original" + VALUE).classList.contains("active")) {
-                document.getElementById(VALUE).style.display = 'none'
-                document.getElementById("original" + VALUE).classList.remove("active")
-                document.getElementById("id" + VALUE).style.height = '350px'
-                document.getElementById("original" + VALUE).style.display = 'block'
-                document.getElementById("panel" + VALUE).classList.add("col").
-                    remove("m12", "xl12").add("col").add("xl3").add("s12").add("l4")
-               
-            }
-        }
-
-        function displayEnable(VALUE) {
-            console.log("hello");
-            document.getElementById("original" + VALUE).classList.add("active")
-            document.getElementById(VALUE).style.display = 'block'
-            document.getElementById(VALUE).focus();
-            document.getElementById("id" + VALUE).style.width = 'auto'
-        }
-    </script>
 
 {% for member in site.data.courseInfo %} {% assign topics = member.curriculam.topics%} {% assign loopindex = forloop.index%}
 
@@ -56,8 +33,8 @@ layout: default
           <div class="container" style="padding:2%">
               <h1>{{member.course}}</h1>
               {% for item in topics %} {% assign details = item.details%}
-              <p class="purple-text"> {{item.topic}}</p>
-              <p>{{details}}</p>
+              <cite class="purple-text"> {{item.topic}}</cite>
+              <p style="font-style: italic"> {{details}}</p>
               {% endfor %}
           </div>
 
