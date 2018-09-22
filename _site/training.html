@@ -22,14 +22,14 @@
 
 <body>
   <div id="nav-bar" (window:scroll)="onScroll()">
-    <nav id="nav" class="white valign-wrapper">
-      <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:10%"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
+    <nav id="nav" class="white valign-wrapper" style="padding:3%">
+      <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:8%"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
       <a href="#!" class="brand-logo hide-on-large-only"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
       <a href="#" data-activates="mobile-bar" class="button-collapse">
               <i class="medium material-icons red-text" style="font-size:40px">menu</i>
             </a>
       <!-- <img class="brand-logo" src="/assets/img/scala-logo.png" alt="scala logo not found"> -->
-      <ul id="ulmain" class="animated right-align hide-on-med-and-down" style="position:absolute;right:0 !important">
+      <ul id="ulmain" class="animated right-align hide-on-med-and-down"  style="margin-left: 60%">
         <li>
           <a href = "https://www.scalamill.com/home" (click) = "removeDepth()">
                   <span>Company</span>
@@ -58,7 +58,7 @@
       </ul>
     </nav>
   </div>
-  <ul id="nav2" class="z-depth-5 side-nav" id="mobile-bar">
+  <ul id="nav2" class="z-depth-5 side-nav" id="mobile-bar" style="align:center">
     <li class="">
       <div class="right-align">
         <a routerLink="https://www.scalamill.com//home" (click) = "addDepth()">
@@ -127,148 +127,167 @@
       Are you looking for training on Scala, Akka, Play, Lagom or Spark. We provides corporate training in Lightbend technologies.
     </h3>
     
-    <button href="" class = "btn btn-medium circle transparent" style="font-size:15px;margin-top:3%;">Contact Us</>
+    <button href="" class = "btn btn-medium transparent" style="font-size:15px;font-weight:600;border:solid;border-width:1px;margin-top:3%;">Contact Us</>
 
   </div>
 
 
 </div>
 
-<div class = "row">
-    <div class = "col s10 offset-s1">
-       <h3 class = "blue-grey-text" style="font-style: italic;font-size:25px;padding:2%">
-           "We have number of years experience in scala and in it's ecosystem, 
-           we provide training on Lightbend technologies"</h3>
+<div class="row">
+    <div class="col l7 offset-l1">
+        <h3 class="grey-text ext-lighten-5 animated lightSpeedIn" style="font-style:italic;font-size:30px;padding:5%">
+            "We have number of years experience in scala and in it's ecosystem, we provide training on Lightbend technologies.
+            If you are stucked on how to kick-start a scala project or want help on the existing one we are here with you.
+            Checkout our training courses."
+        </h3>
     </div>
-   
-        <div class="row">
-                <div class="container">
-                    
-                    <div class="col s12 m6 l4 xl3">
-                        <div class="card" style="height: 300px;">
-                            <div class="bimg course-background">
-                                <div class="card-content">
-                                    <span class="card-title activator white-text text-darken-4">Scala
-                                        <i class="material-icons right">more_vert</i>
-                                    </span>
-                                    <p>
-                                        <a class="white-text text-darken-4" href="#">https://www.scala-lang.com</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <p>In the course you will learn scala from scratch which covers classes, trait, function, higher order functions, pattern matching recursion, map, flatmap and much more.</p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Scala
-                                    <i class="material-icons right">close</i>
-                                </span>
-                                <p>In the course you will learn scala from scratch which covers classes, trait, function, higher order functions, pattern matching recursion, map, flatmap and much more.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col s12 m6 l4 xl3">
-                        <div class="card" style="height: 300px;">
-                            <div class="bimg course-background">
-                                <div class="card-content">
-                                    <span class="card-title activator white-text text-darken-4">Akka
-                                        <i class="material-icons right">more_vert</i>
-                                    </span>
-                                    <p>
-                                        <a class="white-text text-darken-4" href="#">https://akka.io</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <p>This course covers Akka Actors, supervison, parent child creation, routing, data persistence, remoting, clustering, event sourcing, circuit breaker, Akka stream and Akka http</p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Akka
-                                    <i class="material-icons right">close</i>
-                                </span>
-                                <p>This course covers Akka Actors, supervison, parent child creation, routing, data persistence, remoting, clustering, event sourcing, circuit breaker, Akka stream and Akka http</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col s12 m6 l4 xl3">
-                        <div class="card" style="height: 300px;">
-                            <div class="bimg course-background">
-                                <div class="card-content">
-                                    <span class="card-title activator white-text text-darken-4">Play
-                                        <i class="material-icons right">more_vert</i>
-                                    </span>
-                                    <p>
-                                        <a class="white-text text-darken-4" href="#">scala-lang</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Play
-                                    <i class="material-icons right">close</i>
-                                </span>
-                                <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col s12 m6 l4 xl3">
-                        <div class="card" style="height: 300px;">
-                            <div class="bimg course-background">
-                                <div class="card-content">
-                                    <span class="card-title activator white-text text-darken-4">Lagom
-                                        <i class="material-icons right">more_vert</i>
-                                    </span>
-                                    <p>
-                                        <a class="white-text text-darken-4" href="#">scala-lang</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Lagom
-                                    <i class="material-icons right">close</i>
-                                </span>
-                                <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col s12 m6 l4 xl3">
-                        <div class="card" style="height: 300px;">
-                            <div class="bimg course-background">
-                                <div class="card-content">
-                                    <span class="card-title activator white-text text-darken-4">Spark
-                                        <i class="material-icons right">more_vert</i>
-                                    </span>
-                                    <p>
-                                        <a class="white-text text-darken-4" href="#">scala-lang</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Spark
-                                    <i class="material-icons right">close</i>
-                                </span>
-                                <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
 </div>
 
+<div class="row">
 
+
+    <div class="row">
+        <div class="container">
+            
+            <div class="col s12 m6 l4 xl3">
+                <div class="card" style="height: 350px;">
+                    <div class="trianglify1">
+                        <div class="card-content">
+                            <span class="card-title activator white-text text-darken-4">Scala
+                                <i class="material-icons right">more_vert</i>
+                            </span>
+                            <p>
+                                <a class="white-text text-darken-4" href="#">https://www.scala-lang.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>In the course you will learn scala from scratch which covers classes, trait, function, higher order functions, pattern matching recursion, map, flatmap and much more.</p>
+
+                    </div>
+                    <a href="btn" class = "btn">Get Course Info</a>
+
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Scala
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>In the course you will learn scala from scratch which covers classes, trait, function, higher order functions, pattern matching recursion, map, flatmap and much more.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col s12 m6 l4 xl3">
+                <div class="card" style="height: 350px;">
+                    <div class="trianglify5">
+                        <div class="card-content">
+                            <span class="card-title activator white-text text-darken-4">Akka
+                                <i class="material-icons right">more_vert</i>
+                            </span>
+                            <p>
+                                <a class="white-text text-darken-4" href="#">https://akka.io</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>This course covers Akka Actors, supervison, parent child creation, routing, data persistence, remoting, clustering, event sourcing, circuit breaker, Akka stream and Akka http</p>
+
+                    </div>
+                    <a href="btn" class = "btn">Get Course Info</a>
+
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Akka
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>This course covers Akka Actors, supervison, parent child creation, routing, data persistence, remoting, clustering, event sourcing, circuit breaker, Akka stream and Akka http</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col s12 m6 l4 xl3">
+                <div class="card" style="height: 350px;">
+                    <div class="trianglify3">
+                        <div class="card-content">
+                            <span class="card-title activator white-text text-darken-4">Play
+                                <i class="material-icons right">more_vert</i>
+                            </span>
+                            <p>
+                                <a class="white-text text-darken-4" href="#">scala-lang</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
+
+                    </div>
+                    <a href="btn" class = "btn">Get Course Info</a>
+
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Play
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col s12 m6 l4 xl3">
+                <div class="card" style="height: 350px;">
+                    <div class="trianglify4">
+                        <div class="card-content">
+                            <span class="card-title activator white-text text-darken-4">Lagom
+                                <i class="material-icons right">more_vert</i>
+                            </span>
+                            <p>
+                                <a class="white-text text-darken-4" href="#">scala-lang</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
+
+                    </div>
+                    <a href="btn" class = "btn">Get Course Info</a>
+
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Lagom
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col s12 m6 l4 xl3">
+                <div class="card" style="height: 350px;">
+                    <div class="trianglify2">
+                        <div class="card-content">
+                            <span class="card-title activator white-text text-darken-4">Spark
+                                <i class="material-icons right">more_vert</i>
+                            </span>
+                            <p>
+                                <a class="white-text text-darken-4" href="#">scala-lang</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
+
+                    </div>
+                    <a href="btn" class = "btn">Get Course Info</a>
+
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Spark
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
 
 <footer class="page-footer blue-grey darken-3">
     <div class="container col s10 offset-s1" style="font-family:'font-family: 'PT Serif',sans-serif">

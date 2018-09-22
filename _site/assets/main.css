@@ -132,8 +132,8 @@ div {
 
 body {
   /* font-family: "Source Sans Pro","Helvetica Neue",Arial,sans-serif; */
-  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
-  /* font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue","Fira Sans",Ubuntu,Oxygen,"Oxygen Sans",Cantarell,"Droid Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Emoji","Segoe UI Symbol","Lucida Grande",Helvetica,Arial,sans-serif; */
+  /* font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif; */
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue","Fira Sans",Ubuntu,Oxygen,"Oxygen Sans",Cantarell,"Droid Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Emoji","Segoe UI Symbol","Lucida Grande",Helvetica,Arial,sans-serif;
   /* font-family: Lato; */
   font-weight: 400;
 }
@@ -152,6 +152,7 @@ h1, h2, h3, h4 {
 h4, h5, h6 {
   font-family: Lato;
   font-size: 20px;
+  font-weight: 400;
   font-style: italic;
   color: rgb(209, 98, 131);
   margin-top: 2%;
@@ -328,13 +329,13 @@ li>a {
 }
 
 .pseudolink {
-  color: blue;
+  color: rgb(85, 94, 133);
   text-decoration: underline;
   cursor: pointer;
 }
 
 p {
-  color: #3d6372 !important;
+  color: #283f63 !important;
   font-size: 16px !important;
   font-family: inherit;
   line-height: 1.8em;
@@ -449,6 +450,15 @@ body, html {
   margin: 0;
 }
 
+
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
 .leftbar {
   border-left: 6px solid hsl(0, 72%, 56%) !important;
   border-left-width: 6px !important;
@@ -469,7 +479,7 @@ body, html {
 }
 
 .training-background {
-  background:  linear-gradient(to left, rgb(93, 220, 54), rgb(91, 134, 229));
+  background:  linear-gradient(to left, rgb(107, 184, 84), rgb(119, 150, 218));
   /* background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160)); */
   /* background: linear-gradient(to right, rgb (238, 188, 197), rgb(250, 207, 182)); */
 }
@@ -487,6 +497,36 @@ body, html {
   /* background-color: #f977ce;
  background-image: linear-gradient(141deg, #ec8dcc 0%, #ca8fec 74%); */
   background-image: url("./trianglify.png")
+}
+
+.trianglify5 {
+  /* background-color: #f977ce;
+ background-image: linear-gradient(141deg, #ec8dcc 0%, #ca8fec 74%); */
+  background-image: url("./trianglify5.png")
+}
+
+.trianglify4 {
+  /* background-color: #f977ce;
+ background-image: linear-gradient(141deg, #ec8dcc 0%, #ca8fec 74%); */
+  background-image: url("./trianglify4.png")
+}
+
+.trianglify3 {
+  /* background-color: #f977ce;
+ background-image: linear-gradient(141deg, #ec8dcc 0%, #ca8fec 74%); */
+  background-image: url("./trianglify3.png")
+}
+
+.trianglify2 {
+  /* background-color: #f977ce;
+ background-image: linear-gradient(141deg, #ec8dcc 0%, #ca8fec 74%); */
+  background-image: url("./trianglify.png")
+}
+
+.trianglify1 {
+  /* background-color: #f977ce;
+ background-image: linear-gradient(141deg, #ec8dcc 0%, #ca8fec 74%); */
+  background-image: url("./trianglify2.png")
 }
 
 .offers-background {
@@ -531,8 +571,8 @@ ol {
 ol > li {
   padding-left: 4px;
   font-size: 16px;
-  font-weight: 100;
-  color: #5a6791 !important;
+  font-weight: 400;
+  color: #4a6c9e !important;
 }
 
 ol > li::before {

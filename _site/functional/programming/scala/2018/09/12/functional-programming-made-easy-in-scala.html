@@ -22,14 +22,14 @@
 
 <body>
   <div id="nav-bar" (window:scroll)="onScroll()">
-    <nav id="nav" class="white valign-wrapper">
-      <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:10%"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
+    <nav id="nav" class="white valign-wrapper" style="padding:3%">
+      <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:8%"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
       <a href="#!" class="brand-logo hide-on-large-only"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
       <a href="#" data-activates="mobile-bar" class="button-collapse">
               <i class="medium material-icons red-text" style="font-size:40px">menu</i>
             </a>
       <!-- <img class="brand-logo" src="/assets/img/scala-logo.png" alt="scala logo not found"> -->
-      <ul id="ulmain" class="animated right-align hide-on-med-and-down" style="position:absolute;right:0 !important">
+      <ul id="ulmain" class="animated right-align hide-on-med-and-down"  style="margin-left: 60%">
         <li>
           <a href = "https://www.scalamill.com/home" (click) = "removeDepth()">
                   <span>Company</span>
@@ -58,7 +58,7 @@
       </ul>
     </nav>
   </div>
-  <ul id="nav2" class="z-depth-5 side-nav" id="mobile-bar">
+  <ul id="nav2" class="z-depth-5 side-nav" id="mobile-bar" style="align:center">
     <li class="">
       <div class="right-align">
         <a routerLink="https://www.scalamill.com//home" (click) = "addDepth()">

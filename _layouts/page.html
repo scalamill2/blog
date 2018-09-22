@@ -3,41 +3,49 @@ layout: default
 --- 
 {% include trainingBanner.html %}
 
-<div class = "row">
-    <div class = "col s10 offset-s1">
-       <h3 class = "blue-grey-text" style="font-style: italic;font-size:25px;padding:2%">
-           "We have number of years experience in scala and in it's ecosystem, 
-           we provide training on Lightbend technologies"</h3>
+<div class="row">
+    <div class="col l7 offset-l1">
+        <h3 class="grey-text ext-lighten-5 animated lightSpeedIn" style="font-style:italic;font-size:30px;padding:5%">
+            "We have number of years experience in scala and in it's ecosystem, we provide training on Lightbend technologies.
+            If you are stucked on how to kick-start a scala project or want help on the existing one we are here with you.
+            Checkout our training courses."
+        </h3>
     </div>
-   
-        <div class="row">
-                <div class="container">
-                    {% for member in site.data.courseInfo %}
-                    <div class="col s12 m6 l4 xl3">
-                        <div class="card" style="height: 300px;">
-                            <div class="bimg course-background">
-                                <div class="card-content">
-                                    <span class="card-title activator white-text text-darken-4">{{member.course}}
-                                        <i class="material-icons right">more_vert</i>
-                                    </span>
-                                    <p>
-                                        <a class="white-text text-darken-4" href="#">{{member.url}}</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <p>{{member.explanation}}</p>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">{{member.course}}
-                                    <i class="material-icons right">close</i>
-                                </span>
-                                <p>{{member.explanation}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
 </div>
 
+<div class="row">
+
+
+    <div class="row">
+        <div class="container">
+            {% for member in site.data.courseInfo %}
+            <div class="col s12 m6 l4 xl3">
+                <div class="card" style="height: 350px;">
+                    <div class="{{member.css}}">
+                        <div class="card-content">
+                            <span class="card-title activator white-text text-darken-4">{{member.course}}
+                                <i class="material-icons right">more_vert</i>
+                            </span>
+                            <p>
+                                <a class="white-text text-darken-4" href="#">{{member.url}}</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>{{member.explanation}}</p>
+
+                    </div>
+                    <a href="btn" class = "btn">Get Course Info</a>
+
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{member.course}}
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>{{member.explanation}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
