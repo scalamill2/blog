@@ -466,6 +466,11 @@ body, html {
   border-left-color: rgb(24, 122, 202) !important;
 }
 
+label
+{
+  color:blue
+}
+
 .blog {
   background: linear-gradient(to left, #6498f3, rgb(255, 195, 160));
   /* background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160)); */
