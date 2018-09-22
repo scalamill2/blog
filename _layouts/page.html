@@ -4,39 +4,94 @@ layout: default
 {% include trainingBanner.html %}
 
 <div class="row">
-    <div class="col l7 offset-l1">
-        <h3 class="grey-text ext-lighten-5 animated lightSpeedIn" style="font-style:italic;font-size:30px;padding:5%">
-            "We have number of years experience in scala and in it's ecosystem, we provide training on Lightbend technologies.
-            If you are stucked on how to kick-start a scala project or want help on the existing one we are here with you.
-            Checkout our training courses."
+    <div class="col l7">
+        <h3 class="blue-grey-text lighten-5 animated lightSpeedIn" style="font-style:italic;font-size:30px;padding:6%">
+            "We have number of years experience in scala and in it's ecosystem, we provide training on Lightbend technologies. If you
+            are stucked on how to kick-start a scala project or want help on the existing one we are here with you. Checkout
+            our training courses."
+
+            <div class="section">
+                <hr>
+            </div>
         </h3>
+
     </div>
 </div>
 
+
 <div class="row">
+    <script>
 
+        function reverse(VALUE) {
+            console.log("hello");
+            if (document.getElementById("original" + VALUE).classList.contains("active")) {
+                document.getElementById(VALUE).style.display = 'none'
+                document.getElementById("original" + VALUE).classList.remove("active")
+                document.getElementById("id" + VALUE).style.height = '350px'
+                document.getElementById("original" + VALUE).style.display = 'block'
+                document.getElementById("panel" + VALUE).classList.add("col").
+                    remove("m12", "xl12").add("col").add("xl3").add("s12").add("l4")
+               
+            }
+        }
 
-    <div class="row">
-        <div class="container">
-            {% for member in site.data.courseInfo %}
-            <div class="col s12 m6 l4 xl3">
-                <div class="card" style="height: 350px;">
+        function displayEnable(VALUE) {
+            console.log("hello");
+            document.getElementById("original" + VALUE).classList.add("active")
+            document.getElementById(VALUE).style.display = 'block'
+            document.getElementById(VALUE).focus();
+            document.getElementById("id" + VALUE).style.width = 'auto'
+        }
+    </script>
+
+{% for member in site.data.courseInfo %} {% assign topics = member.curriculam.topics%} {% assign loopindex = forloop.index%}
+
+            
+<!-- Modal Trigger -->
+
+<!-- Modal Structure -->
+<div id="modal{{loopindex}}" class="modal modal-fixed-footer" style="z-index:999" style="width: 100%">
+  <div class="modal-content">
+      <div id={{loopindex}}>
+          <div class="container" style="padding:2%">
+              <h1>{{member.course}}</h1>
+              {% for item in topics %} {% assign details = item.details%}
+              <p class="purple-text"> {{item.topic}}</p>
+              <p>{{details}}</p>
+              {% endfor %}
+          </div>
+
+      </div>
+  </div>
+  <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Contact Us</a>
+  </div>
+</div>
+{% endfor %}
+
+    <div class="col s10 offset-s1">
+         
+    
+
+           
+
+        {% for member in site.data.courseInfo %} {% assign topics = member.curriculam.topics%} {% assign loopindex = forloop.index%}
+       
+        <div id="panel{{loopindex}}" class=" col s12 m6 l4 xl4">
+            <div id="id{{loopindex}}" class="card" style="height: 350px;">
+                <div id="original{{loopindex}}">
                     <div class="{{member.css}}">
                         <div class="card-content">
                             <span class="card-title activator white-text text-darken-4">{{member.course}}
-                                <i class="material-icons right">more_vert</i>
+
                             </span>
-                            <p>
-                                <a class="white-text text-darken-4" href="#">{{member.url}}</a>
-                            </p>
                         </div>
                     </div>
                     <div class="card-content">
                         <p>{{member.explanation}}</p>
-
                     </div>
-                    <a href="btn" class = "btn">Get Course Info</a>
-
+                    <a style="position:absolute;bottom:7%;" class="waves-effect waves-light btn modal-trigger" href="#modal{{loopindex}}">Get Course Info</a>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">{{member.course}}
                             <i class="material-icons right">close</i>
@@ -45,7 +100,7 @@ layout: default
                     </div>
                 </div>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
 </div>

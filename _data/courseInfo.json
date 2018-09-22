@@ -4,8 +4,7 @@
   "explanation": "In the course you will learn scala from scratch which covers classes, trait, function, higher order functions, pattern matching recursion, map, flatmap and much more.",
   "css": "trianglify1",
   "url" : "https://www.scala-lang.com",
-  "curriculam": [{
-    "name": "Scala",
+  "curriculam": {
     "topics": [{
       "topic": "Primitive Types",
       "details": ["Any, AnyRef","Null, Nil, Nothing, None"]
@@ -36,22 +35,14 @@
       "details": ["for with yield, multiple generators, flatmap, filter, foldleft using recusion and pattern matching"]
     }
   ]
-  },
-  {
-    "name": "Akka",
-    "topics": [{
-      "topic": "Actor Intro",
-      "details": ["Actor Model"]
-    }]
   }
-]
 },
 {
   "course": "Akka",
   "css": "trianglify5",
   "explanation": "This course covers Akka Actors, supervison, parent child creation, routing, data persistence, remoting, clustering, event sourcing, circuit breaker, Akka stream and Akka http",
   "url": "https://akka.io"
-},
+  },
 {
   "course": "Play",
   "css": "trianglify3",

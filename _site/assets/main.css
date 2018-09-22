@@ -466,16 +466,14 @@ body, html {
   border-left-color: rgb(24, 122, 202) !important;
 }
 
-.post {
-  /* background: linear-gradient(to left, #6498f3, rgb(255, 195, 160)); */
-  background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160));
-  /* background: linear-gradient(to right, rgb (238, 188, 197), rgb(250, 207, 182)); */
-}
-
 .blog {
   background: linear-gradient(to left, #6498f3, rgb(255, 195, 160));
   /* background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160)); */
   /* background: linear-gradient(to right, rgb (238, 188, 197), rgb(250, 207, 182)); */
+}
+
+.random {
+  background: linear-gradient(to left, rgb(255, 175, 189), rgb(255, 195, 160));
 }
 
 .training-background {

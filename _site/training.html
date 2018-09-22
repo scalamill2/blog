@@ -5,7 +5,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="/css/autumn.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
   <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
@@ -14,6 +14,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="/js/animate.css">
+
 <!-- <link rel="stylesheet" href="/hljs/styles/atelier-plateu-light.css">
 <script src="/hljs/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script> -->
@@ -21,7 +22,8 @@
 </head>
 
 <body>
-  <div id="nav-bar" (window:scroll)="onScroll()">
+
+  <div id="nav-bar" class = "nav-wrapper" (window:scroll)="onScroll()">
     <nav id="nav" class="white valign-wrapper" style="padding:3%">
       <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:8%"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
       <a href="#!" class="brand-logo hide-on-large-only"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
@@ -58,50 +60,7 @@
       </ul>
     </nav>
   </div>
-  <ul id="nav2" class="z-depth-5 side-nav" id="mobile-bar" style="align:center">
-    <li class="">
-      <div class="right-align">
-        <a routerLink="https://www.scalamill.com//home" (click) = "addDepth()">
-        <span class="blue-grey-text text-darken-3">Company</span>
-    </a>
-        <span>
-      <a><i class="medium right pink-text material-icons">close</i> </a>
-    </span>
-      </div>
-    </li>
-    <li class="">
-      <div class="divider"></div>
-      <div class="center-align">
-        <a routerLink="https://www.scalamill.com/services/consulting" (click) = "addDepth()">
-        <span class="blue-grey-text text-darken-3">Consulting & Development</span>
-      </a>
-      </div>
-    </li>
-    <li class="">
-      <div class="divider"></div>
-      <div class="center-align">
-        <a routerLink="https://www.scalamill.com/training"  (click) = "addDepth()">
-        <span class="blue-grey-text text-darken-3">Training</span>
-      </a>
-      </div>
-    </li>
-    <li class="">
-      <div class="divider"></div>
-      <div class="center-align">
-        <a href="http://localhost:4000/blog"(click) = "addDepth()">
-        <span class="blue-grey-text text-darken-3">Blog</span>
-      </a>
-      </div>
-    </li>
-    <li class="">
-      <div class="divider"></div>
-      <div class="center-align">
-        <a href="https://www.scalamill.com/contact" (click) = "addDepth()">
-        <span class="blue-grey-text text-darken-3">Contact</span>
-      </a>
-      </div>
-    </li>
-  </ul>
+ 
 
 
   <div class="col s12 m12 l12" id="particles-js"></div>
@@ -117,12 +76,12 @@
       <p class="white-text" style="font-size:20px">Your training partner for Lightbend Technologies.</p>
     </div>
 
-    <div class="col s12 l11 m12 xl11 offset-l1 offset-l1  hide-on-med-and-up animated fadeInUp">
+    <div class="col s12 l11 m12 xl11 offset-l1 offset-xl1 hide-on-med-and-up animated fadeInUp">
       <h1 class="white-text" style="font-size:23px">Are you looking for training on Scala, Akka, Play, Lagom or Spark. We provides corporate training in Lightbend technologies.</h1>
     </div>
   </div>
 
-  <div class="col s11 l10 m12 xl11 offset-l1 offset-l1 hide-on-small-only animated fadeInUp">
+  <div class="col s11 l10 m12 xl10 offset-l2 offset-xl1 hide-on-small-only animated fadeInUp">
     <h3 class="white-text">
       Are you looking for training on Scala, Akka, Play, Lagom or Spark. We provides corporate training in Lightbend technologies.
     </h3>
@@ -135,39 +94,196 @@
 </div>
 
 <div class="row">
-    <div class="col l7 offset-l1">
-        <h3 class="grey-text ext-lighten-5 animated lightSpeedIn" style="font-style:italic;font-size:30px;padding:5%">
-            "We have number of years experience in scala and in it's ecosystem, we provide training on Lightbend technologies.
-            If you are stucked on how to kick-start a scala project or want help on the existing one we are here with you.
-            Checkout our training courses."
+    <div class="col l7">
+        <h3 class="blue-grey-text lighten-5 animated lightSpeedIn" style="font-style:italic;font-size:30px;padding:6%">
+            "We have number of years experience in scala and in it's ecosystem, we provide training on Lightbend technologies. If you
+            are stucked on how to kick-start a scala project or want help on the existing one we are here with you. Checkout
+            our training courses."
+
+            <div class="section">
+                <hr>
+            </div>
         </h3>
+
     </div>
 </div>
 
+
 <div class="row">
+    <script>
 
+        function reverse(VALUE) {
+            console.log("hello");
+            if (document.getElementById("original" + VALUE).classList.contains("active")) {
+                document.getElementById(VALUE).style.display = 'none'
+                document.getElementById("original" + VALUE).classList.remove("active")
+                document.getElementById("id" + VALUE).style.height = '350px'
+                document.getElementById("original" + VALUE).style.display = 'block'
+                document.getElementById("panel" + VALUE).classList.add("col").
+                    remove("m12", "xl12").add("col").add("xl3").add("s12").add("l4")
+               
+            }
+        }
 
-    <div class="row">
-        <div class="container">
+        function displayEnable(VALUE) {
+            console.log("hello");
+            document.getElementById("original" + VALUE).classList.add("active")
+            document.getElementById(VALUE).style.display = 'block'
+            document.getElementById(VALUE).focus();
+            document.getElementById("id" + VALUE).style.width = 'auto'
+        }
+    </script>
+
+  
+
             
-            <div class="col s12 m6 l4 xl3">
-                <div class="card" style="height: 350px;">
+<!-- Modal Trigger -->
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal modal-fixed-footer" style="z-index:999" style="width: 100%">
+  <div class="modal-content">
+      <div id=1>
+          <div class="container" style="padding:2%">
+              <h1>Scala</h1>
+               
+              <p class="purple-text"> Primitive Types</p>
+              <p>Any, AnyRefNull, Nil, Nothing, None</p>
+               
+              <p class="purple-text"> Classes and Traits</p>
+              <p>Class, Constructor, Auxaliary ConstructorTraits, Mixin composition</p>
+               
+              <p class="purple-text"> Mutable vs Immutable collection</p>
+              <p>List, Array, ArrayBuffer, ListBufferSet, Maps</p>
+               
+              <p class="purple-text"> Functions, Higher Order Functions</p>
+              <p>Function definitionsWriting functionsWriting own higher order functionsUnderstanding how Map, flatMap, filter workscomposing Functions</p>
+               
+              <p class="purple-text"> Pattern matching</p>
+              <p>Case classesPattern matching on case classesPartial Functions</p>
+               
+              <p class="purple-text"> Recursion</p>
+              <p>Tail Recursion, implement map, flatmap, filter, foldleft using recusion and pattern matching</p>
+               
+              <p class="purple-text"> For Comprehensions</p>
+              <p>for with yield, multiple generators, flatmap, filter, foldleft using recusion and pattern matching</p>
+              
+          </div>
+
+      </div>
+  </div>
+  <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Contact Us</a>
+  </div>
+</div>
+  
+
+            
+<!-- Modal Trigger -->
+
+<!-- Modal Structure -->
+<div id="modal2" class="modal modal-fixed-footer" style="z-index:999" style="width: 100%">
+  <div class="modal-content">
+      <div id=2>
+          <div class="container" style="padding:2%">
+              <h1>Akka</h1>
+              
+          </div>
+
+      </div>
+  </div>
+  <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Contact Us</a>
+  </div>
+</div>
+  
+
+            
+<!-- Modal Trigger -->
+
+<!-- Modal Structure -->
+<div id="modal3" class="modal modal-fixed-footer" style="z-index:999" style="width: 100%">
+  <div class="modal-content">
+      <div id=3>
+          <div class="container" style="padding:2%">
+              <h1>Play</h1>
+              
+          </div>
+
+      </div>
+  </div>
+  <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Contact Us</a>
+  </div>
+</div>
+  
+
+            
+<!-- Modal Trigger -->
+
+<!-- Modal Structure -->
+<div id="modal4" class="modal modal-fixed-footer" style="z-index:999" style="width: 100%">
+  <div class="modal-content">
+      <div id=4>
+          <div class="container" style="padding:2%">
+              <h1>Lagom</h1>
+              
+          </div>
+
+      </div>
+  </div>
+  <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Contact Us</a>
+  </div>
+</div>
+  
+
+            
+<!-- Modal Trigger -->
+
+<!-- Modal Structure -->
+<div id="modal5" class="modal modal-fixed-footer" style="z-index:999" style="width: 100%">
+  <div class="modal-content">
+      <div id=5>
+          <div class="container" style="padding:2%">
+              <h1>Spark</h1>
+              
+          </div>
+
+      </div>
+  </div>
+  <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Contact Us</a>
+  </div>
+</div>
+
+
+    <div class="col s10 offset-s1">
+         
+    
+
+           
+
+          
+       
+        <div id="panel1" class=" col s12 m6 l4 xl4">
+            <div id="id1" class="card" style="height: 350px;">
+                <div id="original1">
                     <div class="trianglify1">
                         <div class="card-content">
                             <span class="card-title activator white-text text-darken-4">Scala
-                                <i class="material-icons right">more_vert</i>
+
                             </span>
-                            <p>
-                                <a class="white-text text-darken-4" href="#">https://www.scala-lang.com</a>
-                            </p>
                         </div>
                     </div>
                     <div class="card-content">
                         <p>In the course you will learn scala from scratch which covers classes, trait, function, higher order functions, pattern matching recursion, map, flatmap and much more.</p>
-
                     </div>
-                    <a href="btn" class = "btn">Get Course Info</a>
-
+                    <a style="position:absolute;bottom:7%;" class="waves-effect waves-light btn modal-trigger" href="#modal1">Get Course Info</a>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Scala
                             <i class="material-icons right">close</i>
@@ -176,25 +292,23 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="col s12 m6 l4 xl3">
-                <div class="card" style="height: 350px;">
+        </div>
+          
+       
+        <div id="panel2" class=" col s12 m6 l4 xl4">
+            <div id="id2" class="card" style="height: 350px;">
+                <div id="original2">
                     <div class="trianglify5">
                         <div class="card-content">
                             <span class="card-title activator white-text text-darken-4">Akka
-                                <i class="material-icons right">more_vert</i>
+
                             </span>
-                            <p>
-                                <a class="white-text text-darken-4" href="#">https://akka.io</a>
-                            </p>
                         </div>
                     </div>
                     <div class="card-content">
                         <p>This course covers Akka Actors, supervison, parent child creation, routing, data persistence, remoting, clustering, event sourcing, circuit breaker, Akka stream and Akka http</p>
-
                     </div>
-                    <a href="btn" class = "btn">Get Course Info</a>
-
+                    <a style="position:absolute;bottom:7%;" class="waves-effect waves-light btn modal-trigger" href="#modal2">Get Course Info</a>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Akka
                             <i class="material-icons right">close</i>
@@ -203,25 +317,23 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="col s12 m6 l4 xl3">
-                <div class="card" style="height: 350px;">
+        </div>
+          
+       
+        <div id="panel3" class=" col s12 m6 l4 xl4">
+            <div id="id3" class="card" style="height: 350px;">
+                <div id="original3">
                     <div class="trianglify3">
                         <div class="card-content">
                             <span class="card-title activator white-text text-darken-4">Play
-                                <i class="material-icons right">more_vert</i>
+
                             </span>
-                            <p>
-                                <a class="white-text text-darken-4" href="#">scala-lang</a>
-                            </p>
                         </div>
                     </div>
                     <div class="card-content">
                         <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
-
                     </div>
-                    <a href="btn" class = "btn">Get Course Info</a>
-
+                    <a style="position:absolute;bottom:7%;" class="waves-effect waves-light btn modal-trigger" href="#modal3">Get Course Info</a>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Play
                             <i class="material-icons right">close</i>
@@ -230,25 +342,23 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="col s12 m6 l4 xl3">
-                <div class="card" style="height: 350px;">
+        </div>
+          
+       
+        <div id="panel4" class=" col s12 m6 l4 xl4">
+            <div id="id4" class="card" style="height: 350px;">
+                <div id="original4">
                     <div class="trianglify4">
                         <div class="card-content">
                             <span class="card-title activator white-text text-darken-4">Lagom
-                                <i class="material-icons right">more_vert</i>
+
                             </span>
-                            <p>
-                                <a class="white-text text-darken-4" href="#">scala-lang</a>
-                            </p>
                         </div>
                     </div>
                     <div class="card-content">
                         <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
-
                     </div>
-                    <a href="btn" class = "btn">Get Course Info</a>
-
+                    <a style="position:absolute;bottom:7%;" class="waves-effect waves-light btn modal-trigger" href="#modal4">Get Course Info</a>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Lagom
                             <i class="material-icons right">close</i>
@@ -257,25 +367,23 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="col s12 m6 l4 xl3">
-                <div class="card" style="height: 350px;">
+        </div>
+          
+       
+        <div id="panel5" class=" col s12 m6 l4 xl4">
+            <div id="id5" class="card" style="height: 350px;">
+                <div id="original5">
                     <div class="trianglify2">
                         <div class="card-content">
                             <span class="card-title activator white-text text-darken-4">Spark
-                                <i class="material-icons right">more_vert</i>
+
                             </span>
-                            <p>
-                                <a class="white-text text-darken-4" href="#">scala-lang</a>
-                            </p>
                         </div>
                     </div>
                     <div class="card-content">
                         <p>In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.</p>
-
                     </div>
-                    <a href="btn" class = "btn">Get Course Info</a>
-
+                    <a style="position:absolute;bottom:7%;" class="waves-effect waves-light btn modal-trigger" href="#modal5">Get Course Info</a>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">Spark
                             <i class="material-icons right">close</i>
@@ -284,8 +392,8 @@
                     </div>
                 </div>
             </div>
-            
         </div>
+        
     </div>
 </div>
 
@@ -338,6 +446,14 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+
+   $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+
+</script>
 <script>
     particlesJS("particles-js", {
   "particles": {
