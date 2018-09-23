@@ -177,17 +177,17 @@ b {
   font-weight: 400;
 }
 
-ul>li {
+ul> li {
   font-family: Lato;
 }
 
-li>a:hover {
+li> a:hover {
   background: none !important;
   color: rgb(233, 89, 190) !important;
 }
 
 li>a:active {
-  color: rgb(183, 0, 255) !important;
+  color: rgb(1  83, 0, 255) !important;
 }
 
 li>a {
