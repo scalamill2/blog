@@ -2,48 +2,69 @@
 layout: default 
 --- 
 {% include contactusBanner.html %}
+<div class="row" style="padding:4%">
 
-    <div class="row" style="padding:4%">
-        <div class = "col s4 offset-s1">
-        <h2 class= "blue-grey-text"> Let us know your concerns.</h2>
-           <p>
-            Are you having any project in mind or you need development support or consulting and in-house training on your scala project. Let us know your problems and requirements
-           </p> 
-        </div>
-        <div class="col s5 offset-s2 z-depth-2" style="padding:4%">
-                <h3 class="blue-grey-text">Contact us</h3>
-            <div class="row">
-                <form class="col s12" #heroForm="ngForm" (ngSubmit)="onSubmit(heroForm)">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix deep-orange-text">account_circle</i>
-                            <input id="first_name" type="text" class="validate" name="firstName" required>
-                            <label class= "large" for="first_name">First Name</label>
-                        </div>
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix deep-orange-text">account_circle</i>
-                            <input id="last_name" type="text" class="validate" name="lastName" required>
-                            <label class= "large"  for="last_name">Last Name</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix deep-orange-text">email</i>
-                            <input id="email" type="email" class="validate" name="perosnalMail" required>
-                            <label class= "large"  for="email">Email</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix deep-orange-text">message</i>
-                            <textarea id="textarea1" class="materialize-textarea" name="message" required> </textarea>
-                            <label class= "large" for="textarea1">Tell us</label>
-                        </div>
-                    </div>
-                    <button class="btn waves-effect waves-light green lighten-1" type="submit" name="action">Send Letter
-                        <i class="material-icons right">send</i>
-                    </button>
-                </form>
-            </div>
+    <div class="col s4 offset-s1">
+    
+        <div class="row">
+    
+            <h2 class="blue-grey-text"> Let us know your concerns.</h2>
+            <p>
+                Are you having any project in mind or you need development support or consulting and in-house training on your scala project.
+                Let us know your problems and requirements.Mail us at <strong>contact@scalamill.com</strong>
+            </p>
+
+         <div>
+           <h2 class="blue-grey-text">Our Presence.</h2>
+           <ol>
+               <li><cite>Noida, Hyderabad, </cite>India</li>
+               
+               <cite class="blue-grey-text"> Currently we operate from India and handle assigments.</cite>
+           </ol>
+         </div>   
         </div>
     </div>
+
+    <div class = "col s5 offset-s1">
+            <h2 class="blue-grey-text"> Contact us.</h2>
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+         <i class="material-icons prefix grey-text text-darken-2">face</i>
+          <input id="icon_face" type="text" class="validate" required="required">
+          <label for="icon_face">Name</label>
+        </div>
+        <div class="input-field col s6">
+         <i class="material-icons prefix grey-text text-darken-2">email</i>
+          <input id="icon_email" type="email" class="validate" required="required">
+          <label for="icon_email" data-error="Write your email again please!" data-success="OK, you're good!">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+         <i class="material-icons prefix grey-text text-darken-2">gesture</i>
+          <input id="icon_subject" type="text" class="validate" required="required">
+          <label for="icon_subject">Subject</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+         <i class="material-icons prefix grey-text text-darken-2">create</i>
+          <textarea id="icon_message" class="materialize-textarea" required="required"></textarea>
+          <label for="icon_message">Message</label>
+        </div>
+      </div>
+      <div class="row">
+      <div class="input-field col s12">
+         <button class="btn waves-effect waves-light valign-wrapper" type="submit" name="action">
+             Send
+         </button>
+         </div>
+      </div>
+    </form>
+  </div>
+
+    </div>
+
+</div>

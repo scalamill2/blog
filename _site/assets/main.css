@@ -335,8 +335,8 @@ li>a {
 }
 
 p {
-  color: #283f63 !important;
-  font-size: 16px !important;
+  color: #3d5f92 !important;
+  font-size: 17px !important;
   font-family: inherit;
   line-height: 1.8em;
   margin-top: 2%;
@@ -440,6 +440,7 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -563,7 +564,6 @@ label
 
 #lists> ol {
   list-style: none;
-  font-size: 15px !important;
   margin-left: 4%;
   margin-bottom: 2%;
   line-height: 1.8em
@@ -571,7 +571,7 @@ label
 
 ol {
   list-style: none;
-  font-size: 17px !important;
+  font-size: 16px !important;
   margin-bottom: 2%;
 }
 
