@@ -146,7 +146,7 @@ strong {
 h1, h2, h3, h4 {
   font-family: Lato;
   font-weight: 400;
-  color: rgb(73, 73, 187)
+  color:rgba(75, 112, 155, 0.842);
 }
 
 h4, h5, h6 {
@@ -446,6 +446,10 @@ canvas {
   background-position: 50% 50%;
 }
 
+.carousel-item {
+  padding: 3%;
+}
+
 body, html {
   height: 100%;
   margin: 0;
@@ -580,86 +584,4 @@ ol > li::before {
   width: 1em;
   font-size:22px;
   margin-left: -1em
-}
-
-.img-home {
-  /*http://www.freepngimg.com/png/15202-mountain-transparent*/
-  background: url("./img/home.svg") no-repeat;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* border: 1px solid red; */
-}
-
-.bg {
-  /* The image used */
-  background-image: url("./img/5-2-mountain-transparent3.png");
-  /* Full height */
-  height: 100%;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.modal .modal-header {
-  border-radius: 0 0 2px 2px;
-  background-color: #fafafa;
-  padding: 6px 4px;
-  height: 56px;
-  width: 100%;
-}
-
-.modal.modal-fixed-header-footer {
-  padding: 0;
-  height: 70%;
-}
-
-.modal.modal-fixed-header-footer .modal-content {
-  position: absolute;
-  height: calc(100% - 112px);
-  max-height: 100%;
-  width: 100%;
-  overflow-y: auto;
-}
-
-.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {
-  margin: 6px 0;
-}
-
-.modal.modal-fixed-header-footer .modal-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  position: relative;
-  top: 0;
-}
-
-.modal.modal-fixed-header-footer .modal-footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  position: absolute;
-  bottom: 0;
-}
-
-.modal .modal-footer {
-  border-radius: 0 0 2px 2px;
-  background-color: #fafafa;
-  padding: 4px 6px;
-  height: 56px;
-  width: 100%;
-}
-
-.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {
-  margin: 6px 0;
-}
-
-.whatWeDocard {
-  background: red;
-  height: 200px;
-  background: -webkit-linear-gradient(left, purple, blue);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, purple, blue);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, purple, blue);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, purple, blue);
-  /* Standard syntax (must be last) */
 }
