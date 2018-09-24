@@ -28,7 +28,7 @@ tags: Lagom, scala, akka, play, microservices
  	<li>   Your Lagom services</li>
 </ol>
 </div>
-#### Below are some rules for building Microservices in Lagom
+###### Below are some rules for building Microservices in Lagom
 <div id = "lists">
 <ol>
  	<li> Each services owns it's data</li>

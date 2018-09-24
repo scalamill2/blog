@@ -6,6 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link href="/css/autumn.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
   <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
@@ -156,12 +157,12 @@
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
 
-   $(document).ready(function(){
+ $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
+    $('.modal').modal();
   });
 
-  $(document).ready(function(){
+  $(document).ready(function () {
     $('.carousel').carousel();
   });
 
@@ -169,7 +170,7 @@
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true,
-    duration :'100'
+    duration: '100'
   });
 
 

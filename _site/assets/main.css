@@ -151,7 +151,6 @@ h1, h2, h3, h4 {
 
 h4, h5, h6 {
   font-family: Lato;
-  font-size: 20px;
   font-weight: 400;
   font-style: italic;
   color: rgb(209, 98, 131);
@@ -159,13 +158,6 @@ h4, h5, h6 {
   margin-bottom: 2%;
 }
 
-h4::before {
-  content: "👉";
-  font-size: 20px;
-  font-weight: 600;
-  margin-right: 2%;
-  margin-left: -1%;
-}
 
 cite {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
