@@ -451,15 +451,6 @@ body, html {
   margin: 0;
 }
 
-
-
-.center {
-  margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
-}
-
 .leftbar {
   border-left: 6px solid hsl(0, 72%, 56%) !important;
   border-left-width: 6px !important;

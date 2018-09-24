@@ -48,7 +48,7 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
 
@@ -57,6 +57,25 @@
     $('.modal-trigger').leanModal();
   });
 
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+
+
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true,
+    duration :'100'
+  });
+
+
+autoplay()   
+function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 3500);
+}
+      
+      
 </script>
 <script>
     particlesJS("particles-js", {
