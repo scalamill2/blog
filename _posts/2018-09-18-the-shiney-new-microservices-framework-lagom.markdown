@@ -225,7 +225,7 @@ abstract class SignUpLagomApplication(context: LagomApplicationContext)
 }
 {% endhighlight %}
 
-We are using cassnadra for persisting events and below is the configuration for keyspace.
+We are using cassnadra for persisting events and below is the configuration for keyspace. Repo is hosted [here](https://github.com/scalamill/lagom-signup-microservice). Your comment are mosr welcome.
 
 {% highlight bash %}
 
@@ -239,8 +239,6 @@ akka.actor.serialization-bindings {
 cassandra-journal.keyspace = test2
 cassandra-snapshot-store.keyspace = test2
 lagom.persistence.read-side.cassandra.keyspace = test2
-
-
 {% endhighlight %}
 
 
