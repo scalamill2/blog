@@ -225,7 +225,7 @@ abstract class SignUpLagomApplication(context: LagomApplicationContext)
 }
 {% endhighlight %}
 
-We are using cassnadra for persisting events and below is the configuration for keyspace. Repo is hosted [here](https://github.com/scalamill/lagom-signup-microservice). Your comment are mosr welcome.
+We are using cassnadra for persisting events and below is the configuration for keyspace. Repo is hosted [here](https://github.com/scalamill/lagom-signup-microservice). Your comments are most welcome.
 
 {% highlight bash %}
 
