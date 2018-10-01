@@ -2,7 +2,7 @@
 layout: post
 author: ScalaMill LLP
 title: "The Shiney new microservices framework Lagom"
-date: 2018-09-16 14:41:27 +0530
+date: 2018-10-01 14:41:27 +0530
 categories: lagom scala
 tags: Lagom, scala, akka, play, microservices
 ---
@@ -113,7 +113,7 @@ object User {
 
 {% endhighlight %}
 
-Now create a UserPersistenceEntity which manages the data of users.
+Now create a UserPersistenceEntity which manages the data of users. We can think of a persistent entity as an actor to which we send command and then it persist those event into database. We are using cassandra in our case. This is the place where an entity's state is managed by events and this is called event sourcing. 
 
 {% highlight scala%}
 package com.scalamill.persistence
@@ -151,4 +151,100 @@ object UserPersistenceSerializationRegistry extends JsonSerializerRegistry {
     JsonSerializer[SignUpCommand]
   )
 }
+{% endhighlight scala%}
+
+Now our task is to implement service description for signing in and signing up. Look at below code.
+
+{% highlight scala%}
+package com.scalamill.signup.impl
+
+import akka.NotUsed
+import com.lightbend.lagom.scaladsl.api.ServiceCall
+import com.lightbend.lagom.scaladsl.persistence.PersistentEntityRegistry
+import com.scalamill.persistence._
+import com.scalamill.signup.api.SignUpLagomService
+
+class SignUpLagomServiceImpl(persistentEntityRegistry: PersistentEntityRegistry) extends SignUpLagomService {
+  /**
+    * Example: curl http://localhost:9000/api/signin/admin/admin
+    * Example: curl -X POST   http://localhost:9000/api/signup/ -H 'content-type: application/json' -d '{"name":"admin", "password":"admin"}'
+    */
+  override def signUp: ServiceCall[User, UserSignUpDone] = ServiceCall {
+    user =>
+      val ref = persistentEntityRegistry.refFor[UserPersistenceEntity](user.name)
+      ref.ask(SignUpCommand(user))
+  }
+
+  override def signIn(name: String, password: String): ServiceCall[NotUsed, Boolean] = ServiceCall {
+    request =>
+      val ref = persistentEntityRegistry.refFor[UserPersistenceEntity](name)
+      ref.ask(SignInCommand(User(name, password)))
+  }
+}
+
 {% endhighlight %}
+
+All are done and we need to bind our service implementation to service description.
+
+{% highlight scala%}
+package com.scalamill.signup.impl
+
+import com.lightbend.lagom.scaladsl.api.ServiceLocator
+import com.lightbend.lagom.scaladsl.api.ServiceLocator.NoServiceLocator
+import com.lightbend.lagom.scaladsl.devmode.LagomDevModeComponents
+import com.lightbend.lagom.scaladsl.persistence.cassandra.CassandraPersistenceComponents
+import com.lightbend.lagom.scaladsl.server.{LagomApplication, LagomApplicationContext, LagomApplicationLoader}
+import com.scalamill.persistence.{UserPersistenceEntity, UserPersistenceSerializationRegistry}
+import com.scalamill.signup.api.SignUpLagomService
+import play.api.libs.ws.ahc.AhcWSComponents
+
+class SignUpServiceLoader extends LagomApplicationLoader {
+
+    override def load(context: LagomApplicationContext): LagomApplication =
+      new SignUpLagomApplication(context) {
+        override def serviceLocator: ServiceLocator = NoServiceLocator
+      }
+
+    override def loadDevMode(context: LagomApplicationContext): LagomApplication =
+      new SignUpLagomApplication(context) with LagomDevModeComponents
+
+    override def describeService = Some(readDescriptor[SignUpLagomService])
+
+}
+
+abstract class SignUpLagomApplication(context: LagomApplicationContext)
+  extends LagomApplication(context) with AhcWSComponents with CassandraPersistenceComponents{
+
+  import com.softwaremill.macwire._
+
+  override lazy val lagomServer = serverFor[SignUpLagomService](wire[SignUpLagomServiceImpl])
+
+  override lazy val jsonSerializerRegistry = UserPersistenceSerializationRegistry
+
+  persistentEntityRegistry.register(wire[UserPersistenceEntity])
+}
+{% endhighlight %}
+
+We are using cassnadra for persisting events and below is the configuration for keyspace.
+
+{% highlight bash %}
+
+play.application.loader = com.scalamill.signup.impl.SignUpServiceLoader
+
+# Enable the serializer for akka.Done provided in Akka 2.5.8+ to avoid the use of Java serialization.
+akka.actor.serialization-bindings {
+  "akka.Done" = akka-misc
+}
+
+cassandra-journal.keyspace = test2
+cassandra-snapshot-store.keyspace = test2
+lagom.persistence.read-side.cassandra.keyspace = test2
+
+
+{% endhighlight %}
+
+
+
+
+
+
