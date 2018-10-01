@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <title>ScalaMill | Custom Software developmemt using Scala, Akka, Playframework, Lagom and Spark</title>
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,12 +11,17 @@
   <link href="/css/autumn.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
   <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
-</head>
-<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="/js/animate.css">
-<!-- <link rel="stylesheet" href="/hljs/styles/atelier-plateu-light.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="/js/animate.css"> -->
+  <link rel="stylesheet" href="/css/animations.css">
+
+
+  <!-- <link rel="stylesheet" href="/hljs/styles/atelier-plateu-light.css">
 <script src="/hljs/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script> -->
 
@@ -23,53 +29,50 @@
 
 <body>
 
-  <div id="nav-bar" class = "nav-wrapper" (window:scroll)="onScroll()">
+  <div id="nav-bar" class="nav-wrapper" (window:scroll)="onScroll()">
     <nav id="nav" class="white valign-wrapper" style="padding:3%">
-      <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:8%"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
+      <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:8%"><img src="http://localhost:4000/assets/scala-mill.svg"
+          alt="not-found"></a>
       <a href="#!" class="brand-logo hide-on-large-only"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
       <a href="#" data-activates="mobile-bar" class="button-collapse">
-              <i class="medium material-icons red-text" style="font-size:40px">menu</i>
-            </a>
+        <i class="medium material-icons red-text" style="font-size:40px">menu</i>
+      </a>
       <!-- <img class="brand-logo" src="/assets/img/scala-logo.png" alt="scala logo not found"> -->
-      <ul id="ulmain" class="animated right-align hide-on-med-and-down"  style="margin-left: 50%">
+      <ul id="ulmain" class="animated right-align hide-on-med-and-down" style="margin-left: 50%">
         <li>
-          <a href = "http://localhost:4000/whoweare.html" (click) = "removeDepth()">
-                  <span>Company</span>
-                </a>
+          <a href="http://localhost:4000/whoweare.html" (click)="removeDepth()">
+            <span>Company</span>
+          </a>
         </li>
         <li>
-          <a href="http://localhost:4000/services.html" (click) = "addDepth()">
-                  <span>Consulting & Development</span>
-                </a>
+          <a href="http://localhost:4000/services.html" (click)="addDepth()">
+            <span>Consulting & Development</span>
+          </a>
         </li>
         <li>
-          <a href = "http://localhost:4000/training.html" (click) = "addDepth()">
-                  <span>Training</span>
-                </a>
+          <a href="http://localhost:4000/training.html" (click)="addDepth()">
+            <span>Training</span>
+          </a>
         </li>
         <li>
-          <a href="" (click) = "addDepth()">
-                  <span>Blog</span>
-                </a>
+          <a href="https://blog.scalamill.com" (click)="addDepth()">
+            <span>Blog</span>
+          </a>
         </li>
         <li>
-          <a href = "http://localhost:4000/contactus.html" (click) = "addDepth()">
-                  <span>Contact</span>
-                </a>
+          <a href="http://localhost:4000/contactus.html" (click)="addDepth()">
+            <span>Contact</span>
+          </a>
         </li>
       </ul>
     </nav>
   </div>
- 
 
+  <div class="carousel carousel-slider bimg center">
 
-  
-
-<div class="carousel carousel-slider bimg center">
-    
-    <div  id= "particles-js"  class="carousel-fixed-item">
+    <div id="particles-js" class="carousel-fixed-item">
     </div>
-    
+
 
     <div class="carousel-item random white-text" href="#one!">
 
@@ -77,86 +80,68 @@
 
             <div class="col s6 offset-s3 xl7 offset-xl1 l10 offset-l1">
 
-                    <h1 class = "white-text left-align">Are you looking for your remote or in-house scala team.</h1>
-    
+                <h1 class="white-text left-align">Are you looking for your remote or in-house scala team.</h1>
+                <h2 class="white-text flow-text left-align">
+                    We are a team of engineers who are expert in Lightbend technologies and provides development
+                    services in Scala, Akka, Play, Lagom, Spark and much more.</h2>
+
+
             </div>
 
-            <div class="col s10 offset-s1 xl9 offset-l1 xl7 offset-xl1">
-
-                    <h2 class = "white-text flow-text left-align">
-                        We are a team of engineers who are expert in Lightbend technologies and provides development services in Scala, Akka, Play, Lagom, Spark and much more.</h2>
-    
-            </div>
-    
         </div>
     </div>
-    
+
     <div class="carousel-item blog white-text" href="#one!">
-    
+
         <div class="row">
 
-            <div class="col s6 offset-s3 xl7 offset-xl1 l10">
-    
-                    <h1 class = "white-text left-align">Stucked with a scala project. Contact us to rescue that.</h1>
-    
-            </div>
+            <div class="col s6 offset-s3 xl6 offset-xl1 l10">
 
-            <div class="col s10 offset-s1 l9 offset-l1 xl7 offset-xl1">
+                <h1 class="white-text left-align">Stucked with a scala project contact us to rescue that.</h1>
+                <h2 class="white-text flow-text left-align">
+                    If you are handling a project in scala or building a product using Lightbend technologies and
+                    facing difficulties we can help you.</h2>
 
-                    <h2 class = "white-text flow-text left-align">
-                        If you are handling a project in scala or building a product using Lightbend technologies and facing difficulties we can help you.</h2>
-    
             </div>
-    
         </div>
     </div>
-    
+
     <div class="carousel-item training-background white-text" href="#one!">
-            <div class="col s11 m12 l12" id="particles-js"></div>
+        <div class="col s11 m12 l12" id="particles-js"></div>
 
         <div class="row">
-    
+
             <div class="col s6 offset-s3 xl7 offset-xl1 l10">
-    
-                    <h1 class = "white-text left-align">Are you looking for consulting over scala project</h1>
-    
-            </div>
 
-            <div class="col s10 offset-s1 l9 offset-l1 xl7 offset-xl1">
-
-                    <h2 class = "white-text flow-text left-align">
-                        We consult over scala project architecture, do code reviews, provide trainings and best development practices of functional programming and reactive architecture.</h2>
-    
+                <h1 class="white-text left-align">Are you looking for consulting over scala project</h1>
+                <h2 class="white-text flow-text left-align">
+                    We consult over scala project architecture, do code reviews, provide trainings and best development
+                    practices of functional programming and reactive architecture.</h2>
             </div>
-    
         </div>
     </div>
-    
-    
+
+
     <div class="carousel-item blog white-text" href="#one!">
-            <div class="col s11 m12 l12" id="particles-js"></div>
+        <div class="col s11 m12 l12" id="particles-js"></div>
 
         <div class="row">
-    
-            <div class="col s6 offset-s3 xl7 offset-xl1 l10">
-    
-               
-                    <h1 class = "white-text left-align">We are your team for cutting-edge technolgies and big data.</h1 class = "white-text">
-    
-            </div>
-    
-            <div class="col s10 offset-s1 l9 offset-l1 xl7 offset-xl1">
 
-                    <h2 class = "white-text flow-text left-align">
+            <div class="col s6 offset-s3 xl7 offset-xl1 l10">
+
+
+                <h1 class="white-text left-align">We are your team for cutting-edge technologies and big data.</h1
+                    class="white-text">
+                <h2 class="white-text flow-text left-align">
                     We love to work in niche project and technologies.
-                    Let us know if you are using cutting-edge technologies and want to build a team with us.    
-                    </h2>
-    
+                    Let us know if you are using cutting-edge technologies and want to build a team with us.
+                </h2>
+
             </div>
 
         </div>
     </div>
-       
+
 
 
 </div>
@@ -188,30 +173,17 @@
 
 
 <footer class="page-footer blue lighten-2">
-    <div class="col offset-l1">
-        <head>
-
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-</head>
-<div class = "row">
-<div class="col s5 offset-s2 blue lighten-2 white-text">
-
-    <h5 class="white-text">Follow and connect with us on social and corporate Media</h>
-    <div class="section"> </div>
-    <a href="https://www.linkedin.com/company/scalamill/">
-        <i class="fa fa-linkedin share-button white-text"> Linkedin</i></a>
-
-    <a href="https://www.linkedin.com/in/scalamill-software-48a16715b/">
-        <i class="fa fa-linkedin share-button white-text"> Linkedin page</i></a>
-    </br>
-    <a href="https://twitter.com/scalamill">
-        <i class="fa fa-twitter share-button white-text"> Twitter</i></a>
-</div>
-</div>
-</div>
-      </div>
     <div class="container col s10 offset-s1" style="font-family:'font-family: 'PT Serif',sans-serif">
+        <h5 class="white-text">Follow and connect with us on social and corporate Media</h5>
+<div class="section"> </div>
+<a href="https://www.linkedin.com/company/scalamill/">
+    <i class="fa fa-linkedin share-button white-text"> Linkedin</i></a>
+
+<a href="https://www.linkedin.com/in/scalamill-software-48a16715b/">
+    <i class="fa fa-linkedin share-button white-text"> Linkedin page</i></a>
+<br>
+<a href="https://twitter.com/scalamill">
+    <i class="fa fa-twitter share-button white-text"> Twitter</i></a>
       <p class="white-text">
         <em>"ScalaMill, now is a startup community of individuals who works towards providing modern software solutions using cutting-edge
           technologies.Since we have just started we work from home. We are a startup and help startup's as well as big organisation to build thier solutions .
@@ -273,13 +245,13 @@
 
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
-    indicators: true,
+    indicators: false,
     duration: '100'
   });
 
-
-autoplay()   
-function autoplay() {
+ setTimeout(autoplay, 5000);
+ 
+ function autoplay() {
     $('.carousel').carousel('next');
     setTimeout(autoplay, 5000);
 }
@@ -397,7 +369,9 @@ function autoplay() {
   },
   "retina_detect": true
 });
+
 </script>
+<script src="/js/css3-animate-it.js"></script>
 
 </body></html>
 

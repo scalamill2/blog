@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <title>ScalaMill | Custom Software developmemt using Scala, Akka, Playframework, Lagom and Spark</title>
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,12 +11,17 @@
   <link href="/css/autumn.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
   <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
-</head>
-<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="/js/animate.css">
-<!-- <link rel="stylesheet" href="/hljs/styles/atelier-plateu-light.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="/js/animate.css"> -->
+  <link rel="stylesheet" href="/css/animations.css">
+
+
+  <!-- <link rel="stylesheet" href="/hljs/styles/atelier-plateu-light.css">
 <script src="/hljs/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script> -->
 
@@ -23,306 +29,161 @@
 
 <body>
 
-  <div id="nav-bar" class = "nav-wrapper" (window:scroll)="onScroll()">
+  <div id="nav-bar" class="nav-wrapper" (window:scroll)="onScroll()">
     <nav id="nav" class="white valign-wrapper" style="padding:3%">
-      <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:8%"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
+      <a href="#!" class="brand-logo hide-on-med-and-down" style="margin-left:8%"><img src="http://localhost:4000/assets/scala-mill.svg"
+          alt="not-found"></a>
       <a href="#!" class="brand-logo hide-on-large-only"><img src="http://localhost:4000/assets/scala-mill.svg" alt="not-found"></a>
       <a href="#" data-activates="mobile-bar" class="button-collapse">
-              <i class="medium material-icons red-text" style="font-size:40px">menu</i>
-            </a>
+        <i class="medium material-icons red-text" style="font-size:40px">menu</i>
+      </a>
       <!-- <img class="brand-logo" src="/assets/img/scala-logo.png" alt="scala logo not found"> -->
-      <ul id="ulmain" class="animated right-align hide-on-med-and-down"  style="margin-left: 50%">
+      <ul id="ulmain" class="animated right-align hide-on-med-and-down" style="margin-left: 50%">
         <li>
-          <a href = "http://localhost:4000/whoweare.html" (click) = "removeDepth()">
-                  <span>Company</span>
-                </a>
+          <a href="http://localhost:4000/whoweare.html" (click)="removeDepth()">
+            <span>Company</span>
+          </a>
         </li>
         <li>
-          <a href="http://localhost:4000/services.html" (click) = "addDepth()">
-                  <span>Consulting & Development</span>
-                </a>
+          <a href="http://localhost:4000/services.html" (click)="addDepth()">
+            <span>Consulting & Development</span>
+          </a>
         </li>
         <li>
-          <a href = "http://localhost:4000/training.html" (click) = "addDepth()">
-                  <span>Training</span>
-                </a>
+          <a href="http://localhost:4000/training.html" (click)="addDepth()">
+            <span>Training</span>
+          </a>
         </li>
         <li>
-          <a href="" (click) = "addDepth()">
-                  <span>Blog</span>
-                </a>
+          <a href="https://blog.scalamill.com" (click)="addDepth()">
+            <span>Blog</span>
+          </a>
         </li>
         <li>
-          <a href = "http://localhost:4000/contactus.html" (click) = "addDepth()">
-                  <span>Contact</span>
-                </a>
+          <a href="http://localhost:4000/contactus.html" (click)="addDepth()">
+            <span>Contact</span>
+          </a>
         </li>
       </ul>
     </nav>
   </div>
- 
 
+  <div class="carousel carousel-slider bimg center">
 
-  <div class="col s12 m12 l12" id="particles-js"></div>
-
-<div class="row bimg blog" style="padding:3%">
-  <div class="col s12 m12 l4 offset-l1">
-    <div class="hide-on-small-only animated fadeInUp">
-      <h2 class="white-text" style="font-size:25px;font-family:monospace">ScalaMill Blog.</h2>
-      <cite class="white-text" style="font-size:18px">Visit us for boosting your productivity</cite>
-    </div>
-    <div class="centerThings hide-on-med-and-up">
-      <h2 class="white-text" style="font-size:25px;font-family:monospace">ScalaMill Blog</h2>
-      <p class="white-text" style="font-size:20px">Visit us for boosting your productivity</p>
+    <div id="particles-js" class="carousel-fixed-item">
     </div>
 
-    <div class="col s12 l11 m12 xl11 offset-l1 offset-l1  hide-on-med-and-up animated fadeInUp">
-      <h1 class = "white-text" style="font-size:23px">Your pathway to functional, reactive, pragmatic programming,
-        follow our blog to get updates in functional reactive and big data ecosystem.</h1>
-    </div>
 
-  </div>
+    <div class="carousel-item random white-text" href="#one!">
 
-  <div class="col s11 l10 m12 xl10 offset-l1 offset-xl1 hide-on-small-only animated fadeInUp">
-    <h3 class = "white-text">Your pathway to functional, reactive, pragmatic programming,
-      follow our blog to get updates in functional, reactive and big data ecosystem.</h3>
-  </div>
+        <div class="row">
 
-</div>
-<div class="container" style="position:relative">
-<div class="section">
-</div>
+            <div class="col s6 offset-s3 xl7 offset-xl1 l10 offset-l1">
 
-<div class="row">
-  <div class="col s12 l12">
-    <div>
-      <div style="padding:0 1 0 1%">
-        <h5 class="left-align" style="color:hsl(226, 41%, 49%)">
-          <em style= "font-size:30px;">The Shiney new microservices framework Lagom</em>
-          <p class="orange-text tags">
-            Lagom,scala,akka,play,microservices
-          </p>
-        </h5>
-
-        <cite class="orange-text">
-          Last updated on
-          <span class="post-meta">
-            <span class="post-date">
-              16 SEP 2018
-            </span>
-          </span> by
-          <span class="post-meta">
-            <span class="post-author">
-              ScalaMill LLP
-            </span>
-        </cite>
-      </div>
-
-      <div style="padding:0 1 0 1%">
-        <p><p><b>Lagom</b> is a Microservices framework built on top of Akka and Play. Lagom provides Scala as well as Java API to build microservices. Like Akka where we focus on writing business logic in Actors rather than focusing on low-level multi-threading logic, Lagom enables us to write microservices without bothering about wiring them.</p>
+                <h1 class="white-text left-align">Are you looking for your remote or in-house scala team.</h1>
+                <h2 class="white-text flow-text left-align">
+                    We are a team of engineers who are expert in Lightbend technologies and provides development
+                    services in Scala, Akka, Play, Lagom, Spark and much more.</h2>
 
 
-        </p>
-        <div class="card-action">
-          <a href="/lagom/scala/2018/09/16/the-shiney-new-microservices-framework-lagom.html">
-            Read More
-          </a>
+            </div>
+
         </div>
-      </div>
     </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col s12 l12">
-    <div>
-      <div style="padding:0 1 0 1%">
-        <h5 class="left-align" style="color:hsl(226, 41%, 49%)">
-          <em style= "font-size:30px;">Understanding functor via cats in scala</em>
-          <p class="orange-text tags">
-            scala,cats,functor
-          </p>
-        </h5>
+    <div class="carousel-item blog white-text" href="#one!">
 
-        <cite class="orange-text">
-          Last updated on
-          <span class="post-meta">
-            <span class="post-date">
-              15 SEP 2018
-            </span>
-          </span> by
-          <span class="post-meta">
-            <span class="post-author">
-              ScalaMill LLP
-            </span>
-        </cite>
-      </div>
+        <div class="row">
 
-      <div style="padding:0 1 0 1%">
-        <p><p>In previous posts we learned something about Semigroup and Monoid in Cats. Now we will look into a Functor.</p>
+            <div class="col s6 offset-s3 xl6 offset-xl1 l10">
 
+                <h1 class="white-text left-align">Stucked with a scala project contact us to rescue that.</h1>
+                <h2 class="white-text flow-text left-align">
+                    If you are handling a project in scala or building a product using Lightbend technologies and
+                    facing difficulties we can help you.</h2>
 
-        </p>
-        <div class="card-action">
-          <a href="/functional/programming/scala/2018/09/15/understanding-functor-via-cats-in-scala.html">
-            Read More
-          </a>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col s12 l12">
-    <div>
-      <div style="padding:0 1 0 1%">
-        <h5 class="left-align" style="color:hsl(226, 41%, 49%)">
-          <em style= "font-size:30px;">Understanding Semigroup via Cats in Scala</em>
-          <p class="orange-text tags">
-            scala,akka,java,lagom,spark
-          </p>
-        </h5>
+    <div class="carousel-item training-background white-text" href="#one!">
+        <div class="col s11 m12 l12" id="particles-js"></div>
 
-        <cite class="orange-text">
-          Last updated on
-          <span class="post-meta">
-            <span class="post-date">
-              15 SEP 2018
-            </span>
-          </span> by
-          <span class="post-meta">
-            <span class="post-author">
-              ScalaMill LLP
-            </span>
-        </cite>
-      </div>
+        <div class="row">
 
-      <div style="padding:0 1 0 1%">
-        <p><p>Hi All, Scala now is a most widely used language for enterprises and if you are Scala Programmer then you are also using it in your daily life. Ever wondered how Scala library collections share the same algebra. We can use map, flatMap, reduceLeft, foldLeft functions for any kind of the collection if we know how a particular algebraic datatype in that collection behaves. We will understand these things via Cats.</p>
+            <div class="col s6 offset-s3 xl7 offset-xl1 l10">
 
-
-        </p>
-        <div class="card-action">
-          <a href="/functional/programming/scala/2018/09/15/understanding-semigroup-via-cats-in-scala.html">
-            Read More
-          </a>
+                <h1 class="white-text left-align">Are you looking for consulting over scala project</h1>
+                <h2 class="white-text flow-text left-align">
+                    We consult over scala project architecture, do code reviews, provide trainings and best development
+                    practices of functional programming and reactive architecture.</h2>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12 l12">
-    <div>
-      <div style="padding:0 1 0 1%">
-        <h5 class="left-align" style="color:hsl(226, 41%, 49%)">
-          <em style= "font-size:30px;">Understanding monoids using Cats in Scala</em>
-          <p class="orange-text tags">
-            scala,akka,java,lagom,spark
-          </p>
-        </h5>
-
-        <cite class="orange-text">
-          Last updated on
-          <span class="post-meta">
-            <span class="post-date">
-              15 SEP 2018
-            </span>
-          </span> by
-          <span class="post-meta">
-            <span class="post-author">
-              ScalaMill LLP
-            </span>
-        </cite>
-      </div>
-
-      <div style="padding:0 1 0 1%">
-        <p><p>In the previous post we learned about Semigroup, In this post, we will see what are Monoids and how to use them.</p>
 
 
-        </p>
-        <div class="card-action">
-          <a href="/functional/programming/scala/2018/09/15/understanding-monoids-using-cats-in-scala.html">
-            Read More
-          </a>
+    <div class="carousel-item blog white-text" href="#one!">
+        <div class="col s11 m12 l12" id="particles-js"></div>
+
+        <div class="row">
+
+            <div class="col s6 offset-s3 xl7 offset-xl1 l10">
+
+
+                <h1 class="white-text left-align">We are your team for cutting-edge technologies and big data.</h1
+                    class="white-text">
+                <h2 class="white-text flow-text left-align">
+                    We love to work in niche project and technologies.
+                    Let us know if you are using cutting-edge technologies and want to build a team with us.
+                </h2>
+
+            </div>
+
         </div>
-      </div>
     </div>
-  </div>
+
+
+
 </div>
 
-<div class="row">
-  <div class="col s12 l12">
-    <div>
-      <div style="padding:0 1 0 1%">
-        <h5 class="left-align" style="color:hsl(226, 41%, 49%)">
-          <em style= "font-size:30px;">functional programming made easy in scala</em>
-          <p class="orange-text tags">
-            scala,akka,java,lagom,spark
-          </p>
-        </h5>
-
-        <cite class="orange-text">
-          Last updated on
-          <span class="post-meta">
-            <span class="post-date">
-              12 SEP 2018
-            </span>
-          </span> by
-          <span class="post-meta">
-            <span class="post-author">
-              ScalaMill LLP
-            </span>
-        </cite>
-      </div>
-
-      <div style="padding:0 1 0 1%">
-        <p><p>Hello Programmers, 
-We are living in the era of functional programming. Gone are the days when we used to model object and functions together and building the program using object-oriented technique but still we are left with the necessities of design pattern and management of code in modules when it comes to object-oriented programming. There are many functional programming languages which are coming every day but Scala is very old of them. Since Scala has come in the mainstream, many languages like Java, kotlin, Javascript are influenced by it and taken the same face as Scala has. They have functions, lambdas, closures etc. But Scala comes with a strong type system and with a lot of functional patterns inbuilt. So we will see what is functional programming and how we do it in Scala.</p>
-
-
-        </p>
-        <div class="card-action">
-          <a href="/functional/programming/scala/2018/09/12/functional-programming-made-easy-in-scala.html">
-            Read More
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
+<div class = "row" style="padding:3%">
+<div class= "col offset-l1">     
+<h2 class = "blue-grey-text text-lighten-1">Our Domain expertise.</h2>
+
+<div class = "col offset-xl1">
+   
+    <h3>Application development</h3> 
+    <p>We have provided consulting and development services to logistics companies.</p>
+
+    <h3>Big Data and Analytics</h3> 
+    <p>We have provided consulting and development services to logistics companies.</p>
+
+    <h3>Micro Services</h3> 
+    <p>We have provided consulting and development services to logistics companies.</p>
+
+    <h3>Rest API</h3> 
+    <p>We have provided consulting and development services to logistics companies.</p>
+
+</div>
+</div>
 </div>
 
 
 
 <footer class="page-footer blue lighten-2">
-    <div class="col offset-l1">
-        <head>
-
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-</head>
-<div class = "row">
-<div class="col s5 offset-s2 blue lighten-2 white-text">
-
-    <h5 class="white-text">Follow and connect with us on social and corporate Media</h>
-    <div class="section"> </div>
-    <a href="https://www.linkedin.com/company/scalamill/">
-        <i class="fa fa-linkedin share-button white-text"> Linkedin</i></a>
-
-    <a href="https://www.linkedin.com/in/scalamill-software-48a16715b/">
-        <i class="fa fa-linkedin share-button white-text"> Linkedin page</i></a>
-    </br>
-    <a href="https://twitter.com/scalamill">
-        <i class="fa fa-twitter share-button white-text"> Twitter</i></a>
-</div>
-</div>
-</div>
-      </div>
     <div class="container col s10 offset-s1" style="font-family:'font-family: 'PT Serif',sans-serif">
+        <h5 class="white-text">Follow and connect with us on social and corporate Media</h5>
+<div class="section"> </div>
+<a href="https://www.linkedin.com/company/scalamill/">
+    <i class="fa fa-linkedin share-button white-text"> Linkedin</i></a>
+
+<a href="https://www.linkedin.com/in/scalamill-software-48a16715b/">
+    <i class="fa fa-linkedin share-button white-text"> Linkedin page</i></a>
+<br>
+<a href="https://twitter.com/scalamill">
+    <i class="fa fa-twitter share-button white-text"> Twitter</i></a>
       <p class="white-text">
         <em>"ScalaMill, now is a startup community of individuals who works towards providing modern software solutions using cutting-edge
           technologies.Since we have just started we work from home. We are a startup and help startup's as well as big organisation to build thier solutions .
@@ -384,13 +245,13 @@ We are living in the era of functional programming. Gone are the days when we us
 
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
-    indicators: true,
+    indicators: false,
     duration: '100'
   });
 
-
-autoplay()   
-function autoplay() {
+ setTimeout(autoplay, 5000);
+ 
+ function autoplay() {
     $('.carousel').carousel('next');
     setTimeout(autoplay, 5000);
 }
@@ -508,7 +369,9 @@ function autoplay() {
   },
   "retina_detect": true
 });
+
 </script>
+<script src="/js/css3-animate-it.js"></script>
 
 </body></html>
 

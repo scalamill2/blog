@@ -1,8 +1,6 @@
 <footer class="page-footer blue lighten-2">
-    <div class="col offset-l1">
-        {% include followus-bottom.html %}
-      </div>
     <div class="container col s10 offset-s1" style="font-family:'font-family: 'PT Serif',sans-serif">
+        {% include followus-bottom.html %}
       <p class="white-text">
         <em>"ScalaMill, now is a startup community of individuals who works towards providing modern software solutions using cutting-edge
           technologies.Since we have just started we work from home. We are a startup and help startup's as well as big organisation to build thier solutions .
@@ -64,13 +62,13 @@
 
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
-    indicators: true,
+    indicators: false,
     duration: '100'
   });
 
-
-autoplay()   
-function autoplay() {
+ setTimeout(autoplay, 5000);
+ 
+ function autoplay() {
     $('.carousel').carousel('next');
     setTimeout(autoplay, 5000);
 }
@@ -188,6 +186,8 @@ function autoplay() {
   },
   "retina_detect": true
 });
+
 </script>
+<script src="/js/css3-animate-it.js"></script>
 
 </body></html>

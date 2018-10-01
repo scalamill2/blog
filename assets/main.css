@@ -577,3 +577,11 @@ ol > li::before {
   font-size:22px;
   margin-left: -1em
 }
+
+
+.half-circle {
+  height: 200px;
+  background-color: gold;
+  border-bottom-right-radius: 100px;
+  border-top-right-radius: 100px;
+}
