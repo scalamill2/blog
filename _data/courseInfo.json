@@ -1,0 +1,200 @@
+[
+  {
+    "course": "Beginner Track on Scala",
+    "explanation": "In the course you will learn scala from scratch which covers classes, trait, function, higher order functions, pattern matching recursion, map, flatmap and much more.",
+    "css": "trianglify1",
+    "url": "https://www.scala-lang.com",
+    "curriculam": {
+      "topics": [
+        {
+          "topic": "Primitive Types",
+          "details": [
+            "Any, AnyRef, Null,  Nil,  Nothing,  None"
+          ]
+        },
+        {
+          "topic": "Classes and Traits",
+          "details": [
+            "Class, Constructor, Auxaliary Constructor, Traits, Mixin composition"
+          ]
+        },
+        {
+          "topic": "Mutable vs Immutable collection",
+          "details": [
+            "List, Array, ArrayBuffer, ListBuffer, Set, Maps"
+          ]
+        },
+        {
+          "topic": "Functions, Higher Order Functions",
+          "details": [
+            "Function definitions",
+            "Writing functions",
+            "Writing own higher order functions",
+            "Understanding how Map, flatMap, filter works",
+            "composing Functions"
+          ]
+        },
+        {
+          "topic": "Pattern matching",
+          "details": [
+            "Case classes",
+            "Pattern matching on case classes",
+            "Partial Functions"
+          ]
+        },
+        {
+          "topic": "Recursion",
+          "details": [
+            "Tail Recursion, implement map, flatmap, filter, foldleft using recusion and pattern matching"
+          ]
+        },
+        {
+          "topic": "For Comprehensions",
+          "details": [
+            "for with yield, multiple generators, flatmap, filter, foldleft using recusion and pattern matching"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "course": "Beginner Track on Akka",
+    "css": "trianglify5",
+    "explanation": "This course covers Akka Actors, supervison, parent child creation, routing, data persistence, remoting, clustering, event sourcing, circuit breaker, Akka stream and Akka http",
+    "url": "https://akka.io",
+    "curriculam": {
+      "topics": [
+        {
+          "topic": "Actor Intro",
+          "details": [
+            "Introduction, Need For Akka, Actor Model, ActorSystem, Actor hierarchy"
+          ]
+        },
+        {
+          "topic": "Actors",
+          "details": [
+            "Defining an actor",
+            "Creating an actor"
+          ]
+        },
+        {
+          "topic": "Messege passing to actor",
+          "details": [
+            "Sending Messages to actors",
+            "Fire and Forget",
+            "Ask pattern"
+          ]
+        },
+        {
+          "topic": "Supervision and Monitoring",
+          "details": [
+            "Creating child actors",
+            "Defining strategy for supervison",
+            "Let it Crash, Building fault-tolerance"
+          ]
+        },
+        {
+          "topic": "Messeging and Routing",
+          "details": [
+            "Sending Message to actors",
+            "Creating Routers and Pool",
+            "Round Robin, Smallestmailbox routers etc"
+          ]
+        },
+        {
+          "topic": "Actor Path and selection",
+          "details": [
+            "Actor Path and references",
+            "Actor Address",
+            "ActorSelection"
+          ]
+        },
+        {
+          "topic": "Akka Remoting",
+          "details": [
+            "Remote actors and configuration",
+            "Creating remote actors",
+            "Location transparency and sending message to remote actors"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "course": "Beginner Track on Play",
+    "css": "trianglify3",
+    "explanation": "In the course you will learn Play anatomy, Http programming, async http programming, creating play actions, routes, result, configuration, working with json and dependecny injection",
+    "url": "https://www.playframework.com/",
+    "curriculam": {
+      "topics": [
+        {
+          "topic": "Play Framework Inroduction",
+          "details": [
+            "What is Play, How to get started with play", 
+            "Creating a new play application",
+            "Understanding play application architectuture"
+          ]
+        },
+        {
+          "topic": "Setting up Play framework development environment",
+          "details": [
+            "Importing the project into IntellJ"
+          ]
+        },
+        {
+          "topic": "Http Programming",
+          "details": [
+            "Creating controllers, actions and results", 
+            "Creating routes for controller",
+            "Mapping routes to controller method",
+            "Url parameters and default values, Optional parameters"
+          ]
+        },
+        {
+          "topic": "Asynchronous HTTP programming",
+          "details": [
+            "Creating asynchonous actions",
+            "Creating future of results",
+            "Returning future of results",
+            "Handling time-outs",
+            "Steaming large http responses"
+          ]
+        },
+        {
+          "topic": "Working with JSON",
+          "details": [
+            "JSON and HTTP ",
+            "JSON READ/WRITE format",
+            "JSON Transformers"
+          ]
+        },
+        {
+          "topic": "Configuration",
+          "details": [
+            "Injecting the configuration",
+            "Loading and Reading Play configuration file"
+          ]
+        },
+        {
+          "topic": "Dependency Injection",
+          "details": [
+            "Runtime dependency injection",
+            "Compile time depedency Injection"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "course": "Lagom",
+    "css": "trianglify4",
+    "explanation": "In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.",
+    "url": "scala-lang"
+  },
+  {
+    "course": "Spark",
+    "css": "trianglify2",
+    "explanation": "In the course you will learn scala from scratch which covers classes, trait, function,higher order functions, pattern matching recursion, map, flatmap and much more.",
+    "url": "scala-lang"
+  }
+]

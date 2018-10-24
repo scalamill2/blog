@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ScalaMill | Custom Software developmemt using Scala, Akka, Playframework, Lagom and Spark</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="/css/autumn.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script>
+  
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
+  </script>
+
+  <!-- <link rel="stylesheet" href="/js/animate.css"> -->
+  <!-- <link rel="stylesheet" href="/css/animations.css"> -->
+
+
+  <!-- <link rel="stylesheet" href="/hljs/styles/atelier-plateu-light.css">
+<script src="/hljs/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    
+  <div class  = "navbar-fixed" style ="z-index: 999">
+  <div id="nav-bar" class="nav-wrapper" (window:scroll)="onScroll()">
+    <nav id="nav" class="white valign-wrapper" style="padding:2.5%">
+      <a href="http://localhost:4000" class="brand-logo hide-on-med-and-down" style="margin-top:0.6%;margin-left:10%"><img src="http://localhost:4000/favicon.ico"
+          alt="not-found" height = "35" width = "35"></a>
+      <a href="http://localhost:4000" class="brand-logo hide-on-med-and-down" style="margin-left:12%;margin-top:0.5%;"><img src="http://localhost:4000/assets/scala-mill.svg"
+          alt="not-found" height = "150" width = "150"></a>
+      <a href="http://localhost:4000" class="brand-logo hide-on-large-only left" style="margin-top:1%;margin-left:2%"><img src="http://localhost:4000/favicon.ico"
+        alt="not-found" height = "30" width = "30"></a>
+      <a href="http://localhost:4000" class="brand-logo hide-on-large-only left"><img src="http://localhost:4000/assets/scala-mill.svg" 
+        alt="not-found" height = "120" width = "120" style="margin-left:27%;margin-top:6%"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger purple-text" style="left: 80%;"><i class="material-icons" 
+        style="font-size:40px">menu</i></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down" style="margin-left: 50%;">
+        <li>
+          <a href="http://localhost:4000/whoweare.html" (click)="removeDepth()">
+            <span>Company</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:4000/services.html" (click)="addDepth()">
+            <span>Consulting & Development</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:4000/training.html" (click)="addDepth()">
+            <span>Training</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://blog.scalamill.com" (click)="addDepth()">
+            <span>Blog</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:4000/contactus.html" (click)="addDepth()">
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>   
+    <ul class="sidenav" id="mobile-demo" style="z-index: 999;padding: 5%; left: 0%;">
+      <div class = "divider"></div>
+      <li>
+        <a href="http://localhost:4000/whoweare.html" (click)="removeDepth()">
+          <span>Company</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+      <li>
+        <a href="http://localhost:4000/services.html" (click)="addDepth()">
+          <span>Consulting & Development</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+      <li>
+        <a href="http://localhost:4000/training.html" (click)="addDepth()">
+          <span>Training</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+      <li>
+        <a href="https://blog.scalamill.com" (click)="addDepth()">
+          <span>Blog</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+      <li>
+        <a href="http://localhost:4000/contactus.html" (click)="addDepth()">
+          <span>Contact</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+    </ul>
+  </div>
+
+  <div class="col s11 m12 l12 hide-on-small-only" id="particles-js"></div>
+
+<div class="bimg random" style="padding:4%">
+  <div class = "row">
+  <div class="col s12 m12 l4 xl4 offset-l1 offset-xl1">
+    <div class="">
+      <h2 class="white-text text-darken-5" style="font-size:35px">Contact Us</h2>
+      <cite class="white-text">Let's get in touch and build something</cite>
+    </div>
+
+  </div>
+
+  <div class="col s11 l8 m12 xl10 offset-l2 offset-xl1">
+    <h4 class="white-text">
+        We are expert in functional programming, reactive architechure, microservices
+        and spark. We provides development services, consulting and training over lightbend product .
+    </h4>
+  </div>
+
+</div>
+</div>
+<div class="row" style="padding:4%">
+
+    <div class="col s12 xl4 offset-xl1">
+    
+        <div class="row">
+    
+            <h2 class="blue-grey-text"> Let us know your concerns.</h2>
+            <p>
+                Are you having any project in mind or you need development support or consulting and in-house training on your scala project.
+                Let us know your problems and requirements. We encourage you to send us a custom mail at <strong>contact@scalamill.com</strong>
+            </p>
+
+         <div>
+           <h2 class="blue-grey-text">Our Presence.</h2>
+           <ol>
+               <li><cite>Noida, Hyderabad, </cite>India</li>
+               
+               <cite class="blue-grey-text"> Currently we operate from India and handle assignments.</cite>
+           </ol>
+         </div>   
+        </div>
+    </div>
+
+    <div class = "col s12 xl5 offset-xl1">
+            <h2 class="blue-grey-text"> Contact us.</h2>
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+         <i class="material-icons prefix grey-text text-darken-2">face</i>
+          <input id="icon_face" type="text" class="validate" name = "first" required="required">
+          <label for="icon_face">Name</label>
+        </div>
+        <div class="input-field col s6">
+         <i class="material-icons prefix grey-text text-darken-2">email</i>
+          <input id="icon_email" type="email" class="validate "name = "email"  required="required">
+          <label for="icon_email" data-error="Write your email again please!" data-success="OK, you're good!">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+         <i class="material-icons prefix grey-text text-darken-2">gesture</i>
+          <input id="icon_subject" type="text" class="validate" name = "subject" required="required">
+          <label for="icon_subject">Subject</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+         <i class="material-icons prefix grey-text text-darken-2">create</i>
+          <textarea id="icon_message" class="materialize-textarea" name = "message" required="required"></textarea>
+          <label for="icon_message">Message</label>
+        </div>
+      </div>
+      <div class="row">
+      <div class="input-field col s12">
+         <button class="btn button4 green waves-effect waves-light valign-wrapper" type="submit" name="action">
+             Send Letter <i class="material-icons right">send</i>
+         </button>
+         </div>
+      </div>
+    </form>
+  </div>
+
+    </div>
+
+</div>
+
+
+<div class = "section"></div>
+<div class = "section"></div>
+<div class = "section"></div>
+
+<footer class="page-footer" style="background-color: rgba(13, 33, 99, 0.849)">
+    <div class="container col s10 offset-s1" style="font-family:'font-family: 'PT Serif',sans-serif">
+        <h6 class="white-text">Follow and connect with us on social and corporate Media</h6>
+<div class = "section"></div>
+<a href="https://www.linkedin.com/company/scalamill/">
+    <i class="fa fa-linkedin share-button white-text"> Linkedin</i></a>
+
+<a href="https://www.linkedin.com/in/scalamill-software-48a16715b/">
+    <i class="fa fa-linkedin share-button white-text"> Linkedin page</i></a>
+<br>
+<a href="https://twitter.com/scalamill">
+    <i class="fa fa-twitter share-button white-text"> Twitter</i></a>
+      <p class="white-text">
+        ScalaMill, now is a startup working towards providing modern software solutions using cutting-edge
+          technologies. We are a startup and help startup's as well as big organisation to build thier solutions .
+          We welcome clients of every type from small to big enterprises.
+        </em>
+      </p>
+    <br>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">ScalaMill</h5>
+          <p class="grey-text text-lighten-4">Developing Software At Pace</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/">Company</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/services.html">Consulting and Development</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/training.html">Training</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://blog.scalamill.com/">blog</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/contactus.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        ScalaMill©2018 Copyright
+      </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+
+ $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+
+  $(document).ready(function () {
+    $('.carousel').carousel();
+  });
+
+
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: false,
+    duration: '100'
+  });
+
+ setTimeout(autoplay, 5000);
+ 
+ function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 5000);
+}
+
+ $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+      
+      
+</script>
+<script>
+    particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": false,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "blue"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": false
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 200,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 10,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+</script>
+<script src="/js/css3-animate-it.js"></script>
+
+</body></html>
+

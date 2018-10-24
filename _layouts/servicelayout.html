@@ -1,0 +1,133 @@
+--- 
+layout: default 
+--- 
+{% include servicesbanner.html %}
+
+<div class="row grey lighten-5" style="padding:5%">
+    <div class="col s12 xl10 l10 offset-xl1 animatedParent animateOnce">
+        <h3 class="lighten-1 blue-grey-text text-lighten-1 center animated growIn">
+            Tranforming your business to the digital age and legacy to reactive architecture.
+        </h3>
+    </div>
+</div>
+
+<div class="section">
+    <h2 class="center black-text">What we offer?</h2>
+</div>
+
+<div class="row">
+    <div class="col s12 xl6 offset-l1">
+        <div class="animatedParent animateOnce">
+            <div class="col l12 xl10 lighten-2 animated fadeInLeft">
+                <h3 class="center pink-text">
+                    Application Development</h3>
+            </div>
+
+            <div class="col s12 l12">
+                <p class="animated fadeInLeft">
+                    We build scalabale, resilient, elastic, event-driven, distributed custom software using
+                    <strong>scala, akka, java, play framework, lagom, functional programming</strong> and other libraries existing
+                    in java and scala ecosystem. We are here to build a team for your project and provides you state of the
+                    art development using cutting edge technologies. Since functional programming paradigm evolved, the way
+                    we write the application has changed a lot. The pattern we follow in funtional programming software design
+                    are totally different from object oriented one. We help companies to land them in the playground of functional
+                    programmimg.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 xl6 offset-l1">
+        <div class="animatedParent animateOnce">
+            <div class="col l12 xl10 lighten-2 animated fadeInLeft">
+                <h3 class="center orange-text">
+                    Big data and Analytics</h3>
+            </div>
+            <div class="col s12 l12">
+                <p class="animated fadeInRight">We have an excellent and certified team of bigdata developers and provide big-data solutions using
+                    <strong>hadoop, flink, storm, hive, hdfs and spark</strong> ecosystem and Lightbend fast data platform ecosystem,
+                    We have built several custom distributed big data processing engines in past and we are experienced in
+                    processing TB's of data through complex computations using spark and storm. We delivered some of analytics
+                    solutions in social media, advertising, sentiment analysis and code recommendation engines. Spark core
+                    API integrates with scala seamlessely and it's very good to use with zeppelin for any exploratory analysis.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="divider container">
+
+</div>
+
+<div class="row">
+
+    <div class="col s12 xl6 offset-l1">
+        <div class="animatedParent animateOnce">
+            <div class="col l12 xl10 lighten-2 animated fadeInLeft">
+                <h3 class="center purple-text">
+                    Microservices</h3>
+            </div>
+            <div class="col s12 l12">
+                <p class="animated fadeInLeft">
+                    Now it's a time to break your monolith into microservices architecture. We provide reactive microservices development using
+                    Lagom framework which is a state of the art microservices framework in the market by Lightbend. The basic
+                    idea of microservices is that every system will be running a single microservice but lagom says that
+                    microservices does not work alone they also need to interact with other services that why Lagom as it's
+                    name suggests focus on breaking microservices into right sized peices and each group of microservices
+                    have their own bounded context. Lagom comes with Java and Scala API to develop microservices.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col s12 xl6 offset-l1">
+        <div class="animatedParent animateOnce">
+            <div class="col l12 xl10 lighten-2 animated fadeInLeft">
+                <h3 class="center blue-text">
+                    REST API Development</h3>
+            </div>
+            <div class="col s12 l12">
+                <p class="animated fadeInRight">Are you willing to build your rest API using reactive technologies like Akka, Akka-http, Akka-streams, Playframework
+                    and http4s. We recommend you to use them to build your application http layer. Playframwork is a reactive
+                    framework build over top of concurrency framework akka gives you fast response through your rest services,
+                    it is a super simple framework to develop a web application backend. If you need only http layer for
+                    your application there is many options like http4s and akka-http etc. We have developed Rest API for
+                    shipping/logistics, telecom, marking analysis and integartes http layer to the core of applications.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="section">
+    <h2 class="center black-text">Technology Stack</h2>
+</div>
+<div class="section">
+</div>
+<div class="row grey darken-2" style="padding:5%">
+    {% for image in site.static_files %} {% if image.path contains 'assets/img/tech/lb' %}
+    <div class="col xl3">
+        <img src="{{ image.path }}" alt="" style="height: 50px">
+        <span class="white-text">By Lightbend</span>
+    </div>
+    {% endif %} {% endfor %}
+    <!-- <div class = "section"></div>   
+            <div class ="col xl3">
+            {% for image in site.static_files %} {% if image.path contains 'assets/img/tech/db' %}
+            <img src="{{ image.path }}" alt="" style="height: 50px">
+            <span class="white-text">By DataBricks</span>
+            </div>
+            {% endif %} {% endfor %}
+            <div class = "section"></div>
+            {% for image in site.static_files %} {% if image.path contains 'assets/img/tech/oc' %}
+            <div class = "col xl3">
+            <img src="{{ image.path }}" alt="" style="height: 50px">
+            <span class="white-text">By Oracle</span>
+            </div>
+            {% endif %} {% endfor %} -->
+</div>

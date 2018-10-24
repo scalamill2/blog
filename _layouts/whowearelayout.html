@@ -1,0 +1,146 @@
+---
+layout: default
+---
+
+{% include whowearebanner.html %}
+
+<div class="animatedParent animateOnce center">
+
+    <div class="grey lighten-5" style="padding:3%">
+
+        <h3 class="center animated center growIn line-space"> Functional Programming, Reactive architechure and fast
+            data thoughtleaders</h3>
+        <cite class="orange-text text-lighten-1" style="font-size:18px">Scala, Akka, Java, Playframework, Lagom,
+            hadoop, Spark, big data analytics</cite>
+    </div>
+    <div class="container">
+        <h2 class="lighten-1 grey-text text-darken-2 animated center growIn" style="padding:1%">Who we are?</h2>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col s12 xl10 l10 offset-l1 offset-xl1">
+
+        <p class="whoweare">
+            First, we would like to say
+            that we are awesome people to work with! :-). We are passionate technology lovers working
+            in niche technologies on a mission to make industry work better and adopt new technologies. if you are
+            looking
+            for a partner who can work on niche technologies in which you are interested we can help you.
+            We are people working in functional and reactive paradigm and building scalable,
+            fault-tolerant, event-driven system using functional programming using Scala and reactive framework Akka,
+            Playframework.
+            We are experienced in bigdata and expert in building big data processsing engines aka data pipelines.
+            We encourage you to use these technologies to bring your appliaction at the heights of scalability,
+            resilience and peformance.
+        </p>
+
+
+    </div>
+
+</div>
+
+
+<div class="row">
+
+    <div class="col s10 offset-s1 divider" style="margin-top:2%"></div>
+
+    <h2 class="col s12 lighten-1 grey-text text-darken-2 center" style="padding:2%">What we do?</h2>
+
+    <ul>
+        <li class="row">
+            <h3 class="col s12 xl10 l10 offset-l1 offset-xl1 pink-text">Functional Programming</h3>
+            <div class="col s12 xl10 l10 offset-l1 offset-xl1">
+                <p class="whoweare">
+                    We are a team of software engineers and consultant with expertise in functional programming. Lambdas has become a common part
+                    of the any upcoming languages and we understand them very well.
+                    We understand scala, java, kotlin, functional javascript and write quality code around functional
+                    design patterns.
+                </p>
+            </div>
+        </li>
+        <li class="row">
+            <h3 class="col s12 xl10 l10 offset-l1 offset-xl1 blue-text">Build Reactive Applications</h3>
+            <div class="col s12 xl10 l10 offset-l1 offset-xl1">
+                <p class="whoweare">
+                    We are expert in
+                    building scalable, distributed, event driven resilient code using Akka, Akka-Http, Akka-Streams and
+                    playframweork. We have wriiten books over Akka and reactive programming.
+                    We love actors. We have build very complex message passing data processing engines using akka and
+                    related libraries.
+                </p>
+            </div>
+        </li>
+        <li class="row">
+            <h3 class="col s12 xl10 l10 offset-l1 offset-xl1 orange-text">Perform Big Data analytics</h3>
+            <div class="col s12 xl10 l10 offset-l1 offset-xl1 ">
+
+                <p class="whoweare">
+                    As we have already
+                    build
+                    complex system using akka so we posses a lot of expereince in building custom data pipelines and
+                    big
+                    data analytics processing engines before Apache Spark came.
+                    We don't fear big data and we have expertise in Apache Spark, hadoop ecosystem and big data
+                    analytics.
+                </p>
+            </div>
+        </li>
+        <li class="row">
+            <h3 class="col s12 xl10 l10 offset-l1 offset-xl1 purple-text">Write Microservices</h3>
+            <div class="col s12 xl10 l10 offset-l1 offset-xl1 ">
+
+                <p class="whoweare">
+
+                    We love actors
+                    programming, we have written a lot of microservices using Akka, Spray (Akka-Http) and currently we
+                    are
+                    building microservices using
+                    brand new microservices framework <strong>Lagom</strong> which let's you write right sized
+                    microservices which talks to each other and they all remain in thier bounded context.
+                </p>
+
+            </div>
+
+        </li>
+    </ul>
+
+    <div class="row">
+
+        <div class="center-align"><a class="btn button4 orange" href="{{ site.url}}/services.html">
+                Know our services
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row grey lighten-5">
+    <div class="animatedParent animateOnce">
+            <h2 class="col s12 lighten-1 grey-text text-darken-2 center" style="padding:2%">Latest Posts</h2>
+        </div>
+
+    <div class="col s12 xl10 offset-xl1">
+        {% for post in site.posts limit:3 %}
+
+        <div class="col s12 m6 l4 xl4">
+            <div class="">
+
+                <div class="">
+                    <h5 class="purple-text">{{post.title}}</h5>
+                </div>
+                <div class="postoverview">
+                    {{ post.content | truncate: 300 }}
+                </div>
+
+                <div class="section">
+                    <a class="btn button4 grey-text text-darken-3 z-depth-1 transparent lighten-2" href="{{ post.url | prepend: site.baseurl }}">
+                        Read More>>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

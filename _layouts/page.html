@@ -1,0 +1,87 @@
+--- 
+layout: default 
+--- 
+{% include trainingBanner.html %}
+
+<div class="row grey lighten-5" style="padding:3%">
+    <div class="col s12 xl10 l10 offset-xl1 offset-l1 animatedParent center animateOnce">
+        <h3 class="center animated center growIn line-space">Path towards functional programming, reactive architecture and fast data</h3>
+        <cite class="orange-text text-lighten-1" 
+        style="font-size:18px">Training on Scala, Akka, Java8, Playframework, Lagom, hadoop, Spark</cite>
+    </div>
+</div>
+
+<div class="row" style="padding:3%">
+    <div class="col l8 xl8 offset-l1 offset-xl2">
+        <h3 class="blue-grey-text text-darken-5 animated slideInLeft" style="font-style:italic;font-size:25px">
+            "We have number of years experience in scala and in it's ecosystem, we provide training on Lightbend technologies.
+        </h3>
+    </div>
+
+    <div class="col l8 xl8 offset-l1 offset-xl2">
+        <hr>
+        </div>
+
+    <div class="col offset-l5">
+        <h3 class="pink-text text-darken-5 animated slideInRight" style="font-style:italic;font-size:25px">
+            "checkout our training courses."</h3>
+    </div>
+</div>
+
+
+<div class="row">
+
+{% for member in site.data.courseInfo %} {% assign topics = member.curriculam.topics%} {% assign loopindex = forloop.index%}
+
+<div id="modal{{loopindex}}" class="modal modal-fixed-footer" style="z-index:999">
+  <div class="modal-content white">
+      <div id="{{loopindex}}">
+          <div class="container" style="padding:2%">
+              <h1>{{member.course}}</h1>
+              {% for item in topics %} {% assign details = item.details%}
+              <cite class="purple-text"> {{item.topic}}</cite>
+              {% for d in details %}
+              <p style="font-style: italic"> {{d}}</p>
+              {% endfor %}
+              {% endfor %}
+          </div>
+
+      </div>
+  </div>
+  <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      <a href="{{site.url}}/contactus.html" class="modal-close waves-effect waves-green btn-flat">Contact Us</a>
+  </div>
+</div>
+{% endfor %}
+
+    <div class="col s12 xl10 offset-xl1">
+
+        {% for member in site.data.courseInfo %} {% assign topics = member.curriculam.topics%} {% assign loopindex = forloop.index%}
+       
+        <div id="panel{{loopindex}}" class="col s12 m6 l4 xl4">
+            <div id="id{{loopindex}}" class="card" style="height: 350px;">
+                <div id="original{{loopindex}}">
+                    <div class="{{member.css}}">
+                        <div class="card-content">
+                            <span class="card-title activator white-text text-darken-4">{{member.course}}
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>{{member.explanation}}</p>
+                    </div>
+                    <a style="position:absolute;bottom:7%;" class="btn blue lighten-1 modal-trigger" href="#modal{{loopindex}}">Get Course Info</a>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{member.course}}
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>{{member.explanation}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

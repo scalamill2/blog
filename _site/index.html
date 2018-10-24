@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ScalaMill | Custom Software developmemt using Scala, Akka, Playframework, Lagom and Spark</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="/css/autumn.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script>
+  
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
+  </script>
+
+  <!-- <link rel="stylesheet" href="/js/animate.css"> -->
+  <!-- <link rel="stylesheet" href="/css/animations.css"> -->
+
+
+  <!-- <link rel="stylesheet" href="/hljs/styles/atelier-plateu-light.css">
+<script src="/hljs/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    
+  <div class  = "navbar-fixed" style ="z-index: 999">
+  <div id="nav-bar" class="nav-wrapper" (window:scroll)="onScroll()">
+    <nav id="nav" class="white valign-wrapper" style="padding:2.5%">
+      <a href="http://localhost:4000" class="brand-logo hide-on-med-and-down" style="margin-top:0.6%;margin-left:10%"><img src="http://localhost:4000/favicon.ico"
+          alt="not-found" height = "35" width = "35"></a>
+      <a href="http://localhost:4000" class="brand-logo hide-on-med-and-down" style="margin-left:12%;margin-top:0.5%;"><img src="http://localhost:4000/assets/scala-mill.svg"
+          alt="not-found" height = "150" width = "150"></a>
+      <a href="http://localhost:4000" class="brand-logo hide-on-large-only left" style="margin-top:1%;margin-left:2%"><img src="http://localhost:4000/favicon.ico"
+        alt="not-found" height = "30" width = "30"></a>
+      <a href="http://localhost:4000" class="brand-logo hide-on-large-only left"><img src="http://localhost:4000/assets/scala-mill.svg" 
+        alt="not-found" height = "120" width = "120" style="margin-left:27%;margin-top:6%"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger purple-text" style="left: 80%;"><i class="material-icons" 
+        style="font-size:40px">menu</i></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down" style="margin-left: 50%;">
+        <li>
+          <a href="http://localhost:4000/whoweare.html" (click)="removeDepth()">
+            <span>Company</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:4000/services.html" (click)="addDepth()">
+            <span>Consulting & Development</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:4000/training.html" (click)="addDepth()">
+            <span>Training</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://blog.scalamill.com" (click)="addDepth()">
+            <span>Blog</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:4000/contactus.html" (click)="addDepth()">
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>   
+    <ul class="sidenav" id="mobile-demo" style="z-index: 999;padding: 5%; left: 0%;">
+      <div class = "divider"></div>
+      <li>
+        <a href="http://localhost:4000/whoweare.html" (click)="removeDepth()">
+          <span>Company</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+      <li>
+        <a href="http://localhost:4000/services.html" (click)="addDepth()">
+          <span>Consulting & Development</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+      <li>
+        <a href="http://localhost:4000/training.html" (click)="addDepth()">
+          <span>Training</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+      <li>
+        <a href="https://blog.scalamill.com" (click)="addDepth()">
+          <span>Blog</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+      <li>
+        <a href="http://localhost:4000/contactus.html" (click)="addDepth()">
+          <span>Contact</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+    </ul>
+  </div>
+
+  <div class="carousel carousel-slider bimg center">
+
+    <div id="particles-js" class="carousel-fixed-item hide-on-small-only">
+    </div>
+
+
+    <div class="carousel-item random white-text" href="#one!">
+
+        <div class="row">
+
+            <div class="col s12 xl8 offset-xl1 l10 offset-l1">
+
+                <h1 class="white-text left-align">Are you looking for your remote or in-house scala team.</h1>
+                <h4 class="white-text flow-text left-align">
+                    We are a team of engineers who are expert in Lightbend technologies and provides development
+                    services in Scala, Akka, Play, Lagom, Spark and much more.</h4>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="carousel-item blog white-text" href="#one!">
+
+        <div class="row">
+
+            <div class="col s12 xl8 offset-xl1 l10 offset-l1">
+
+                <h1 class="white-text left-align">Stucked with a scala project contact us to rescue that.</h1>
+                <h4 class="white-text flow-text left-align">
+                    If you are handling a project in scala or building a product using Lightbend technologies and
+                    facing difficulties we can help you.</h4>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-item training-background white-text" href="#one!">
+
+        <div class="row">
+
+            <div class="col s12 xl8 offset-xl1 l10 offset-l1">
+
+                <h1 class="white-text left-align">Are you looking for consulting over scala project</h1>
+                <h4 class="white-text flow-text left-align">
+                    We consult over scala project architecture, do code reviews, provide trainings and best development
+                    practices of functional programming and reactive architecture.</h4>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="carousel-item blog white-text" href="#one!">
+
+        <div class="row">
+
+            <div class="col s12 xl8 offset-xl1 l10 offset-l1">
+
+                <h1 class="white-text left-align">We are your team for cutting-edge technologies and big data.</h1
+                    class="white-text">
+                <h4 class="white-text flow-text left-align">
+                    We love to work in niche project and technologies.
+                    Let us know if you are using cutting-edge technologies and want to build a team with us.
+                </h4>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="animatedParent animateOnce center">
+
+    <div class="grey lighten-5" style="padding:3%">
+
+        <h3 class="center animated center growIn line-space"> Functional Programming, Reactive architechure and fast
+            data thoughtleaders</h3>
+        <cite class="orange-text text-lighten-1" style="font-size:18px">Scala, Akka, Java, Playframework, Lagom,
+            hadoop, Spark, big data analytics</cite>
+    </div>
+    <div class="container">
+        <h2 class="lighten-1 grey-text text-darken-2 animated center growIn" style="padding:1%">Who we are?</h2>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col s12 xl10 l10 offset-l1 offset-xl1">
+
+        <p class="whoweare">
+            First, we would like to say
+            that we are awesome people to work with! :-). We are passionate technology lovers working
+            in niche technologies on a mission to make industry work better and adopt new technologies. if you are
+            looking
+            for a partner who can work on niche technologies in which you are interested we can help you.
+            We are people working in functional and reactive paradigm and building scalable,
+            fault-tolerant, event-driven system using functional programming using Scala and reactive framework Akka,
+            Playframework.
+            We are experienced in bigdata and expert in building big data processsing engines aka data pipelines.
+            We encourage you to use these technologies to bring your appliaction at the heights of scalability,
+            resilience and peformance.
+        </p>
+
+
+    </div>
+
+</div>
+
+
+<div class="row">
+
+    <div class="col s10 offset-s1 divider" style="margin-top:2%"></div>
+
+    <h2 class="col s12 lighten-1 grey-text text-darken-2 center" style="padding:2%">What we do?</h2>
+
+    <ul>
+        <li class="row">
+            <h3 class="col s12 xl10 l10 offset-l1 offset-xl1 pink-text">Functional Programming</h3>
+            <div class="col s12 xl10 l10 offset-l1 offset-xl1">
+                <p class="whoweare">
+                    We are a team of software engineers and consultant with expertise in functional programming. Lambdas has become a common part
+                    of the any upcoming languages and we understand them very well.
+                    We understand scala, java, kotlin, functional javascript and write quality code around functional
+                    design patterns.
+                </p>
+            </div>
+        </li>
+        <li class="row">
+            <h3 class="col s12 xl10 l10 offset-l1 offset-xl1 blue-text">Build Reactive Applications</h3>
+            <div class="col s12 xl10 l10 offset-l1 offset-xl1">
+                <p class="whoweare">
+                    We are expert in
+                    building scalable, distributed, event driven resilient code using Akka, Akka-Http, Akka-Streams and
+                    playframweork. We have wriiten books over Akka and reactive programming.
+                    We love actors. We have build very complex message passing data processing engines using akka and
+                    related libraries.
+                </p>
+            </div>
+        </li>
+        <li class="row">
+            <h3 class="col s12 xl10 l10 offset-l1 offset-xl1 orange-text">Perform Big Data analytics</h3>
+            <div class="col s12 xl10 l10 offset-l1 offset-xl1 ">
+
+                <p class="whoweare">
+                    As we have already
+                    build
+                    complex system using akka so we posses a lot of expereince in building custom data pipelines and
+                    big
+                    data analytics processing engines before Apache Spark came.
+                    We don't fear big data and we have expertise in Apache Spark, hadoop ecosystem and big data
+                    analytics.
+                </p>
+            </div>
+        </li>
+        <li class="row">
+            <h3 class="col s12 xl10 l10 offset-l1 offset-xl1 purple-text">Write Microservices</h3>
+            <div class="col s12 xl10 l10 offset-l1 offset-xl1 ">
+
+                <p class="whoweare">
+
+                    We love actors
+                    programming, we have written a lot of microservices using Akka, Spray (Akka-Http) and currently we
+                    are
+                    building microservices using
+                    brand new microservices framework <strong>Lagom</strong> which let's you write right sized
+                    microservices which talks to each other and they all remain in thier bounded context.
+                </p>
+
+            </div>
+
+        </li>
+    </ul>
+
+    <div class="row">
+
+        <div class="center-align"><a class="btn button4 orange" href="http://localhost:4000/services.html">
+                Know our services
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row grey lighten-5">
+    <div class="animatedParent animateOnce">
+            <h2 class="col s12 lighten-1 grey-text text-darken-2 center" style="padding:2%">Latest Posts</h2>
+        </div>
+
+    <div class="col s12 xl10 offset-xl1">
+        
+
+        <div class="col s12 m6 l4 xl4">
+            <div class="">
+
+                <div class="">
+                    <h5 class="purple-text">The Shiney new microservices framework Lagom</h5>
+                </div>
+                <div class="postoverview">
+                    <h2 id="what-is-lagom-framework">What is Lagom Framework?</h2>
+
+<p><b>Lagom</b> is a Microservices framework built on top of Akka and Play. Lagom provides Scala as well as Java API to build microservices. Like Akka where we focus on writing business logic in Actors rather than focusing on low-lev...
+                </div>
+
+                <div class="section">
+                    <a class="btn button4 grey-text text-darken-3 z-depth-1 transparent lighten-2" href="/lagom/scala/2018/10/01/the-shiney-new-microservices-framework-lagom.html">
+                        Read More>>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col s12 m6 l4 xl4">
+            <div class="">
+
+                <div class="">
+                    <h5 class="purple-text">Understanding functor via cats in scala</h5>
+                </div>
+                <div class="postoverview">
+                    <p>In previous posts we learned something about Semigroup and Monoid in Cats. Now we will look into a Functor.</p>
+
+<h2 id="what-is-a-functor">What is a Functor?</h2>
+
+<p>According to Wikipedia: In <a title="Mathematics" href="https://en.wikipedia.org/wiki/Mathematics">mathematics</a>, a <b>funct...
+                </div>
+
+                <div class="section">
+                    <a class="btn button4 grey-text text-darken-3 z-depth-1 transparent lighten-2" href="/functional/programming/scala/2018/09/15/understanding-functor-via-cats-in-scala.html">
+                        Read More>>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col s12 m6 l4 xl4">
+            <div class="">
+
+                <div class="">
+                    <h5 class="purple-text">Understanding Semigroup via Cats in Scala</h5>
+                </div>
+                <div class="postoverview">
+                    <p>Hi All, 
+Scala now is a most widely used language for enterprises and if you are Scala Programmer then you are also using it in your daily life. Ever wondered how Scala library collections share the same algebra. We can use map, flatMap, reduceLeft, foldLeft functions for any kind of the colle...
+                </div>
+
+                <div class="section">
+                    <a class="btn button4 grey-text text-darken-3 z-depth-1 transparent lighten-2" href="/functional/programming/scala/2018/09/15/understanding-semigroup-via-cats-in-scala.html">
+                        Read More>>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class = "section"></div>
+<div class = "section"></div>
+<div class = "section"></div>
+
+<footer class="page-footer" style="background-color: rgba(13, 33, 99, 0.849)">
+    <div class="container col s10 offset-s1" style="font-family:'font-family: 'PT Serif',sans-serif">
+        <h6 class="white-text">Follow and connect with us on social and corporate Media</h6>
+<div class = "section"></div>
+<a href="https://www.linkedin.com/company/scalamill/">
+    <i class="fa fa-linkedin share-button white-text"> Linkedin</i></a>
+
+<a href="https://www.linkedin.com/in/scalamill-software-48a16715b/">
+    <i class="fa fa-linkedin share-button white-text"> Linkedin page</i></a>
+<br>
+<a href="https://twitter.com/scalamill">
+    <i class="fa fa-twitter share-button white-text"> Twitter</i></a>
+      <p class="white-text">
+        ScalaMill, now is a startup working towards providing modern software solutions using cutting-edge
+          technologies. We are a startup and help startup's as well as big organisation to build thier solutions .
+          We welcome clients of every type from small to big enterprises.
+        </em>
+      </p>
+    <br>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">ScalaMill</h5>
+          <p class="grey-text text-lighten-4">Developing Software At Pace</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/">Company</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/services.html">Consulting and Development</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/training.html">Training</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://blog.scalamill.com/">blog</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.scalamill.com/contactus.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        ScalaMill©2018 Copyright
+      </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+
+ $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+
+  $(document).ready(function () {
+    $('.carousel').carousel();
+  });
+
+
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: false,
+    duration: '100'
+  });
+
+ setTimeout(autoplay, 5000);
+ 
+ function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 5000);
+}
+
+ $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+      
+      
+</script>
+<script>
+    particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": false,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "blue"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": false
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 200,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 10,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+</script>
+<script src="/js/css3-animate-it.js"></script>
+
+</body></html>
+

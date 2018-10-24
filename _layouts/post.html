@@ -1,0 +1,52 @@
+{% include header.html %}
+
+<div class="hide-on-small-only">
+<div id="particles-js"></div>
+</div>
+
+
+<div class="row">
+  <div class="col s12">
+      <div style="z-index:99">
+        <div class="section post-header center" style="padding: 10%;color:aquamarine">
+          <h5 class="white-text" style="font-size:35px">
+            <em>{{page.title}}</em>
+            <p class="white-text tags">
+              {{ page.tags }}
+            </p>
+          </h5>
+
+          <cite class="white-text">
+            Last updated on
+            <span class="post-meta">
+              <span class="post-date">
+                {{ page.date | date: "%-d %b %Y" | upcase }}
+              </span>
+            </span> by
+            <span class="post-meta">
+              <span class="post-author">
+                {{ page.author}}
+              </span>
+              </span>
+          </cite>
+
+          <div class="section">
+            {% include share.html %}
+          </div>
+        </div>
+    </div>
+
+      <div id = "blogpost" class="col s12 xl8 offset-xl2 blogpost" style="padding:3%">
+          {{content}}
+        {% include discuss.html %}
+      </div>
+    </div>
+
+    <div class="section col s12 m12 xl3 l3" style="margin-top:2%">
+      <div class="col">
+        {% include followus.html %}
+      </div>
+    </div>
+  </div>
+
+{% include footer.html %}

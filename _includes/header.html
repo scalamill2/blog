@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ScalaMill | Custom Software developmemt using Scala, Akka, Playframework, Lagom and Spark</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="/css/autumn.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Welcome to ScalaMill blog" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script>
+  
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
+  </script>
+
+  <!-- <link rel="stylesheet" href="/js/animate.css"> -->
+  <!-- <link rel="stylesheet" href="/css/animations.css"> -->
+
+
+  <!-- <link rel="stylesheet" href="/hljs/styles/atelier-plateu-light.css">
+<script src="/hljs/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    
+  <div class  = "navbar-fixed" style ="z-index: 999">
+  <div id="nav-bar" class="nav-wrapper" (window:scroll)="onScroll()">
+    <nav id="nav" class="white valign-wrapper" style="padding:2.5%">
+      <a href="{{site.url}}" class="brand-logo hide-on-med-and-down" style="margin-top:0.6%;margin-left:10%"><img src="{{site.url}}/favicon.ico"
+          alt="not-found" height = "35" width = "35"></a>
+      <a href="{{site.url}}" class="brand-logo hide-on-med-and-down" style="margin-left:12%;margin-top:0.5%;"><img src="{{site.url}}/assets/scala-mill.svg"
+          alt="not-found" height = "150" width = "150"></a>
+      <a href="{{site.url}}" class="brand-logo hide-on-large-only left" style="margin-top:1%;margin-left:2%"><img src="{{site.url}}/favicon.ico"
+        alt="not-found" height = "30" width = "30"></a>
+      <a href="{{site.url}}" class="brand-logo hide-on-large-only left"><img src="{{site.url}}/assets/scala-mill.svg" 
+        alt="not-found" height = "120" width = "120" style="margin-left:27%;margin-top:6%"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger purple-text" style="left: 80%;"><i class="material-icons" 
+        style="font-size:40px">menu</i></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down" style="margin-left: 50%;">
+        <li>
+          <a href="{{site.url}}/whoweare.html" (click)="removeDepth()">
+            <span>Company</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{site.url}}/services.html" (click)="addDepth()">
+            <span>Consulting & Development</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{site.url}}/training.html" (click)="addDepth()">
+            <span>Training</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{site.blog}}" (click)="addDepth()">
+            <span>Blog</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{site.url}}/contactus.html" (click)="addDepth()">
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>   
+    <ul class="sidenav" id="mobile-demo" style="z-index: 999;padding: 5%; left: 0%;">
+      <div class = "divider"></div>
+      <li>
+        <a href="{{site.url}}/whoweare.html" (click)="removeDepth()">
+          <span>Company</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+      <li>
+        <a href="{{site.url}}/services.html" (click)="addDepth()">
+          <span>Consulting & Development</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+      <li>
+        <a href="{{site.url}}/training.html" (click)="addDepth()">
+          <span>Training</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+      <li>
+        <a href="{{site.blog}}" (click)="addDepth()">
+          <span>Blog</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+      <li>
+        <a href="{{site.url}}/contactus.html" (click)="addDepth()">
+          <span>Contact</span>
+        </a>
+      </li>
+      <div class = "divider"></div>
+    </ul>
+  </div>
